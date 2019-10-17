@@ -1,0 +1,50 @@
+{% macro showList(lst) %}
+    <ol>
+        {% for i in lst %}
+            <li 
+                {% if loop.index % 2 == 1 %}
+                    style="background:red;"
+                {% else %}
+                    style="background:yellow;"
+                {% endif %}
+            >
+                {{i}}
+            </li>
+        {% endfor %}
+    </ol>
+{% endmacro %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

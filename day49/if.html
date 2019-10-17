@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year = prompt("Please input year:");
+        var month = prompt("Please input month:");
+        var day = Number(prompt("Please input day:"));
+        var days;
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+            var runy = 1;
+        }else{
+            var runy = 0;
+        }
+        
+        if(month == 1){
+            days = day;
+        }else if(month == 2){
+            days = 31 + day;
+        }else if(month == 3){
+            days = 31 + 28 + day;
+        }else if(month == 4){
+            days = 31 + 28 + 31 + day;
+        }else if(month == 5){
+            days = 31 + 28 + 31 + 30 + day;
+        }
+            
+        if(month >= 3 && runy){
+            days += 1;
+        }
+        
+        console.log("Now,the year already passed:"+days)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

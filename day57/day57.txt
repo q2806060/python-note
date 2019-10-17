@@ -1,0 +1,112 @@
+1.基于threading的多线程并发
+    1.流程
+        1.创建套接字，绑定，监听
+        2.接收客户端连接
+        3.创建新的线程，处理客户端请求
+        4.主线程继续等待其他客户端连接
+        5.当客户端退出时处理对应线程
+
+2.FTP文件服务器
+    1.功能
+        1.分为服务端和客户端两部分，要求启动服务端可以有多个客户端进行连接操作
+        2.客户端可以查看服务器文件库中的文件（不包括隐藏文件）
+        3.客户端可以选择文件库中的文件进行下载
+        4.客户端可以上传本地文件到文件库
+    2.技术分析
+        1.TCP+多线程
+        2.判断普通文件：os.path.isfile()
+        3.查看文件列表：os.listdir()
+    3.结构设计（用类实现）
+        将功能说明中 2 3 4 三个功能封装在一个类中
+    4.实现步骤
+        1.搭建网络
+        2.封装类（整体结构）
+        3.功能实现并测试
+
+3.FTP服务器项目实现
+    1.网络搭建模型
+    2.搭建类（程序架构）
+        1.确定客户端发送请求和服务端回复的种类
+    3.文件列表功能实现
+        1.客户端 
+            1.向服务端发请求 L 开头
+            2.等待接收服务端反馈，服务端把文件名发送给客户端并打印，接收到##则结束
+
+5.协程
+    1.定义
+        纤程，微线程，是为非抢占式多任务产生子程序的计算机程序组件
+    2.特点
+        1.协程允许在不同的位置暂停或者开始执行，简单来说，协程及时可以暂停执行的函数
+        2.yield是实现协程的基本关键字（生成器就是协程的基本体现）
+    3.原理
+        1.记录一个函数栈的上下文，进行协程的切换调度，当一个函数暂停执行时，会将上下文帧保存起来
+    4.优点
+        1.可执行多任务
+        2.本质是单线程，资源消耗小
+        3.协程无需切换的开销，无需同步互斥（无需内核切换，只是应用层的切换）
+    5.缺点
+        1.无法利用计算机的多核资源
+
+6.协程的模块
+    1.第三方模块：greenlet gevent
+    2.greenlet模块的方法
+        import greenlet
+        1.g = greenlet.greenlet(func)
+            功能：创建协程对象
+            参数：协程函数
+        2.g.switch()
+            功能：启动协程函数
+    3.gevent模块的方法
+        import gevent
+        1.gevent.spawn(func,argv)
+            1.功能：生成协程对象
+            2.参数：func协程函数，argv传参
+            3.特点：当func中遇到gevent类型阻塞会跳出
+                    ## 并不是所有类型的阻塞都会跳出
+        2.gevent.joinall(List,[timeout])
+            1.功能：启动并阻塞等待回收协程
+            2.参数：List为协程对象列表，timeout为超时时间
+        3.gevent.sleep(sec)
+            1.功能：提供协程阻塞
+        4.from gevent import monkey
+            monkey.patch_all()
+            功能：修改原有的IO阻塞行为，触发协程事件跳转
+            特点：必须在导入要使用的模块前设置
+        5.协程支持TCPServer的并发
+
+7.集成模块完成多进程，多线程socket并发
+    1.模块
+        1.python2:SocketServer
+        2.python3:socketserver 
+    2.功能
+        通过模块提供的不同类的组合，完成多进程或者多线程并发
+    3.方法
+        from socketserver import *
+        #创建服务器类,TCP+多进程并发
+        #Python支持多继承
+        class Server(ForkingMixIn,TCPServer):
+            pass
+        #创建一个处理请求的类,继承
+        class Handler(StreamRequestHandler):
+            #重写handler方法
+            def handler(self):
+                # self.client_address属性：客户端地址
+                # self.request --> 套接字
+                while True:
+                    data = self.request.recv(1024)
+                    if not data:
+                        break
+                    print(data.decode())
+                    self.request.send(msg.encode())
+
+        #创建服务器对象,第二个参数指定由哪个类去处理客户端请求
+        server = Server(("0.0.0.0",8888),Handler)
+        #启动
+        server.serve_forever()
+
+
+
+
+
+
+

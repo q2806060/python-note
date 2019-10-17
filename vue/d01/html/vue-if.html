@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <h3 v-if="yes">yes</h3>
+        <h3 v-if="no">no</h3>
+        <h3 v-if="age>28">age:{{age}}</h3>
+        <h3 v-if="name.indexOf('o')>=0">name:{{name}}</h3>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var exampleData = {
+            message:"hello vue",
+            yes:true,
+            no:false,
+            age:28,
+            name:"lion" 
+        };
+        new Vue({
+            el:"#app",
+            data:exampleData
+        });
+    </script>
+</body>
+</html>

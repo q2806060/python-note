@@ -1,0 +1,189 @@
+1.多线程爬虫
+    1.应用场景
+        多进程：大量密集计算
+        多线程：IO操作比较频繁（网络IO、磁盘IO）
+    2.队列(from multiprocessing import Queue)
+        1.q = Queue()
+        2.q.put()
+        3.q.get() # 如果队列中没有值会发生阻塞
+        4.解决get()阻塞的2种方法
+            1.q.get(block=True, timeout=1)
+                超过1秒钟，抛出异常
+            2.q.get(block=False)
+                直接抛出异常
+    3.线程的模块(from threading import Thread)
+        t = Thread(target=函数名)
+        t.start()
+        t.join()
+
+2.小米应用商城抓取(多线程)
+    1.网址
+    2.目标：应用分类
+        1.应用名称
+        2.应用连接
+    3.抓取查询参数，F12 -> QueryString
+        URL:http://app.mi.com/categotyAllListApi?
+        params = {
+            page:??,
+            categoryId:2,
+            pageSize:30,
+        }
+
+3.BeautifulSoup解析模块
+    1.定义：HTML或XML解析器，依赖于lxml
+    2.安装
+    3.使用流程
+        1.导入模块
+            from bs4 import BeautifulSoup 
+        2.创建解析对象
+            sopu = BeautifulSoup(html, "lxml")
+        3.对象调用方法查找
+            rList = soup.find_all(条件)
+        4.BeautifulSoup支持的解析库
+            1.lxml:速度快，文档容错能力强 
+            2.html.parser:Python标准库，都一般
+            3.xml:速度快，文档容错能力强 
+        5.常用的方法
+            1.find_all():返回列表
+                rList = soup.find_all("div", attrs={"id":"abc"})
+            2.节点对象.get_text():获取节点及子节点的文本内容
+
+5.scrapy框架
+    1.定义：异步处理框架，可配置程度非常高，python中使用最广泛的网络爬虫框架
+    2.安装
+        1.window:
+            conda install Scrapy==1.5.1
+            pip install Scrapy==1.5.1
+        2.ubuntu:
+            见桌面文档
+
+6.scrapy框架组成
+    1.引擎(Engine):整个框架核心
+    2.调度器(Scheduler):接收从引擎发来的URL入队列
+    3.下载器(Downloader):下载网页回应，返回给爬虫程序
+    4.项目管道(Item Pipeline):数据处理
+    5.爬虫程序(Spider)
+    6.下载器中间件(Downloader Middlewares)
+        引擎  ->  下载器 
+    7.蜘蛛中间件(Spider Middlewares)
+        引擎  ->  爬虫程序
+
+7.制作爬虫项目的步骤
+    1.新建项目
+        scrapy startproject 项目名称
+    2.新建爬虫程序
+        scrapy genspider 文件名 域名
+    3.明确目标(items.py)
+    4.编写爬虫程序(文件名.py)
+    5.数据处理(pipelines.py)
+    6.全局配置(settings.py)
+    7.运行爬虫
+        scrapy crawl 爬虫名
+
+8.scrapy中settings的设置
+    1.是否遵循robots协议
+        ROBOTSTXT_OBEY = False
+    2、最大并发量，默认16
+        CONCURRENT_REQUESTS = 32
+    3、下载延迟时间
+        DOWNLOAD_DELAY = 1  
+    4、请求头
+        DEFAULT_REQUEST_HEADERS = {
+            'User-Agent':'Mozilla/5.0',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en',
+        }
+    5、下载器中间件
+        DOWNLOADER_MIDDLEWARES = {
+            'Baidu.middlewares.BaiduDownloaderMiddleware': 543,
+        }
+    6、管道文件
+        ITEM_PIPELINES = {
+            'Baidu.pipelines.BaiduMysqlPipeline': 300,
+            'Baidu.pipelines.BaiduMongoPipeline': 200,
+        }
+
+9.pycharm运行爬虫项目
+    1.创建begin.py(和scrapy.cfg文件同目录)
+    2.begin.py 
+        from scrapy import cmdline
+        cmdline.execute("scrapy crawl baidu".split())
+
+10.yield回顾
+    1.作用：把1个函数当做1个生成器来使用
+    2.特点：让函数暂停，等待下一次调用
+
+11.Csdn项目
+    1.网址
+        https://blog.csdn.net/qq_41185868/article/details/87886811
+    2.标题、发布时间、阅读量
+        标题：//h1[@class="title-article"]/text()
+        发布时间：//div[@class="article-bar-top"]/span[@class="time"]/text()
+        阅读量：//span[@class="read-count"]/text()
+    3.流程
+        1.scrapy startproject Csdn 
+        2.cs Csdn 
+        3.scrapy genspider csdn blog.csdn.net
+        4.items.py 
+            title = scrapy.Field()
+        5.csdn.py
+            from Csdn.items import CsdnItem
+            allowed_domains=[""]
+            item = CsdnItem()
+            item["title"] = response.xpath("").extract()
+            yield item
+        6.pipeliens.py
+            def process_item(self, item, spider):
+        7.settings.py
+            ITEM_PIPELINES = {
+                "Csdn.pipelines.CsdnPipelines":300,
+            }
+
+12.知识点
+    1.extract() : 获取选择器对象中的文本内容
+        response.xpath('')
+        结果：[<selector ... data='文本内容'>, <...>]
+        response.xpath('').extract()
+        结果：['文本内容1', '文本内容2']
+    2.pipelines.py中必须由1个函数叫：
+        def process_item(self, item, spider):
+            return  item
+            # 必须返回item，其他管道会继续使用
+    3.日志级别
+        LOG_LEVEL = ""
+        LOG_FILE = "文件名.log"
+        5层日志级别
+            1.CRITICAL : 严重错误
+            2.ERROR : 一般错误
+            3.WARNING : 警告信息    ***
+            4.INFO : 一般信息
+            5.DEBUG : 调试信息
+
+13.保存为csv、json文件
+    设置导出的编码 ： settings.py添加变量
+        FEED_EXPORT_ENCODING = 'ut-8'
+    1.json文件
+        scrapy crawl 项目 -o 文件名.json 
+    2.csv文件
+        scrapy crawl 项目 -o 文件名.csv 
+        csv文件出现空行解决方法(修改源码)
+        找到安装目录下的 exporters.py 找到 csv 的类,做如下修改：
+            self.stream = io.TextIOWrapper(
+                file,
+                newline=""
+                ....
+            )
+
+14.腾讯招聘项目
+    1.网址
+        https://hr.tencent.com/position.php?start=0
+    2.xpath表达式
+        基准： //tr[@class="even"] | //tr[@class="odd"]
+        1.职位名称(zhName): ./td[1]/a/text()
+        2.职位类别(zhType): ./td[2]/text()
+        3.招聘人数(zhNum): ./td[3]/text()
+        4.招聘地点(zhAddress): ./td[4]/text()
+        5.职位连接(zhLink): ./td[1]/a/@href
+
+15.scrapy.Request(url, callback=解析方法名)
+       

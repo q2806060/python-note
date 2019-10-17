@@ -1,0 +1,4 @@
+布尔运算
+    运算符：not and or
+    not x
+    

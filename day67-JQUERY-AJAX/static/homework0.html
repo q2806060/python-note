@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            loadPro();
+            loadCity($("#province").val());
+            $("#province").change(function(){
+                loadCity(this.value);
+            })
+        });
+        function loadCity(pid){
+            $.ajax({
+                url:"/query-city",
+                data:"pid="+pid,
+                type:"get",
+                dataType:"json",
+                async:true,
+                success:function(data){
+                    var html = "";
+                    $.each(data, function (i, obj) {
+                        html += "<option value='"+obj.id+"'>";
+                        html += obj.city;
+                        html += "</option>";
+                    });
+                    $("#cities").html(html);
+                },
+            });
+        };
+        function loadPro(){
+            $.ajax({
+                url:"/query-province",
+                type:"get",
+                dataType:"json",
+                async:false,
+                success:function(data){
+                    var html = "";
+                    $.each(data, function (i, obj) {
+                        html += "<option value='"+obj.id+"'>";
+                        html += obj.province;
+                        html += "</option>";
+                    });
+                    $("#province").html(html);
+                },
+            });
+        };
+    </script>   
+    省份：<select id="province"></select> 
+    城镇：<select id="cities"></select>
+</body>
+</html>

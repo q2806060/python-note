@@ -1,0 +1,158 @@
+WEB Server 
+1.Flask - 轻量级WEB框架
+2.AJAX - 异步的技术体现
+3.Django - 重量级WEB框架
+
+端口占用
+1.通过 netstat -lptu 查看占用5000端口的pid是多少
+2.通过 kill -9 pid 杀掉进程
+执行两遍
+
+
+
+1.静态网页和动态网页
+    1.静态网页
+        无法与服务器做交互的网页
+    2.动态网页
+        允许与服务器做交互的网页
+
+2.WEB与服务器
+    1.WEB 
+        网页（HTML，CSS，JS）
+    2.服务器
+        Server：能够给用户提供服务的机器就是服务器
+        硬件与软件
+            1.硬件 
+                一台主机
+            2.软件
+                一个能够接收用户请求并给出相应的程序
+                常用服务器端软件：
+                    1.APACHE 阿帕奇
+                    2.TOMCAT 汤姆猫
+                    3.IIS 
+                    4.Nginx
+    3.作用
+        1.存储WEB上的信息
+        2.能够处理用户的请求（request）并给出响应（response）
+        3.执行处理程序
+        4.具备一定的安全功能
+
+3.框架
+    1.框架是为了解决开放性问题而存在的程序结构
+    2.Python Web 框架 
+        1.Flask
+        2.Webpy - 轻量级 
+        3.Tornado - 异步框架
+        4.Django
+    3.框架模式
+        1.框架模式 
+            指的是框架中各组件的交互模式
+        2.常用模式
+            1.MTV
+                M：Models，模型层，根据数据库进行建模
+                T：Templates，模板层，处理与用户显示相关的内容
+                V：Views，视图层，处理与用户打交道的内容（请求和响应）
+            2.MVC
+                M：Models，模型层，根据数据库进行建模
+                V：Views，视图层，处理与用户显示相关的内容
+                C：Controller，控制器，处理请求和响应
+
+4.Flask框架
+    1.简介
+        Flask基于python并且依赖于Jinja2模板引擎和Werkzeug WSGI服务的一个微型框架（Micro Framework）
+        WSGI：Web Server Gateway Interface（WEB服务网关接口）
+
+5.Flask - 路由（route）
+    1.路由 
+        路由就是为了匹配用户的请求地址以及对应的视图函数
+    2.路由的体现
+        在Flask中，路由是通过@app.route(路径)装饰器来表示的
+    3.带参的路由
+        路由中可以携带参数来表示要传递到视图中的数据
+        1.基本带参路由
+            @app.route("/show/<参数>")
+            def show(参数):
+                pass
+        2.带多个参数的路由
+            @app.route("/show/<参数1>/<参数2>....)
+            def show(参数1，参数2):
+                pass
+        3.指定参数类型的路由
+            @app.route("/show/<name>/<int:age>")
+            def show(name, age):
+                pass
+
+            int: 称为类型转换器
+            Flask中支持的类型转换器：
+                类型转换器                    作用
+                   缺省                字符串，不能有斜杠(/)
+                   int:                整数
+                   float:              浮点数
+                   path:               字符串，允许有斜杠(/)
+        4.多url的路由匹配
+            允许让多个url地址匹配到同一个视图处理函数
+            示例：
+                localhost:5000/
+                localhost:5000/index
+                localhost:5000/default
+            语法：
+                @app.route("/")
+                @app.route("/index")
+                @app.route("/dafault")
+                ....
+                def index():
+                    pass
+    4.url的反向解析
+        正向解析：程序自动解析，根据@app.route("")中的访问路径来匹配处理函数
+
+        地址 -> 视图函数（正向）
+        视图 -> 访问地址（反向）
+
+        方向解析：通过视图处理函数的名称以及参数生成对应的访问url
+
+        语法： x
+            from flask import url_for
+            url = url_for(funName,args)
+                1.参数 funName
+                    表示的是视图处理函数的名称
+                2.参数 args 
+                    视图处理函数中要的参数
+                3.返回值 url
+                    视图处理函数对应的访问地址
+
+6.模板 - Templates 
+    1.在Flask中能够呈现给用户去看的网页结构
+        在模板中，允许包含“变量”来表示动态的数据
+        在模板中，允许嵌套服务器端的代码
+
+        Flask是依赖于Jinja2的模板引擎
+    2.模板的设置
+        默认情况下，Flask会在项目工程目录中的一个templates文件夹中去搜索模板
+    3.模板的渲染
+        1.作用：
+            在视图中，将模板文件（xx.html）先渲染成字符串，再响应给客户端浏览器
+        2.函数：
+            from flask import render_template
+            render_template("模板名.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

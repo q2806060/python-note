@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("parent",{
+            template:'<div>hello vue</div>',
+            beforeCreate:function(){
+
+            },
+            created:function(){
+
+            },
+            beforeMount:function(){
+
+            },
+            mounted:function(){
+                
+            }
+        });
+
+        var exampleData = {
+            msg:"hello Vue",
+            name:"james",
+            list:[10,20,30,40,50],
+            myHide:true,
+        }
+        new Vue({
+            el:"#app",
+            data:exampleData,
+            methods:{
+                setHide:function(){
+                    this.myHide = false;
+                }
+            }
+        })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+1.图片管道
+    1.F12抓包，抓到QueryString中参数：
+        ch:beauty
+        sn:90  # 表示图片编号， 0(1-30张), 30(31-60张)
+        listtype:new
+        temp:1
+    2.Requst URL 
+        http://image.so.com/zj?ch=beauty&sn=90&listtype=new&temp=1
+    3.项目实现
+        1.item.py中爬取数据结构
+        2.重写so.py的start_requests()方法
+
+2.爬虫文件重写start_requests()方法
+    1.去掉：start_urls 变量
+    2.可手动指定解析函数，不一定是parse函数
+    3.图片管道的类
+        from scrapy.pipelines.images import ImagesPipeline
+    4.重写：get_media_requests()方法
+
+3.scrapy shell 使用
+    1.scrapy shell URL地址
+    2.request.headers:
+    3.request.meat 
+    4.request.text
+    5.request.body
+    6.request.xpath('')
+
+4.scrapy.Request()常用参数
+    1.URL
+    2.callback
+    3.headers
+    *4.meta：定义代理等相关信息
+    *5.dont_filter：是否忽略域组限制
+        默认为False，检查allowed_domains=['']
+
+5.下载器中间件(User-Agent)
+    1.以前settings.py  --   适用于少量User-Agent
+        1.USER_AGENT = ""
+        2.DEFAULT_REQUEST_HEADERS = {'User-Agent':""}
+    2.现在 middlewares.py设置中间件
+        1.项目目录中鲜见useragents.py，存放大量agent
+        2.middlewares.py中新建中间件类
+            class RandomUAMiddleware(object):
+                def process_request(self, request, spider):
+                    request.headers["User-Agent"] = random.choice(UA列表)
+        3.settings.py(开启中间件)
+            DOWNLOADER_MODDLEWARES = {.....}
+
+6.下载器中间件(Proxy)
+    1.proxies.py 
+        proxy_list = [
+            '代理1',
+            ...
+        ]
+    2.middlewares.py
+        class RandomProxyMiddleware(object):
+            def process_request(self, request, spider):
+                request.meta['proxy'] = random.choice(...)
+    3.settings.py
+
+7.机器视觉与tesseract(验证码)
+    1.OCR：光学字符识别，通过字符形状，转为电子文本，由谷歌维护
+    2.tesseract-ocr：OCR的一个底层识别库，不能导入
+        1.下载安装，并添加到环境变量
+    3.pytesseract：python模块，做的封装
+        1.安装
+            pip insstall pytesseract 
+        2.示例
+            import pytesseract
+            # Python图像处理标准库
+            from PIL import Image
+
+            # 创建图片对象
+            img = Image.open("test2.jpg")
+
+            # 图片转字符串
+            result = pytesseract.image_to_string(img)
+            print(result)
+
+8.在线打码平台
+    1.tesseract-ocr识别率很低，很多文字变形、干扰，导致无法识别
+    2.在线打码
+        1.云打码平台：http://www.yundama.com/
+        2.下载接口(开发文档)
+    3.示例
+        1.调整接口文档(YDM.py)
+        2.写主体程序
+    
+9.redis
+    为键值对存储
+    1.安装
+        1.window:直接下载安装
+        2.启动并连接
+            1.服务端启动 - redis-server
+            2.客户端连接 - redis-cli
+        3.安装图形界面管理工具(RedisDesktopManager)
+            左下角 - 新建连接 + Connect to Redis server
+        4.客户端命令
+            1.set 'a' 'b'
+                设置a变量的值为b
+            2.flushall 
+                刷新内存，删除所有变量
+
+
+10.分布式爬虫的原理
+    1.多台主机共享1个爬取队列
+    2.实现：重写scrapy调度器(scrapy_redis模块)
+    3.安装
+        pip install scrapy_redis
+    4.为什么使用redis
+        1.非关系型数据库，key-value形式存储，内存读写，快
+        2.使用redis集合，存储每个request指纹
+
+11.打开GitHub登录，搜索scrapy_redis，查看
+
+12.修改腾讯招聘案例
+    1.settings.py
+        # 使用scrapy_redis调度器
+        SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+        # 去重机制
+        DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+        # 不清除指纹
+        SCHEDULER_PESIST = True
+        # 设置管道
+        ITEM_PIPELINES ={
+            'scrapy_redis.pipelines.RedisPipeline':300,
+        }
+        REDIS_HOST = '127.0.0.1'
+        REDIS_PORT = 6379
+    2.运行爬虫，Redis中有3个数据
+        1.Tengxun:dupefilter : 请求指纹
+        2.Tengxun:item : 数据
+        3.Tengxun:requests:请求头信息

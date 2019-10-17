@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        btn1.onclick = function(){
+            var n = uname.value;
+            var p = upwd.value;
+            sessionStorage.setItem("loginName",n);
+            alert("登陆成功，3秒后跳转首页...");
+            setTimeout(function(){
+                location.href = "_index.html";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

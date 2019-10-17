@@ -1,0 +1,40 @@
+1.字符集
+    1位字符上的备选字符的集合
+    只要以为字符上有多种可能的备选字是
+    [备选字符列表]
+        1.不能加逗号分隔
+        2.每个[]，只能匹配以为字符
+    简写：如果字符集中部分字符的unicode号是连续的，可以用 - 省略
+    常用：[0-9] 一位数字
+          [a-z]
+          [A-Z]
+          [a-zA-Z]
+          [0-9A-Za-z]
+          [\u4e00-\u9fa5]
+
+    除了：[^74]      
+
+2.内置对象和包装对象
+    String Number Boolean -- 包装类型
+    Array RegExp Math Date
+    Error
+    Function Object
+    Global:是全局作用域对象：在浏览器中被window代替
+
+    对包装类型的理解：
+        提供一个原始类型的值，提供操作原始类型值得API
+        原始类型的值本身不具有任何功能
+        只要视图对原始类型的值调用函数时，都会自动创建包装类型对象
+        自动使用
+        1.判断原始类型的类型名
+        2.自欧东创建对应的包装类型的对象，其中保存要操作的原始类型值
+        3.调用包装类型对象，提起定义好的API
+        4.API调用后，包装类型对象自动释放
+    
+    var str = new String('Hello');
+    str.len = 10;
+    console.log(str.len); -- 10
+
+    var str = 'Hello';
+    str.len = 10;
+    console.log(str.len); -- undefined

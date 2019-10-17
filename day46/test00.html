@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #nav{
+            width: 990px;
+            margin: 0 auto;
+            height: 50px;
+            background: orange;
+
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+        li{
+            float: left;
+            width: 240px;
+            height: 50px;
+            margin-right: 10px;
+            background: pink;
+            text-align: center;
+            line-height: 50px;
+        }
+        .no-margin{
+            margin: 0;
+        }
+        #main{
+            width: 990px;
+            margin: 20px auto;
+            background: cyan;
+            /* 解决子元素浮动，父元素高度为0的问题 */
+            overflow: hidden;
+        }
+        .left{
+            width: 200px;
+            height: 500px;
+            background: rgba(255,0,0,.50);
+            float: left;
+        }
+        .right{
+            width: 700px;
+            height: 500px;
+            background: rgba(0,255,0,.5);
+            float: right;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>新闻</li>
+            <li>热点</li>
+            <li class="no-margin">音乐</li>
+
+        </ul>
+    </div>
+    <div id="main">
+        <div class="left"></div>
+        <div class="right"></div>
+
+
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

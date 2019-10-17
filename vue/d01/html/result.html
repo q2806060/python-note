@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>总共：<span id="spanTotal"></span></p>
+    <p>正确：<span id="spanCorrect"></span></p>
+    <p>错误：<span id="spanError"></span></p>
+    <hr>
+    <a href="save.html">录入新单词</a>
+    <a href="test.html">重新测试</a>
+    <script>
+        spanTotal.value = sessionStorage.getItem('total');
+        spanCorrect.value = sessionStorage.getItem('correct');
+        spanError.value = sessionStorage.getItem("error");
+    </script>
+</body>
+</html>

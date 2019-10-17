@@ -1,0 +1,145 @@
+lambda 表达式：
+    作用：
+        创建一个匿名的函数对象
+        同def类似，但不提供函数名
+    语法：
+        lambda[函数形参列表]:表达式
+        注：[] 内部的形参列表可以省略
+    示例：
+        def myadd(x, y):
+            return x + y
+        
+
+        函数名 = lambda 变量名:表达式
+        myadd = lambda x, y : x + y
+    说明：
+        lambda 表达式创建的函数只能包含一条表达式
+        lambda 比函数简单，且可以随时创建和销毁，有利于减少程序的耦合度
+
+
+eval 函数 exec 函数：
+    eval 函数：
+        作用：
+            把一个字符串当成一个表达式来执行，返回表达式执行后的结果
+        格式：
+            eval(source, globals=None, locals=None)
+        参数：
+            source是要解释执行的字符串
+            globals是在source运行时的执行的全局作用域的变量的字典
+            locals时source运行时执行的局部作用域的变量的字典
+        示例：
+            s = '1+2+3'
+            print(eval(s))
+
+            v = eval('print("hello world!")') # 打印hello world！，并返回None
+            print(v)
+
+    exec 函数：
+        作用：
+            把一个字符串当成程序来执行
+        格式：
+            exec(source, globals=None, locals= None)
+        示例：
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

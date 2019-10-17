@@ -1,0 +1,116 @@
+1.requests 请求模块
+    1.常用方法-post
+        1.requests.get(url, headers=headers)
+            向网站发起请求并获取相应对象res
+        2.响应对象res的属性
+            1.res.text  : 字符串
+            2.res.content : bytes类型
+            3.res.status_code : HTTP响应码
+            4.res.url : 返回实际数据的URL
+            5.res.encoding:指定字符编码utf-8
+                res.encoding = "utf-8"
+        3.get()中的参数   
+            1.查询参数(params)
+                res = requests.get(url, params=params, headers=headers)
+                参数为字典格式，自动完成url参数拼接
+            2.代理参数(proxies)
+                1.获取代理IP的网站
+                    快代理
+                    西刺代理
+                    全网代理
+                2.高匿代理和透明代理
+                    高匿：Web服务器不能看到用户自身真实IP
+                    透明：Web服务器同时能看到代理IP和自身真实IP
+                3.普通代理格式
+                    proxies = {"协议" : "协议://IP:端口号"}
+                    测试网站：http://httpbin.org/get
+                            http://www.whatismyip.com/
+                4.私密代理参数
+                    1.格式：
+                        proxies = {"协议":"协议://用户名:密码@IP:端口"}
+            3.Web客户端验证(auth)
+                1.格式：元组 auth = ("用户名","密码")
+                2.达内下载笔记网站爬取
+                    1.网址：http://code.tarena.com.cn/
+                    2.auth = ("tarenacode", "code_2013")
+                    3.regex：<a href=.*?>(.*?)/</a>
+            4.SSL证书认证参数(verify)
+                1.verify = True : 默认，进行SSL证书认证
+                2.verify = False : 不去验证证书
+                3.resp = requests.get(verify=...)
+    2. post
+        1.requests.post(url, data=data, headers=...)
+        2.data : 字典，不用编码，不用转码encode()
+
+2.有道post抓包
+    1.多抓几次包，查看有无加密
+    2.js加密，找到加密的js文件进行分析
+    3.找到加密算法
+    4.用python 实现同等加密
+    5.注意
+        1.加盐通常检查 salt、sign
+        2.headers尽量写全，很多网站不仅仅检查User-Agent，还可能检查其他字段
+
+3.xpath工具(解析)
+    1.在XML文档中查找信息的语言，同样适用于HTML文档的检索
+    2.xpath辅助工具
+        1.Chrome插件 ： Xpath Helper 
+            打开/关闭：Ctrl + Shift + x 
+        2.Firefox插件： Xpath Checker
+        3.Xpath编辑工具：XML Quire
+    3.xpath匹配演示
+        1.查找所有的book节点
+            //book
+        2.查找所有book下lang属性为"en"的title子节点
+            //book/title[@lang="en"]
+        3.查找所有bookstore下第2个book子节点下的title节点
+            //bookstore/book[2]/title
+        4.查找所有book下title子节点中lang属性的值
+            //book/title/@lang
+    4.节点选取
+        1.// : 从所有子节点和后代节点中查找
+        2.@ : 选取某个节点的属性值
+            选取一类节点 : //title[@lang="en"]
+            获取节点属性 : //div/a/@href
+        3.匹配多路径 : 
+            //tr[@class="even"] | //tr[@class="odd"]
+        4.contains()函数
+            1.匹配一个属性值中包含某些字符串的节点
+            2.查找所有lang属性值中半寒"e"的title节点 
+                //title[contains(@lang,"e")]
+        5.text() / 对象.text : 获取文本内容
+            //title[contains(@lang,"en")]/text()  /  对象.text
+    
+4.lxml解析库及xpath使用
+    1.安装 ：install lxml 
+    2.使用流程
+        1.导模块  : from lxml import etree
+        2.创建解析对象  : parseHtml = etree.HTML(html)
+        3.调用xpath  : rList = parseHtml.xpath("表达式")
+            ## 只要调用了xpath，结果一定为列表 ##
+
+5.抓取百度贴吧中所有帖子图片
+    1.目标 : 指定贴吧中所有图片
+    2.思路
+        1.获取贴吧主页URL,下一页,找url规律
+        2.获取1页中所有帖子的URL
+            [帖子链接1,，帖子链接2，...]
+        3.对每个帖子链接发请求，获取1个帖子中所有图片URL
+        4.对每个图片链接发送请求，以wb方式写入本地
+    3.思路梳理
+        帖子链接列表 = parseHtml.xpath("...")
+        for 1个帖子链接 in 帖子链接列表：
+            图片链接列表 = 对1个帖子发送请求后xpath出来的
+            for 1个图片链接 in 图片链接列表：
+                html = 对1张图片发送请求响应
+                存储...
+
+6.xpath高级用法(糗事百科)
+    1.网址 https://www.qiushibaike.com/text/
+    2.xpath表达式
+        1.基准xpath表达式:匹配所有段子的节点对象
+        2.匹配内容  //div[contains(@id,"qiushi_tag_")]
+            用户昵称：./div/a/h2
+            段子内容：.//div[@class="content"]/span
+            好笑数量：.//i[@class="number"]/text()[0]
+            评论数量: .//i[@class="number"]/text()[1]

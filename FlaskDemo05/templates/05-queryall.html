@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <a href="/04-register">user register</a>
+    </p>
+    <table border="1" width="400">
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>邮箱</td>
+            <td>操作</td>
+        </tr>
+        {% for u in params.queryall_view %}
+            <tr>
+                <td>{{u.username}}</td>
+                <td>{{u.age}}</td>
+                <td>{{u.email}}</td>
+                <td><a href="/13-delete?id={{u.id}}">删除</a><a href="">修改</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

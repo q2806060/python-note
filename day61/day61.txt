@@ -1,0 +1,101 @@
+import datetime
+
+time_str_now = datetime.datetime.now().strftime(%Y%m%d%H%M%S%f)
+得到当前时间字符串 --->   20190125114826743455
+
+数据库工具：
+    1.Navicat for MySQL
+        数据库的第三方可视化工具
+    2.Power Designer
+        数据库建模工具
+
+
+
+
+1.文件上传
+    1.准备工作
+        文件一定要放在表单中上传
+        1.表单的提交方式必须为post
+        2.表单的enctype属性值为multipart/form-data
+    2.服务器端
+        文件上传首先会上传到"缓存区"(服务器), 我们需要将文件从缓存区中取出来保存到指定的位置处
+        1.通过 request.files 获取上传的文件
+            f = request.files["文件框的name值"]
+        2.通过 f.save(保存路径) 将文件保存到指定目录处
+            通过f.filename 得到文件名
+            f.save('static/'+f.filename)
+            注：保存的目录必须要已经存在
+
+2.模型 - Models
+    1.模型 - 根据数据库中表结构而创建出来的class
+        数据库中每一张表对应到编程语言中就是一个class
+        表中的每一个列，对应到编程语言中就是class的一个属性
+    2.模型的框架 - ORM框架
+        1.ORM - Object Relational Mapping
+            简称：ORM , O/RM , O/R Mapping
+            中文名：对象关系映射
+        2.ORM的三大特征
+            1.数据表(Table)到编程类(Class)的映射
+            2.数据类型的映射
+                数据库中表的字段以及数据类型对应到编程语言中就是类的属性及其数据类型
+            3.关系映射
+                将数据库中表与表的关系对应到编程语言中类与类的关系
+                1.一对一关系
+                    A表中的一条数据只能与B表中的一条数据关联
+                    B表中的一条数据只能与A表中的一条数据关联
+                2.一对多关系
+                    A表中的一条数据可以与B表中的多条数据关联
+                    B表中的一条数据只能与A表中的一条数据关联
+                3.多对多关系
+                    A表中的一条数据可以与B表中的多条数据关联
+                    B表中的一条数据可以与A表中的多条数据关联
+        3.ORM的优点
+            1.封装了数据库中所有的操作，提升效率
+            2.可以省略庞大的数据访问层，即便不用SQL编码也能完成对数据库的CRUD操作
+    3.Flask中的ORM框架
+        1.SQLAlchemy 框架
+            1.安装 sqlalchemy
+                pip
+            2.Flask中需要使用 flask-sqlalchemy 支持包
+                pip
+        2.Flask中配置数据库
+            from flask import Flask 
+            from flask_sqlalchenmy import SQLAlchemy
+            import pymysql
+
+            #pymysql.install_as_MySQLdb
+
+            app = Flask(__name__)
+
+            #为app指定数据库的连接信息
+
+            app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://用户名:密码@服务器地址:端口/数据库名"  ---> app.config 为字典
+            #取消SQLAlchemy的信号追踪
+            app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+
+            URI : Uniform Resource Identifier
+            URL : Uniform Resource Locator
+
+            #创建SQLAlchemy的实例-db，以后在程序中通过db来操作数据库
+
+            db = SQLAlchemy(app)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

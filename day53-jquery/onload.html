@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1{
+            width: 200px;
+            height: 200px;
+            background: red;
+
+        }
+    
+    </style>
+    <script>
+        window.onload = function (){
+            var h1 = document.getElementsByTagName("h1")[0];
+            console.log(h1);
+            h1.onmouseover = function () {
+                console.log("鼠标移入");
+            }
+            h1.onmouseout = function () {
+                console.log("鼠标移出");
+            }
+            h1.onmousemove = function () {
+                console.log("鼠标移动");
+            }
+            window.onkeydown = function () {
+                console.log("onkeydown");
+            }
+            onkeypress = function (){
+                console.log("onkeypress");
+            }
+            onkeyup = function () {
+                console.log("onkeyup");
+            }
+            var input = document.getElementsByTagName("input")[0];
+            input.onfocus = function () {
+                console.log("getfocus");
+
+            }
+            input.onblur = function () {
+                console.log("onblur",input.value);
+            }
+            input.oninput = function () {
+                console.log(this.value);
+            }
+            input.onchange = function () {
+                console.log(this.value);
+            }
+            var form = document.getElementsByTagName("form")[0];
+            form.onsubmit = function () {
+                if(input.value.length == 0){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <form action="" method="">
+        <input type="text" name="uname">
+        <input type="submit">
+
+
+    </form>
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

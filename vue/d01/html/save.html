@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    英文 <input type="text" id="en"><hr>
+    中文 <input type="text" id="ch"><hr>
+    <input type="button" value="保存生词" id="btnSave">
+    <hr>
+    <a href="test.html">开始测试</a>
+    <script>
+        btnSave.onclick = function(){
+            var e = en.value;
+            var c = ch.value;
+            localStorage.setItem(e, c);
+            alert("保存完成");
+            en.value = "";
+            ch.value = "";
+        }
+    </script>
+</body>
+</html>

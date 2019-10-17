@@ -1,0 +1,256 @@
+day18回顾
+类
+  类变量(类属性)
+    class A:
+        v = 100
+  类方法
+    class A:
+        @classmethod
+        def mymethod(cls, ....):  # 类方法
+            ...
+
+静态方法
+  @staticmethod
+
+
+
+类的预置属性:
+  __doc__属性, 用于绑定文档字符串
+  __base__属性, 用于绑定此类的基类
+
+__slots__列表
+  限定一个类创建的对象(实例)只能有固定的属性,
+    类内有__slots__  列表,此类创建的对象没有 __dict__ 属性
+
+
+继承
+  可以增加,修改原有类的功能
+     增加方法
+     修改:覆盖原有方法
+单继承
+  class 类名(一个基类):
+      pass
+
+任何类都直接或间接的继承自object
+
+覆盖 override
+
+
+显式调用父类的方法:
+   基类名.方法名(实例, 方法传参)
+   super(类名, 实例).方法名(方法传参)
+   super().方法名(方法传参)
+
+issubclass(cls, 类或元组)  判断继承关系
+
+
+
+
+封装 enclosure
+  封装是指隐藏类的实现细节,让使用者不关心这些细节
+  封装的目的是让使用者能过尽可能少的方法(或属性) 操作对象(实例)
+  python的封装是(模拟的封装)
+
+私有属性和方法:
+  python类中以双下划线(__)开头,不以双下划线结尾的标识符为私有
+  成员,私有成员只能使用方法来进行访问和修改
+
+示例见:
+  enclosure.py
+
+
+
+
+多态 ploymorphic
+  什么是多态:
+    字面意思 "多种状态"
+    多态是指在有继承/派生关系的类中,调用基类对象的方法,实际能
+    调用到子类的覆盖方法的现象叫多态
+  状态:
+    静态(编译时状态)
+    动态(运行时状态)
+  说明:
+    Python的全部对象只有运行时状态(动态), 没以C++语言里的
+      编译时状态(静态)
+
+  示例见:
+    poly.py
+
+
+
+面向对象的编程语言的特征
+  1. 继承
+  2. 封装
+  3. 多态
+
+
+
+多继承  multiple inheritance
+  多继承是指一个子类继承自两个或两个以上的基类(父类)
+
+语法:
+  class 子类名(基类名1, 基类名2, ....):
+     ...
+说明:
+  1. 一个子类同时继承自多个父类,父类中的方法可以同时被继承下来
+  2. 如果两个父类中有同名的方法,而在子类中又没有覆盖此方法,调
+  用结果难以确定
+示例见:
+  multiple_inherit.py
+
+
+
+多继承的问题(缺陷)
+  标识符冲突的问题
+    要谨慎使用多继承
+
+示例见:
+  multiple_inherit2.py
+
+
+多继承的MRO(Method Resolution Order)问题
+  类的__mro__属性
+    用来记录类的方法查找顺序
+
+多继承的钻石继承(棱形继承)问题
+         A
+        / \
+       B   C
+        \ /
+         D
+示例见:
+   diamond_inherit.py
+
+对象转字符串函数
+  repr(obj)  返回一个附合python语法规则的且能代表此对象的
+        表达式字符串,通常:
+          eval(repr(obj)) == obj
+  str(obj)  通过给定的对象返回一个字符串(这个字符串通常是给
+        人阅读的)
+  注:
+    repr(obj) 函数 和 str(obj) 函数都是返回一个对象的字
+      符串
+
+
+
+函数重写
+  在自定义的类内添加相应的方法,让自定义的类创建的实例像内建
+  对象一样进行内建函数操作
+
+对象转字符串函数的重写方法
+  repr() 函数的重写方法:
+    def __repr__(self):
+        return 字符串
+  str() 函数的重写方法:
+    def __str__(self):
+        return 字符串
+  说明:
+    __repr__ 和 __str__方法必须返回字符串
+
+str(obj) 函数调用方法说明
+    1. str(obj) 函数先查找obj.__str__() 方法,调用此方法
+        返回字符串
+    2. 如果obj对象没有obj.__str__() 方法,则调用 
+       obj.__repr__() 返回字符串
+    3. 如果obj.__repr__方法不存在,则调用object类的__repr__
+    方法显示<XXXX.myclass object at 0xXXXXXXX>格式的字符串
+
+示例见:
+  mynumber.py
+
+
+内建函数重写
+   方法名              说明
+  __abs__          abs(obj) 函数调用
+  __len__          len(obj) 函数调用
+  __reversed__     reversed(obj) 函数调用
+  __round__        round(obj) 函数调用
+
+示例见:
+  len_overwrite.py
+  abs_overwrite.py
+
+
+数值转换函数重写
+  方法名        说明
+ __complex__   complex(obj)  函数调用
+ __int__       int(obj)    函数调用
+ __float__     float(obj)  函数调用
+ __bool__      bool(obj)   函数调用
+
+示例见:
+  mynumber3.py
+
+complex函数说明:
+  1. complex(obj) 方法优先调用obj.__complex__() 方法返
+     回结果
+  2. 如果没有__complex__方法,则会用obj.__float__() 方法
+  的返回值作为实部,用0j作为虚部返回
+  3. 如果再没有__float__方法,则会触发 TypeErorr类型的错误
+
+
+布尔测试函数 bool(x) 重写方法
+  格式:
+    def __bool_(self):
+        ....
+  作用:
+    用于bool(obj) 函数取值
+    用于 if 语句的真值表达式中
+    用于while语句的真值表达式中
+  说明:
+    1. 当自定义类内有__bool__(self) 方法时,以此方法的返回值
+      作为bool(obj) 的返回值
+    2. 当不存在__bool__方法时,bool(obj) 返回__len__方法的
+      返回值是否为零来测试布尔值
+    3. 当不存在__len__方法时,则直接返回True
+
+
+函数重定的意义
+  让自定义的对象能够像内建对象一样进行内建函数统一操作
+  示例见:
+    mylist.py
+
+对象的属性管理函数
+  getattr(obj, name[,default])
+  hasattr(obj, name)
+  setattr(obj, name, value)
+  delattr(obj, name)
+  文档参见:
+    python_base_docs_html/内建函数(builtins).html
+
+迭代器(高级)
+  什么迭代器
+    可以通过next函数取值的对象,就是迭代器
+  迭代器协议
+    迭代器协议是指能够使用next函数获取下一项数据,在没有下一项
+    数据时触发一个StopIteration异常来终止迭代的约定
+  迭代器协议是实现方法
+    def __next__(self):
+        # 此处实现迭代器协议
+
+  什么是可迭代对象
+    是指能用iter(obj) 函数返回迭代器的对象(实例)
+    可迭代对象内部需要定义 def __iter__(self) 方法来返回
+      迭代器对象(实例)
+  示例见:
+    mylist2.py
+  
+练习:
+  1. 修改学生信息管理程序,将Student类中的属性:
+       name(姓名), age(年龄) , score(成绩) 进行封装
+    不让除Student类方法之外的函数或方法来访问
+    (把name,age,score变为隐藏属性)
+  2. 实现一个与系统内建的range类相同功能的类
+      class MyRange:
+          def __init__(self, ...):
+              ...
+          def __iter__(self):
+              ...
+    测试调用如下:
+      L = list(MyRange(5))
+      print(L)   # [0, 1, 2, 3, 4]
+      print(sum(MyRange(1, 101)))  # 5050
+      for x in MyRange(1, 10, 3):
+          print(x)  # 1 4 7
+
+

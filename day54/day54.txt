@@ -1,0 +1,183 @@
+1.jquery 选择器
+    1.基础选择器
+        id class 标签 群组
+        例：
+            $("#id")
+            $(".className")
+            $("tagName")
+            $("selector1,selector2")
+    2.层级选择器
+        1.后代选择器
+            $("selector1 selector2")
+            匹配直接和间接元素
+        2.子代选择器
+            $("selector1>selector2")
+            匹配直接子元素
+        3.相邻兄弟选择器
+            $("selector1+selector2")
+            匹配下一个兄弟元素，如果满足selector2则返回，否则匹配失败
+        4.通用兄弟选择器
+            $("selector1~selector2")
+            匹配selector1后面都有满足selector2的兄弟元素
+    3.过滤选择器
+        需要和其他选择器结合使用
+        1. :first
+            匹配文档中第一个指定元素
+            例：$("p:first") 获取文档中第一个p元素
+        2. :last
+            匹配文档中最后一个指定元素
+        3. :odd
+            匹配奇数下标对应的元素
+        4. :even
+            匹配偶数下标对应的元素
+        5. :eq(index)
+            匹配下标为index的元素
+        6. :lt(index)
+            匹配下标小于index的元素
+        7. :gt(index)
+            匹配下标大于index的元素
+        8. :not("选择器")
+            匹配除指定选择器对应的元素外，其他所有元素
+            例：   
+                $("p:not(.ci)")匹配类名不是c1的p元素
+                $(":not(p)")在文档中匹配除p元素外其余所有的元素
+    4.属性选择器[]
+        1.[attrName]
+            匹配包含指定属性的元素
+        2.[attrName=value]
+            匹配指定属性名等于属性值的元素
+        3.[attrName^=value]
+            匹配属性值以指定字符开头的元素
+        4.[attrName$=value]
+            匹配属性值以指定字符结尾的元素
+        5.[attrName*=value]
+            匹配属性值包含指定字符的元素
+        6.[attrName!=value]
+            匹配属性名不等于属性值的元素   
+    5.子元素过滤选择器
+        1. :first-child
+            匹配第一个子元素
+        2. :last-child
+            匹配最后一个子元素
+        3. :nth-child(n)
+            匹配第n个子元素
+
+2.操作dom
+    1.操作内容/值
+        1.html()
+        2.text()
+        3.val()
+    2.属性操作
+        1.prop("attrName","value")
+        2.attr("attrName","value")
+        注意：
+            两个方法几乎一致，都是属性操作，但是在访问按钮的checked时有区别
+            prop() 返回true
+            attr() 返回checked
+        3.removeAttr('attrName')
+            移除指定属性
+    3.样式操作
+        1.attr()/prop()
+            为元素添加id/class属性，对应id/class选择器的样式
+        2.操作类选择器
+            1.addClass("className")
+                为元素的class属性添加属性值，可以反复调用，添加多个属性值
+            2.removeClass("className")
+                移除指定属性值
+            3.toggleClass("className")
+                结合用户行为实现元素类选择器样式的切换
+                元素存在指定的class属性值，则删除，不存在，则添加
+        3.操作行内样式
+            1.css("cssAttr")
+                读取CSS属性值
+            2.css("sttrName","value")
+                为元素添加样式，指定属性名和属性值
+            3.css(JSON对象)
+                JSON:数据传输格式
+                语法：
+                    1.JSON对象使用{}表示
+                    2.{}中书写CSS样式声明，需要注意：
+                        属性名与属性值使用""表示
+                        属性名与属性值之间使用:隔开
+                        一条样式声明结束可以使用逗号表示
+                        $("p").css({
+                            "width":"200px",
+                            "height":"200px",
+                            "background":"red",
+                            "color":"green",
+                            "text-align":"center",
+                            "line-height":"200px",
+                            "margin":"16px auto",
+                        })
+    4.通过层次关系获取节点
+        1.parent()
+            获取唯一的父节点
+        2.parents('selector')
+            获取满足指定选择器的祖先元素，参数可以省略，一旦省略，获取全部的祖先元素
+        3.children()/children('selector')
+            获取所有的直接子元素
+            获取所有满足选择器的直接子元素
+        4.find('selector')
+            获取满足选择器的所有后代元素（包含直接与间接子元素），如果省略，查找失败
+        5.next()/next('selector')
+            获取下一个兄弟元素
+            获取下一个兄弟元素，必须满足指定选择器；不满足则查找失败
+        6.prev()/prev('selector')
+            获取上一个兄弟元素
+            获取上一个兄弟元素，必须满足指定选择器；不满足则查找失败
+        7.siblings()/siblings('selector')
+            获取所有兄弟元素
+            获取所有满足选择器的兄弟元素
+    5.节点创建添加和删除
+        1.创建节点
+            语法：  
+                var $div = $("<div>动态创建</div>");
+            注意：
+                1.$()中书写标签语法
+                2.返回创建好的jquery对象
+        2.添加节点
+            添加操作由父元素执行
+            1.作为子元素添加
+                1.语法：$obj.append($new)
+                  作用：将$new添加至$obj的末尾
+                2.语法：$obj.prepend($new)
+                  作用：将$new作为第一个子元素添加到$obj中
+            2.作为兄弟元素添加
+                1.语法：$obj.after($new)
+                  作用：将$new作为$obj的下一个兄弟元素添加
+                2.语法：$obj.before($new)
+                  作用：将$new作为$obj的上一个兄弟元素添加
+        3.删除节点
+            $obj.remove()
+            删除$obj
+
+3.事件处理
+    1.等待文档加载完毕
+        1.$(document).ready(function(){
+                //文档加载完毕后执行
+            })
+        2.$().ready(function(){
+                //文档加载完毕后执行
+            })
+        3.$(function(){
+                //文档加载完毕后执行
+            })
+        注意：
+            1.原生onload事件不能重复书写，会被覆盖，只执行最后一次onload事件中的代码
+            2.$().read()方法可以重复书写，不会造成覆盖，相关函数会从上到下依次执行
+    2.事件的绑定方式
+        1.$obj.on("click",function(){
+                //事件处理函数
+            })
+        2.$obj.bind("click",function(){})
+        3.$obj.click(function(){})
+    3.this对象与时间对象
+        1.this对象可以正常使用，注意直接使用this是原生对象，无法调用jquery方法，需要转换对象类型  $(this)
+        2.事件对象属性访问及获取方式同原生JS一致
+
+
+
+
+
+
+

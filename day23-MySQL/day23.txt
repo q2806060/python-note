@@ -1,0 +1,167 @@
+MySQL 数据类型
+    1.数值类型
+    2.字符型
+    3.枚举与集合
+    4.日期与时间
+        1.date:表示日期 'YYYY-MM-DD'
+        2.time:表示时间 'hh:mm:ss'
+        3.datetime:表示日期时间 'YYYY-MM-DD hh:mm:ss'
+        4.timestamp:表示日期时间 'YYYY-MM-DD hh:mm:ss'
+        注意：
+            日期时间的表示方法：
+                使用字符串表示，格式可采用 '2011/11/11 11:11:11'
+                                         '2011-11-11 11:11:11'
+                                         '20111111111111'
+            日期时间函数：
+                1.now() 返回当前系统时间
+                2.curdate() 返回当前日期
+                3.curtime() 返回当前时间 
+                4.year(date) 根据给定的日期获取年份信息
+                5.date(date) 获取日期信息
+                6.time(date) 获取时间信息
+            日期时间的运算：
+                1.语法格式：
+                    select * from info where 字段名 运算符（时间-interval 时间间隔 单位）
+                    时间间隔 单位：
+                        1 day | 1 month | 1 year | 1 hour | 1 minute
+                    例： select * from info where czTime>(now()-interval 1 day);
+
+修改表字段（修改结构）
+    1.alter table 表名 执行操作；
+    2.添加字段 （add）
+        alter table 表名 add 字段名 数据类型；
+        alter table 表名 add 字段名 数据类型 first；
+        alter table 表名 add 字段名 数据类型 after 字段名；
+    3.移除字段 （drop）
+        alter table 表名 drop 字段名；
+    4.修改数据类型 （modify）
+        alter table 表名 modify 字段名 新数据类型；
+    5.表的重命名
+        alter table 表名 rename 新表名；
+    6.表字段重命名
+        alter table 表名 change 原名 新字段名 数据类型；
+
+修改表记录（修改表中的数据）
+    1.删除表记录
+        delete from 表名 where 条件；
+        注： where 条件可以省略，delete from 表名； 表示清空表记录
+    2.更新操作
+        uodate 表名 set 字段名=值，字段名=值，... where 条件；
+        注：更新操作中，where条件必须写
+
+运算符 
+    1.比较运算符 
+        1.数值 > >= < <= = !=
+        2.字符 = !=
+        3.逻辑 and or 
+    2.逻辑运算符
+        1.and 与
+            连接两个条件，要求同时成立
+        2.or 或
+            连接条件，表示任意一个条件成立都可以
+    3.范围内查找
+        1.where 字段名 between 值1 and 值2
+        2.where 字段名 in/not in （值1，值2）
+    4.匹配空与非空
+        注：null 是特殊的值类型，表示空
+            使用比较运算符 = 查询时，返回空的数据，查询无果
+            区分：
+                1.null:关键字，值类型
+                2.'null':字符串，普通字符串
+        1.匹配 null
+            where 字段 is null
+        2.匹配非空 
+            where 字段 is not null  
+        3.空字符串
+            空字符串，指没有任何有效显示字符的字符串
+    5.模糊查找
+        1.语法： 
+            where 字段名 like 表达式
+        2.表达式
+            1._:表示匹配单个字符
+            2.%:表示匹配零个或多个字符
+        注：null 空类型不会被匹配出来，只能通过 is null / is not null 匹配 
+            空字符串可以通过'%' 模糊匹配
+    6.SQL查询操作
+        1.总结（书写顺序，从上至下； 执行顺序，看序号）
+            select 聚合函数 from 表名 1.where 条件 
+                                     2.group by...（将查询结果进行分组）
+                                     3.having ... 
+                                     4.order by...(排序) 
+                                     5.limit（分页）
+        2.order by...
+            对查询结果进行排序
+            语法：  
+                where 条件 order by 字段名 ASC/DESC(升序/降序)
+                ASC：升序排列（默认的排序方式）
+                DESC：降序排序
+        3.limit
+            分页查询：限制查询结果的显示数量和显示位置
+            语法： 
+                1.limit 永远放在SQL语句的最后书写
+                2.limit n;      显示n条数据
+                3.limit m,n;      表示从第m+1条数据开始显示，显示n条
+        4.聚合函数 
+            1.对指定字段中的数据进行二次处理
+              多个聚合函数之间使用逗号隔开
+            2.分类：
+                avg(字段):求平均值
+                max(字段):求最大值
+                min(字段):求最小值
+                sum(字段):求和
+                count(字段):统计当前字段中记录的条数
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.3.js"></script>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <p id="d1">段落</p>
+    <input type="text" name="uname">
+    <button onclick="show()">点击</button>
+
+
+
+
+    <script>
+        var h1s = $("h1");
+        console.log(h1s);
+        var p = $("#d1");
+        console.log(p);
+        $("h1").html("<a href='#'>动态设置</a>");
+        $("p").text("<a href='#'>动态设置</a>");
+
+        function show(){
+            var text = $("input").val();
+            console.log(text);
+        }
+        var h1 = document.getElementsByTagName("h1")[0];
+        console.log(h1);
+        console.log($(h1));
+        console.log($("h1")[0]);
+        console.log($("h1").get(0));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

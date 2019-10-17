@@ -1,0 +1,300 @@
+{'price': '£¤3999.00', 'name': 'ÈÙÒ«MagicBook 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨AMDÈñÁú5 8G 512G FHD IPS Õý°æOffice£©±ùºÓÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '21Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3699.00', 'name': 'ÈÙÒ«MagicBook 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨AMDÈñÁú5 8G 256G FHD IPS Õý°æOffice£©±ùºÓÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '21Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3899.00', 'name': 'ÁªÏë(Lenovo)330C Ó¢ÌØ¶û¿áî£i5 15.6Ó¢´çÉÌÎñÓ°Òô±Ê¼Ç±¾µçÄÔ(i5-8250U 4G 1T+128G SSD ¶ÀÏÔMX110)ºÚ', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6.2Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5899.00', 'name': 'ÁªÏëThinkPad Òí480 Ó¢ÌØ¶û¿áî£i5 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 128GSSD+500G 2G¶ÀÏÔ£©±ùÔ­Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4799.00', 'name': '£¤4487.00', 'commit': '´÷¶ûÁéÔ½14 È¼ 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256GSSD FHD ±³¹â¼üÅÌ)±ùºÓÒø', 'shop': '¶þÊÖÓÐÊÛ'}
+{'price': '£¤6999.00', 'name': 'ÁªÏë(Lenovo)Õü¾ÈÕßY7000µÚ°Ë´úÓ¢ÌØ¶û¿áî£i7 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7 8G 512G GTX1050Ti 72%NTSC ºÚ)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '24Íò+ÌõÆÀ¼Û'}
+{'price': '£¤8099.00', 'name': 'ÁªÏë(Lenovo)Õü¾ÈÕßY7000PµÚ°Ë´úÓ¢ÌØ¶û¿áî£i7 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 512G GTX1060 144HzºÚ)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '24Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3899.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ³±7000 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(AMDÈñÁú5 8G 512G PCIe FHD IPS)¼«¹âÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6488.00', 'name': 'Apple MacBook Air 13.3Ó¢´ç±Ê¼Ç±¾µçÄÔ ÒøÉ«(2017¿îCore i5 ´¦ÀíÆ÷/8GBÄÚ´æ/128GBÉÁ´æ MQD32CH/A)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '14Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5999.00', 'name': '´÷¶ûDELLÓÎÏ»G315.6Ó¢´çÓ¢ÌØ¶û¿áî£i5ÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8300H 8G 128G 1T GTX1050Ti 4G¶ÀÏÔ IPS)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '15Íò+ÌõÆÀ¼Û'}
+{'price': '£¤7099.00', 'name': 'ÁªÏë(Lenovo)Õü¾ÈÕßY7000PÓ¢ÌØ¶û¿áî£i5 15.6Ó¢´ç¸ßÉ«ÓòÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5 8G 512G SSD GTX1060 144Hz)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '24Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5699.00', 'name': '»ªÎª(HUAWEI)MateBook 13 È«ÃæÆÁÇá±¡ÐÔÄÜ±Ê¼Ç±¾ °Ë´ú¿áî£(i5-8265U 8G 512G MX150 office 2K Ò»Åö´«)Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5989.00', 'name': '»úÐµ¸ïÃü(MECHREVO) Z2 Air 72% 15.6Ó¢´çÕ­±ß¿òÓÎÏ·±Ê¼Ç±¾i7-8750H 8G 512GSSD GTX1050Ti', 'commit': '3.7Íò+ÌõÆÀ¼Û', 'shop': '»úÐµ¸ïÃü¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤6099.00', 'name': 'ÁªÏë(Lenovo)Õü¾ÈÕßY7000Ó¢ÌØ¶û¿áî£i5 15.6Ó¢´ç¸ßÉ«ÓòÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8300H 8G 512G GTX1050Ti72%NTSC)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '24Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5699.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4´ú 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i5-8300H 8G 128G+1TB GTX1050Ti 4G¶ÀÏÔ IPS FHD£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '20Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5199.00', 'name': '´÷¶ûÁéÔ½14 È¼ 14Ó¢´çÓ¢ÌØ¶û¿áî£i5Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256G MX250 2G¶ÀÏÔ ±³¹â¼üÅÌ)±ùºÓÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '13Íò+ÌõÆÀ¼Û'}
+{'price': '£¤7799.00', 'name': 'ÁªÏë(Lenovo)Õü¾ÈÕßY7000Ó¢ÌØ¶û¿áî£i7 15.6Ó¢´ç¸ßÉ«ÓòÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 512G GTX1060 72%NTSCºÚ)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '24Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4898.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ³±7000°Ë´úÓ¢ÌØ¶û¿áî£i514Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ(I5-8250U 8G 512G PCIE SSD R535¶ÀÏÔ )Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3699.00', 'name': 'ÈÙÒ«MagicBook 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨AMDÈñÁú5 8G 256G FHD IPS Õý°æOffice£©ÐÇ¿Õ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '21Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3799.00', 'name': 'Ð¡Ã× (MI)Ruby 2019¿î 15.6Ó¢´ç½ðÊôÇá±¡±Ê¼Ç±¾µçÄÔ(µÚ°Ë´úÓ¢ÌØ¶û¿áî£i5-8250U 8G 256G SSD 2G GDDR5¶ÀÏÔ FHD È«¼üÅÌ Office Win10) Éî¿Õ»Ò', 'commit': '18Íò+ÌõÆÀ¼Û', 'shop': 'Ð¡Ã×¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4999.00', 'name': 'ÈÙÒ«MagicBook Ó¢ÌØ¶û¿áî£i5 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 512G MX150 2G¶ÀÏÔ FHD IPS£©±ùºÓÒø', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÈÙÒ«¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4649.00', 'name': '¡¾ÁÁ²¬½ð¼üÅÌÌ××°¡¿Î¢Èí£¨Microsoft£©Surface Pro£¨µÚÎå´ú£©¶þºÏÒ»Æ½°åµçÄÔ±Ê¼Ç±¾£¨Core M3 4G 128G£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '1.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤12588.00', 'name': 'Apple MacBook Pro 13.3Ó¢´ç±Ê¼Ç±¾µçÄÔ Éî¿Õ»ÒÉ« 2018ÐÂ¿î£¨ËÄºË°Ë´úi5 8G 256G¹ÌÌ¬Ó²ÅÌ MR9Q2CH/A£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5199.00', 'name': '»ªË¶ÍçÊ¯(ASUS) Îå´úFL8000UF 15.6Ó¢´çÓ°Òô±Ê¼Ç±¾µçÄÔ(i7-8550U 8G 128GSSD+1T MX130 2G¶ÀÏÔ FHD)ÐÇ¿Õ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6Íò+ÌõÆÀ¼Û'}
+{'price': '£¤7299.00', 'name': '´÷¶ûDELLÓÎÏ»G315.6Ó¢´çÓ¢ÌØ¶û¿áî£i7ÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 128G 1T GTX1060MQ 6G¶ÀÏÔ ±³¹â¼üÅÌ IPS)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '15Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3899.00', 'name': 'ÁªÏëThinkPad E480£¨2XCD£©14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i3-7020U 4G 500G FHD Win10£©Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '7.1Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5199.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ14Ó¢´ç Ó¢ÌØ¶û¿áî£I5 Çá±¡±Ê¼Ç±¾µçÄÔ(I5-8265U 8G 1T+256G PCIE MX230¶ÀÏÔ IPS)ÔüÔü»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5399.00', 'name': 'ÈÙÒ«MagicBook Ó¢ÌØ¶û¿áî£i7 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i7-8550U 8G 256G MX150 2G¶ÀÏÔ FHD IPS£©±ùºÓÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '11Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3999.00', 'name': 'Ð¡Ã× (MI)Ruby 2019¿î 15.6Ó¢´ç½ðÊôÇá±¡±Ê¼Ç±¾µçÄÔ(µÚ°Ë´úÓ¢ÌØ¶û¿áî£i5-8250U 8G 512G SSD 2G GDDR5¶ÀÏÔ FHD È«¼üÅÌ Office Win10) Éî¿Õ»Ò', 'commit': '18Íò+ÌõÆÀ¼Û', 'shop': 'Ð¡Ã×¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤3799.00', 'name': '£¤3499.00', 'commit': '»ªË¶a¶¹(adol) 13.3Ó¢´çËÄÃæÕ­±ß¿òÇá±¡±Ê¼Ç±¾µçÄÔ(i3-8145U 4G 256GSSD IPS)Ãµ¹å½ð', 'shop': '¶þÊÖÓÐÊÛ'}
+{'price': '£¤5199.00', 'name': '»ªË¶ÍçÊ¯(ASUS) Îå´úFL8000UF 15.6Ó¢´çÓ°Òô±Ê¼Ç±¾µçÄÔ(i7-8550U 8G 128GSSD+1T MX130 2G¶ÀÏÔ FHD)ÏãéÄ½ð', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3799.00', 'name': '»ÝÆÕ£¨HP£©Õ½66 AMD°æ 14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨ÈñÁú5 8G 256G PCIe SSD Win10 Ò»ÄêÉÏÃÅ£©ÒøÉ«', 'commit': '7700+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤13599.00', 'name': 'Apple MacBook Pro 13.3Ó¢´ç±Ê¼Ç±¾µçÄÔ ÒøÉ« 2018ÐÂ¿î£¨ËÄºË°Ë´úi5 8G 256G¹ÌÌ¬Ó²ÅÌ MR9U2CH/A£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6999.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4´ú 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i7-8750H 8G 128G+1TB GTX1050Ti 4G¶ÀÏÔ 144Hz IPS FHD£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '20Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3799.00', 'name': '»ªË¶£¨ASUS£©±Ê¼Ç±¾µçÄÔ³¬±¡K505Çá±¡±¾ÊÖÌáµçÄÔ³¬¼¶±¾ÉÏÍø±¾Ñ§Éú°ì¹« ¡¾¸ßÅä°æ¡¿Ë«ºË/8G/512G¹ÌÌ¬Òø»Ò', 'commit': '3.2Íò+ÌõÆÀ¼Û', 'shop': '»ªË¶¶÷ÈÙ×¨Âôµê'}
+{'price': '£¤3899.00', 'name': 'ÁªÏëThinkPad E485£¨03CD£©14Ó¢´ç±Ê¼Ç±¾µçÄÔ£¨ÈñÁú5-2500U 8GË«Í¨µÀ 500G Win10£©ºÚÉ«', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '1.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5199.00', 'name': 'ºê³ž(Acer)°µÓ°ÆïÊ¿3ÓÎÏ·±¾ 15.6Ó¢´ç±Ê¼Ç±¾µçÄÔAN5(i5°Ë´ú±êÑ¹ 8G 128G SSD+1T GTX1050 4G IPS ±³¹â¼üÅÌ)', 'commit': '1.3Íò+ÌõÆÀ¼Û', 'shop': 'ºê³ž¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4299.00', 'name': '´÷¶ûDELL³É¾ÍÓ¢ÌØ¶û¿áî£i5 14.0Ó¢´çÉÌÎñÇá±¡±Ê¼Ç±¾µçÄÔ(i5-8265U 4G 128G PCIe 1T AMD R520 2G¶ÀÏÔ FHD)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4.9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6599.00', 'name': '´÷¶ûDELLÈ¼7000 pro 15.6Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i7-8565U 8G 128GSSD 1T MX250 2G¶ÀÏÔ ¸ßÉ«Óò)±ùºÓÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6798.00', 'name': '»ªË¶(ASUS) ·ÉÐÐ±¤ÀÝ6 15.6Ó¢´çÕ­±ß¿òÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 256GSSD+1T GTX1050Ti 4G IPS)»ðÔÉºìºÚ', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4.2Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3799.00', 'name': 'ÁªÏë£¨Lenovo£©ÑïÌìV130(V110Éý¼¶°æ)14Ó¢´çÉÌÎñ±Ê¼Ç±¾(i5-7200U 8G 1T 2G¶ÀÏÔ Ô¤×°office Á½ÄêÉÏÃÅwin10)»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '3.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6799.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4´ú 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i5-8300H 8G 128G+1TB GTX1060 6G¶ÀÏÔ ËÄÇø±³¹â¼üÅÌ IPS£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '20Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5979.00', 'name': '»ªË¶(ASUS) ·ÉÐÐ±¤ÀÝ6´ú 15.6Ó¢´çÕ­±ß¿òÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8300H 8G 256GSSD+1T GTX1050Ti 4G IPS)»ðÔÉºìºÚ', 'commit': '4.2Íò+ÌõÆÀ¼Û', 'shop': '»ªË¶¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5299.00', 'name': '´÷¶ûÁéÔ½14 È¼ 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256GSSD MX250 2G¶ÀÏÔ ±³¹â¼üÅÌ)ÔªšÝ·Û', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '13Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5999.00', 'name': 'Ð¡Ã×(MI)Air 13.3Ó¢´çÈ«½ðÊô³¬Çá±¡±Ê¼Ç±¾µçÄÔ(i7-8550U 8G 256G PCIE SSD MX150 2G¶ÀÏÔ 72%NTSC FHD Ô¤×°Office Ö¸ÎÆ°æ)Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '17Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6099.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir Ó¢ÌØ¶û¿áî£i7 13.3Ó¢´ç2019¿î³¬Çá±¡±Ê¼Ç±¾µçÄÔ(I7-8565U 8G 512G SSD MX250)ÇáÉÝ»Ò', 'commit': '6.8Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4599.00', 'name': 'Ð¡Ã× (MI)Ruby 15.6Ó¢´ç½ðÊôÇá±¡±Ê¼Ç±¾µçÄÔ(i5-8250U 8G 1T+128G SSD 2G GDDR5¶ÀÏÔ FHD È«¼üÅÌ Õý°æOffice Win10) ¾­µä°×', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '18Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4599.00', 'name': '»ªË¶ÍçÊ¯(ASUS) ³©Íæ°æY5000 15.6Ó¢´çÕ­±ß¿òÓéÀÖ°ì¹«±Ê¼Ç±¾µçÄÔ(i5-8250U 8G 1T 2G¶ÀÏÔ) »ÒÉ«', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5888.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4´ú 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i5-8300H 8G 512G GTX1050Ti 4G¶ÀÏÔ IPS FHD£©', 'commit': '20Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5599.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir Ó¢ÌØ¶û¿áî£i5 13.3Ó¢´ç³¬Çá±¡±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 512G SSDPCIe MX150 )ºþ¹âÀ¶', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3599.00', 'name': 'ÁªÏëÐ¡ÐÂ³±7000-13.3Ó¢´ç³¬Çá±¡±¾³¬¼«±¾Ñ§ÉúÑ§Ï°±ã½ÝÉÌÎñ°ì¹«ÊÖÌá ±Ê¼Ç±¾µçÄÔ Õ­±ß¿ò¸ßÇå Ô­³§ ÒøÉ«i3-7100 4G 128G¹ÌÌ¬ ¼¯ÏÔ', 'commit': '400+ÌõÆÀ¼Û', 'shop': 'ÁªÏëºãÒæÈðºÆ×¨Âôµê'}
+{'price': '£¤5297.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ7M-KP5SC Ó¢ÌØ¶û¿áî£i5 GTX1050Ti¶ÀÏÔ15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8300H 8G 256GSSD+1T)IPS', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤5799.00', 'name': 'ÁªÏëThinkPad Òí480 Ó¢ÌØ¶û¿áî£i5 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 256GSSD 2G¶ÀÏÔ FHD £©Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '5.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5499.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂÇà´º°æ Ó¢ÌØ¶û¿áî£i7 14Ó¢´ç Çá±¡±Ê¼Ç±¾µçÄÔ(I7-8565U 8G 1T+128G FHD 2G¶ÀÏÔ)×·ÃÎÒø', 'commit': '6.2Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤6799.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAirÓ¢ÌØ¶û¿áî£i713.3Ó¢´ç³¬Çá±¡±Ê¼Ç±¾µçÄÔ(i7-8565U 16G 512G PCIe MX150IPS)¸ß¶¨°æ£¨ºÚ£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4699.00', 'name': '´÷¶ûDELL³É¾Í5000Ó¢ÌØ¶û¿áî£i5²»·²Òø13.3Ó¢´çÉÌÎñÇá±¡±ãÐ¯±Ê¼Ç±¾µçÄÔ(i5-8250U 8G 256G PCIe SSD FHD IPS)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4.9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6498.00', 'name': 'ÉñÖÛÕ½Éñ Z7-KP7EC GTX1060 6G¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾£¨I7-8750H 16G 1T+256G SSD RGB¼üÅÌ WIN10 IPS)', 'commit': '1.5Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛÕ½Éñ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤8999.00', 'name': 'Ð¡Ã×(MI)ÓÎÏ·±¾ 15.6Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨µÚ°Ë´úÓ¢ÌØ¶û¿áî£I7-8750H 16G 1T+256G SSD GTX1060 6G 72%NTSC¸ßÉ«Óò FHD£©Éî¿Õ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '18Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4598.00', 'name': 'ºê³ž(Acer)·äÄñSwift3Î¢±ß¿ò½ðÊôÇá±¡±¾14Ó¢´ç±Ê¼Ç±¾µçÄÔSF314(i5-8250U 8G 128G SSD+1T MX150 IPS )Ð¡³¬Òø', 'commit': '2.1Íò+ÌõÆÀ¼Û', 'shop': 'ºê³ž¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤6699.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4´ú 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i7-8750H 8G 128G+1TB GTX1050Ti 4G¶ÀÏÔ IPS FHD£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '20Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6792.00', 'name': 'À×Éñ(ThundeRobot)911AirÐÇÕ½°æ Ó¢ÌØ¶û¿áî£i7 15.6¡±Õ­±ß¿òÓÎÏ·±Ê¼Ç±¾µçÄÔ(8G 128GSSD+1T 72% GTX1050Ti )', 'commit': '1Íò+ÌõÆÀ¼Û', 'shop': 'À×Éñ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤7499.00', 'name': '´÷¶ûDELLÓÎÏ»G3ÁÒÑæ°æ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 512GSSD GTX1060MQ 6G¶ÀÏÔ 72%NTSC)', 'commit': '15Íò+ÌõÆÀ¼Û', 'shop': '´÷¶û¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5398.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ7M-KP5GZ Ó¢ÌØ¶û¿áî£i5 GTX1050Ti 15.6Ó¢´ç72%É«ÓòÕ­±ß¿òÆÁÓÎÏ·±¾(i5-8300H 8G 128G+1TB)', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤17099.00', 'name': 'Apple MacBook Pro 15.4Ó¢´ç±Ê¼Ç±¾µçÄÔ Éî¿Õ»ÒÉ« Åä±¸2018ÐÂ¿î£¨ÁùºË°Ë´úi7 16G 256G¹ÌÌ¬Ó²ÅÌ MR932CH/A£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4954.00', 'name': '»úÐµ¸ïÃü(MECHREVO)S1 72%1.18kg14Ó¢´ç¶ÀÏÔÕ­±ß¿òÇá±¡±Ê¼Ç±¾µçÄÔi7-8550U 8G 256G MX150 »Ò OFFICE ±³¹â', 'commit': '2.4Íò+ÌõÆÀ¼Û', 'shop': '»úÐµ¸ïÃü¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤3997.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñK670D-G4A5 GTX1050 4G¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(G5400 8G 512G SSD)IPS', 'commit': '2.3Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤10999.00', 'name': 'Apple MacBook Pro 13.3Ó¢´ç±Ê¼Ç±¾µçÄÔ Éî¿Õ»ÒÉ«£¨2017¿îCore i5´¦ÀíÆ÷/8GBÄÚ´æ/256GBÓ²ÅÌ MPXT2CH/A£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3797.00', 'name': 'ÉñÖÛÕ½Éñ K670D-G4D5 GTX1050 4G¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(G5400 8G 256G SSD 1080P IPS Win10)', 'commit': '1.1Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛÕ½Éñ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤5299.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ14Ó¢´ç Ó¢ÌØ¶û¿áî£i5 Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(I5-8265U 8G 1TB+256G PCIE MX230 IPS)ÏÉÅ®·Û', 'commit': '4Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤8399.00', 'name': 'ÁªÏëThinkPad Òí480£¨12CD£©14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i7-8550U 16G 256GSSD+1T 2G¶ÀÏÔ FHD£©±ùÔ­Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4999.00', 'name': '»ÝÆÕ£¨HP£©Õ½66 ¶þ´ú 14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8265U 8G 256G PCIe SSD+1TB MX250 2G¶ÀÏÔ Ò»ÄêÉÏÃÅ£©ÒøÉ«', 'commit': '7700+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤11.50', 'name': 'ÆëÐÄ£¨COMIX£©A5 122ÕÅÓÅÆ·ÉÌÎñ±Ê¼Ç±¾×Ó/¼ÇÊÂ±¾/ÈÕ¼Ç±¾ ºÚÉ« °ì¹«ÎÄ¾ßC5902', 'commit': '13Íò+ÌõÆÀ¼Û', 'shop': 'ÆëÐÄ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5697.00', 'name': 'ÉñÖÛ (HASEE) Õ½ÉñZ7M-KP7GC Ó¢ÌØ¶û¿áî£i7 GTX1050Ti¶ÀÏÔ15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 128G+1T)IPS', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4299.00', 'name': '´÷¶ûDELL³É¾ÍÓ¢ÌØ¶û¿áî£i5 15.6Ó¢´çÇá±¡ÉÌÎñ°ì¹«±Ê¼Ç±¾µçÄÔ(i5-8265U 4G 256G PCIe AMD R520 2G¶ÀÏÔ FHD)Òø', 'commit': '4.9Íò+ÌõÆÀ¼Û', 'shop': '´÷¶û¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤4988.00', 'name': '»ªË¶(ASUS) ÁéÒ«S 2´ú 14Ó¢´çÈýÃæÎ¢±ß³¬Çá±¡±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 512GSSD MX150 2G IPS)Ïû¹â»Ò(S4300)', 'commit': '3.9Íò+ÌõÆÀ¼Û', 'shop': '»ªË¶¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤8598.00', 'name': 'ÉñÖÛ(HASEE)¾«¶ÜG97E GTX1070 8G¶ÀÏÔ 17.3Ó¢´ç120Hzµç¾ºÆÁ ÉÌÎñÓÎÏ·±Ê¼Ç±¾µçÄÔ(I7-8750H 16G 1T+256G SSD)', 'commit': '2.3Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤7888.00', 'name': '»úÐµÊ¦£¨MACHENIKE£©F117-S6Cs µç¾º°æÓÎÏ·±¾±Ê¼Ç±¾µçÄÔ£¨i7-8750H 16G 256G+1T GTX1060 6G Win10 144Hz£©', 'commit': '4200+ÌõÆÀ¼Û', 'shop': '»úÐµÊ¦¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤2799.00', 'name': 'ÁªÏëIdeaPad330 15.6Ó¢´çC³¬±¡±¾¼ÒÓÃÉÌÎñÑ§Éú°ì¹«¶ÀÏÔ³¬¼«±¾ÓÎÏ·Çá±¡±ãÐ¯±Ê¼Ç±¾ÊÖÌáµçÄÔ ÐÇ¿ÕÒø ±êÅä¡¾A6-9225/4G/1T¡¿', 'commit': '3.1Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëº½µçÊÚÈ¨×¨Âôµê'}
+{'price': '£¤5598.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ7-KP5DC Ó¢ÌØ¶û¿áî£i5 GTX1060¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8300H 8G 128GSSD+1TB)IPS', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤6999.00', 'name': 'ÁªÏëThinkPad Òí490£¨2NCD£©14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i7-8565U 8G 128GSSD+1T RX550X 2G¶ÀÏÔ£©±ùÔ­Òø', 'commit': '5.3Íò+ÌõÆÀ¼Û', 'shop': 'ThinkPad¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤5599.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir2018¿î Ó¢ÌØ¶û¿áî£i5 15.6Ó¢´ç±Ê¼Ç±¾µçÄÔ(i5-8250U 8G 512G PCIE SSD ¶ÀÏÔMX150)ÇáÉÝ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '5.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5299.00', 'name': 'ÁªÏëThinkPad E480£¨38CD£©14Ó¢´çÕ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i5-7200U 8G 500G 2G¶ÀÏÔ Win10£©ºÚ', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '7.1Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5899.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir13.3Ó¢´ç³¬Çá±¡±Ê¼Ç±¾µçÄÔ(Ó¢ÌØ¶û¿áî£i7-8565U 8G 512G PCIe MX150 ¸ßÉ«ÓòIPS )ºþ¹âÀ¶', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5698.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZX7-CP5G GTX1060 6G¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8400 8G 256G SSD RGB¼üÅÌ)IPS', 'commit': '3.2Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4788.00', 'name': '»ªË¶a¶¹(adol) 13.3Ó¢´çËÄÃæÕ­±ß¿òÇá±¡±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256GSSD MX150 IPS)Ãµ¹å½ð', 'commit': '6.6Íò+ÌõÆÀ¼Û', 'shop': '»ªË¶¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤15.00', 'name': '£¤12.50', 'commit': 'µÃÁ¦(deli)4±¾A5/60ÕÅÀÖËØÏµÁÐ±Ê¼Ç±¾¼ÇÊÂ±¾ÏßÈ¦±¾ÂÝÐýÈí³­±¾×ÓLA560-01JY ÀÖËØÏµÁÐ£¬ËØ¾»ÓÅÑÅ¡£¸üÓÐÁãÏµÁÐ´´Òâ×éºÏ£¬3ÖÖ³ß´ç£¬1Ì×½â¾ö¡£´ÁÎÒ²é¿´~', 'shop': '5.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤7499.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4Pro 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i5-8300H 8G 512G RTX2060 6G¶ÀÏÔ 60Hz£©', 'commit': '20Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤6099.00', 'name': '´÷¶ûÁéÔ½14 È¼ 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i7-8565U 8G 256GSSD MX250 2G¶ÀÏÔ ±³¹â¼üÅÌ)ÔªšÝ·Û', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '13Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4599.00', 'name': '»ªË¶a¶¹(adol) 13.3Ó¢´çËÄÃæÕ­±ß¿òÇá±¡±Ê¼Ç±¾µçÄÔ(i5-8250U 8G 256GSSD MX150 IPS)ð©ÔÂÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6.6Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5499.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ³±7000 13.3Ó¢´ç³¬Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(Ó¢ÌØ¶û¿áî£i7-8550U 8G 512G SSDMX150 )»¨»ðÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤7699.00', 'name': '´÷¶ûDELLXPS13.3Ó¢´çÓ¢ÌØ¶û¿áî£i5³¬Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i5-8250U 8G 256GPCIe IPS 72%¸ßÉ«Óò ±³¹â)Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '3.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5698.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ7M-KP7Z GTX1050Ti 15.6Ó¢´ç72%É«ÓòÕ­±ß¿òÈ«ÃæÆÁÓÎÏ·±¾£¨i7-8750H 8G 512G SSD)', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤14.00', 'name': 'µÃÁ¦(deli)10±¾A5/38ÕÅÎÞÏß×°¶©Èí³­±¾ °ì¹«¼ÇÊÂ±¾ÎÄ¾ß±Ê¼Ç±¾×Ó33385 ¡¾10ÍòºÃÆÀ¡¿¢ÙÖ½ÕÅÏ¸Äå£¬ÊéÐ´Ë³»¬¢Ú³¬¸ßÐÔ¼Û±È£¬°ì¹«µÄÑ¡Ôñ¡£µã´ËÉý¼¶3±¾×°Æ¤Ãæ±¾£¬×¨ÎªÆóÒµÑÐ·¢µÄ¶à±¾×°£¡', 'commit': '13Íò+ÌõÆÀ¼Û', 'shop': 'µÃÁ¦¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤2499.00', 'name': 'ÁªÏë£¨Lenovo£©ÑïÌìV330 14Ó¢´çÇá±¡ÓéÀÖÉÌÎñÓ°Òô¼ÒÓÃ±Ê¼Ç±¾µçÄÔ(A4 4G 500G 2G¶ÀÏÔwin10Á½ÄêÉÏÃÅ)ÐÇ¿Õ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '3.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5999.00', 'name': 'ÁªÏëThinkPad S2 2019£¨00CD£©13.3Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8265U 8G 256GSSD FHD£©ÒøÉ«', 'commit': '9ÌõÆÀ¼Û', 'shop': 'ThinkPad¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤6299.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir Ó¢ÌØ¶û¿áî£i7 13.3Ó¢´ç2019¿î³¬Çá±¡±Ê¼Ç±¾µçÄÔ(I7-8565U 8G 512G SSD MX250)ºþ¹âÀ¶', 'commit': '6.8Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤4999.00', 'name': '»ÝÆÕ(HP)ÐÇ 13-an0005TU 13.3Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ(i7-8565U 8G 256G PCIE SSD UMA FHD IPS 72%É«Óò)Òø', 'commit': '1.8Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤10999.00', 'name': '´÷¶ûDELLXPS13.3Ó¢´ç³¬Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i7-8550U 16G 512GPCIe IPS 72%¸ßÉ«Óò ±³¹â)Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '3.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6099.00', 'name': '´÷¶ûÁéÔ½14 È¼ 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i7-8565U 8G 256GSSD MX250 2G¶ÀÏÔ ±³¹â¼üÅÌ)Ì«Ñô½ð', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '13Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6999.00', 'name': '´÷¶ûDELLÓÎÏ»G3ÁÒÑæ°æ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 128GSSD 1T GTX1050Ti 4G¶ÀÏÔ IPS)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '15Íò+ÌõÆÀ¼Û'}
+{'price': '£¤22.50', 'name': '£¤20.90', 'commit': 'µÃÁ¦(deli)12±¾A5/40ÕÅÎÞÏß×°¶©Èí³­±¾°ì¹«¼ÇÊÂ±¾ ÎÄ¾ß±Ê¼Ç±¾×Ó7651', 'shop': '40Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5699.00', 'name': '´÷¶ûDELLÈ¼7000 pro 15.6Ó¢´çÓ¢ÌØ¶û¿áî£i5Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256GSSD MX250 2G¶ÀÏÔ)±ùºÓÒø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3999.00', 'name': '»ÝÆÕ£¨HP£©Õ½66 AMD°æ 14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨ÈñÁú5 8G 512G PCIe SSD Win10 Ò»ÄêÉÏÃÅ£©ÒøÉ«', 'commit': '7700+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5199.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir Ó¢ÌØ¶û¿áî£i5 13.3Ó¢´ç2019¿î³¬Çá±¡±Ê¼Ç±¾µçÄÔ(I5-8265U 8G 256G SSD MX250)ÇáÉÝ»Ò', 'commit': '6.8Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤2498.00', 'name': 'ÉñÖÛ(HASEE)ÓÅÑÅX3D1 72%É«Óò13.3Ó¢´çIPSÆÁ±Ê¼Ç±¾µçÄÔ(3867U 8G 256G SSD )', 'commit': '1.1Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤8987.00', 'name': '¡¾¶«¼ÒÖÇÑ¡¡¿Î¢Èí(Microsoft£©Surface Laptop 2³¬Çá±¡´¥¿Ø±Ê¼Ç±¾13.5Ó¢´ç 8´ú¿áî£i5 8G 256GSSD»Ò·Û½ð', 'commit': '7100+ÌõÆÀ¼Û', 'shop': 'Î¢Èí¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤4299.00', 'name': '»ªË¶£¨ASUS£© Æì½¢µê PX554 15.6Ó¢´çÊÖÌá±Ê¼Ç±¾µçÄÔ Òø»ÒÉ« i5-8265U/8G/256G SSD/¶ÀÏÔ', 'commit': '9400+ÌõÆÀ¼Û', 'shop': '»ªË¶µçÄÔ¹Ù·½Æì½¢µê'}
+{'price': '£¤6387.00', 'name': 'Î¢Èí£¨Microsoft£©Surface Pro 6 ¶þºÏÒ»Æ½°åµçÄÔ±Ê¼Ç±¾ 12.3Ó¢´ç£¨µÚ°Ë´úCore i5 8G 128G SSD£©ÁÁ²¬½ð', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6455.00', 'name': '¡¾¶«¼ÒÖÇÑ¡¡¿»úÐµ¸ïÃü(MECHREVO) X3 17.3Ó¢´ç·Ç15.6Õ­±ßÓÎÏ·±Ê¼Ç±¾µçÄÔ i7-8750H 8G 128G+1T GTX1050Ti 4G', 'commit': '1.1Íò+ÌõÆÀ¼Û', 'shop': '»úÐµ¸ïÃü¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5399.00', 'name': 'ÁªÏëThinkPad Òí480£¨04CD£©Ó¢ÌØ¶û¿áî£i5 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 256SSD £©±ùÔ­Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤7499.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4Pro 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i5-8300H 8G 512G RTX2060 6G¶ÀÏÔ 60Hz£©', 'commit': '20Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5299.00', 'name': 'ÁªÏëThinkPad Ò«ÒøS2 2018£¨0HCD£©Ó¢ÌØ¶û8´ú¿áî£13.3Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 256GSSD£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '7900+ÌõÆÀ¼Û'}
+{'price': '£¤6699.00', 'name': 'Ð¡Ã×(MI)ÓÎÏ·±¾ 15.6Ó¢´çÓÎÏ·Çá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨Ó¢ÌØ¶û°Ë´ú¿áî£I5-8300H 8G 1T+256G SSD GTX1050TI 4G 72%NTSC¸ßÉ«Óò FHD£©Éî¿Õ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '18Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5499.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂÇà´º°æ Ó¢ÌØ¶û¿áî£i7 14Ó¢´ç Çá±¡±Ê¼Ç±¾µçÄÔ(I7-8565U 8G 1T+128G FHD 2G¶ÀÏÔ)ÎÞÎ·ºÚ', 'commit': '6.2Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤6098.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ7-KP7GA GTX1060 6G¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 512G SSD)IPS', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤2969.00', 'name': 'ÁªÏëIdeaPad330 15.6Ó¢´çC³¬±¡±¾¼ÒÓÃÉÌÎñÑ§Éú°ì¹«¶ÀÏÔ³¬¼«±¾ÓÎÏ·Çá±¡±ãÐ¯±Ê¼Ç±¾ÊÖÌáµçÄÔ ÐÇ¿ÕÒø ¶¨ÖÆÒ»¡¾A6-9225/4G/1T+120G¡¿', 'commit': '3.1Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëº½µçÊÚÈ¨×¨Âôµê'}
+{'price': '£¤8199.00', 'name': '»ªË¶(ASUS)ÁéÒ«Deluxe14 14.0Ó¢´ç 92%È«ÃæÆÁ Çá±¡±Ê¼Ç±¾µçÄÔ ×ð¾ôÀ¶ i7-8565U 8G 512G¹ÌÌ¬ 92%ÆÁÕ¼±È', 'commit': '100+ÌõÆÀ¼Û', 'shop': '»ªË¶µçÄÔ¹Ù·½Æì½¢µê'}
+{'price': '£¤5499.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ³±7000 Ó¢ÌØ¶û¿áî£i7 13.3Ó¢´ç±Ê¼Ç±¾µçÄÔ(i7-8550U 8G 512G PCIE SSD ¶ÀÏÔMX150)»ð»¨½ð', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4399.00', 'name': '»ªË¶£¨ASUS£©±Ê¼Ç±¾µçÄÔFL8000ÓÎÏ·±¾ÍçÊ¯15.6Ó¢´çÊÖÌáµçÄÔÉÌÎñ°ì¹« ÐÇ¿Õ»Ò ¡¾¡¿i7-8550/4G/1TB/2G¶ÀÏÔ', 'commit': '7200+ÌõÆÀ¼Û', 'shop': '»ªË¶¶÷ÈÙ×¨Âôµê'}
+{'price': '£¤3399.00', 'name': 'ÁªÏëIdeaPad330-15ÐÂÒ»´ú¿áî£I3³¬ÐÔÄÜÊÖÌá°ì¹«±Ê¼Ç±¾µçÄÔ³¬±¡±¾ÓÎÏ·Çá±¡±¾ÉÌÓÃ±¾Ñ§Éú±¾c ÐÂÒ»´ú¿áî£i3/8G/1T+128G/Éý¼¶¡¾ÃëÉ±¡¿ W10 ÒøÉ« 15.6Ó¢´ç[ËÍÕý°æof', 'commit': '3.2Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔÊÚÈ¨×¨Âôµê'}
+{'price': '£¤3999.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂ14Ó¢´ç È«ÐÂ12nmÈñÁú5Çá±¡±Ê¼Ç±¾µçÄÔ(R5-3500U 8G 1TB+256G PCIE IPS)ÔüÔü»Ò', 'commit': '2.3Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤6995.00', 'name': '»úÐµ¸ïÃü(MECHREVO)X8Ti Plus 144Hz GTX1060 17.3Ó¢´ç·Ç15.6Õ­±ßÓÎÏ·±Ê¼Ç±¾µçÄÔi5-8300H 8G 128G+1T Office', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '1.1Íò+ÌõÆÀ¼Û'}
+{'price': '£¤6598.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ7-KP7Z Ó¢ÌØ¶û¿áî£i7 GTX1060 15.6Ó¢´ç72%É«ÓòÕ­±ß¿òÆÁÓÎÏ·±¾(i7-8750H 8G 512G SSD)', 'commit': '11Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤5998.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZX7-CP5A1 GTX1060 6G¶ÀÏÔ 72%É«Óò15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i5-8400 8G 512G SSD RGB¼üÅÌ)', 'commit': '3.2Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤3899.00', 'name': 'ºê³ž£¨Acer£©Ä«ÎèX349 14Ó¢´çÇá±¡±Ê¼Ç±¾£¨i5-7200U 8G 256GPCIe IPSÈ«¸ßÇå 1.53kg ±³¹â¼üÅÌ ÂÁºÏ½ð»úÉí)', 'commit': '6900+ÌõÆÀ¼Û', 'shop': 'ºê³žÉÌÓÃ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤14999.00', 'name': 'Apple MacBook Pro 13.3Ó¢´ç±Ê¼Ç±¾µçÄÔ ÒøÉ« Åä±¸2018ÐÂ¿î£¨ËÄºË°Ë´úi5 8G 512G¹ÌÌ¬Ó²ÅÌ MR9V2CH/A£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '9Íò+ÌõÆÀ¼Û'}
+{'price': '£¤3799.00', 'name': '´÷¶û£¨DELL£© ÁéÔ½5370 13.3Ó¢´ç8´ú¿áî£ËÄºË³¬¼«±¾ÉÌÎñ°ì¹«Çá±¡±Ê¼Ç±¾µçÄÔ ½ðÊô±ãÐ¯ÊÖÌá±¾ 5370-2505S i5-8250U ³¬¶¯Òø 4GÄÚ´æ 128G PCIe ¹Ù·½±êÅä', 'commit': '3500+ÌõÆÀ¼Û', 'shop': '´÷¶ûÆôÓè×¨Âôµê'}
+{'price': '£¤10497.00', 'name': 'ÉñÖÛÕ½Éñ GX8-CP7S2 GTX1070 8G¶ÀÏÔ 17.3Ó¢´ç94%É«Óò120Hzµç¾ºÆÁÓÎÏ·±Ê¼Ç±¾£¨I7-8700 16G 256G SSD+1T£©', 'commit': '1.1Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛÕ½Éñ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤8699.00', 'name': '»ÝÆÕ£¨HP£©Õ½99-64 15.6Ó¢´ç ±Ê¼Ç±¾ ¹¤×÷Õ¾i7-8750H/16GB/256G SSD+2TB/Win10 Home 4G¶ÀÏÔ', 'commit': '5900+ÌõÆÀ¼Û', 'shop': '×ÔÓª'}
+{'price': '£¤5599.00', 'name': 'ÁªÏë(Lenovo)Ð¡ÐÂAir13.3Ó¢´ç³¬Çá±¡±Ê¼Ç±¾µçÄÔ(Ó¢ÌØ¶û¿áî£i7-8565U 8G 256G PCIe MX150 ¸ßÉ«ÓòIPS )¸´¹Å½ð', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '6.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤5399.00', 'name': '»ÝÆÕ£¨HP£©Õ½66 Pro G1 14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 360G PCIe SSD+500G ±êÑ¹MX150 2G¶ÀÏÔ£©ÒøÉ«', 'commit': '7.1Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5299.00', 'name': 'ÁªÏë(lenovo)Ð¡ÐÂµÚ°Ë´úÓ¢ÌØ¶û¿áî£i5 Air15.6Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256G PCIE MX150 )ÇáÉÝ»Ò', 'commit': '24Íò+ÌõÆÀ¼Û', 'shop': 'ÁªÏëµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤8198.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñZ8-CR7P1 RTX2060¶ÀÏÔ144HzÕ­±ß¿òµç¾ºÆÁ15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 512G SSD)', 'commit': '1Íò+ÌõÆÀ¼Û', 'shop': 'ÉñÖÛµçÄÔ¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤8499.00', 'name': '´÷¶ûDELLÓÎÏ»G3 17.3Ó¢´çÓ¢ÌØ¶û¿áî£i7ÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 8G 128G+1T GTX1060MQ 6G¶ÀÏÔ 72%NTSC)ºÚ', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '15Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4399.00', 'name': 'ÈýÐÇ£¨SAMSUNG£©35X0AA-X08 15.6Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 1TB+128GSSD 2G¶ÀÏÔ FHD Win10£©°×', 'commit': '1.8Íò+ÌõÆÀ¼Û', 'shop': 'ÈýÐÇ±Ê¼Ç±¾¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤6769.00', 'name': 'ÁªÏëThinkPad Òí480 Ó¢ÌØ¶û¿áî£i7 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨i7-8550U 8G 128GSSD+1T 2G¶ÀÏÔ FHD£©Òø', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '5.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤8299.00', 'name': '»ÝÆÕ£¨HP£©°µÓ°¾«Áé4 Pro 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ£¨i5-8300H 8G 512G RTX2060 6G¶ÀÏÔ 144Hz£©', 'commit': '20Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤4599.00', 'name': '»ÝÆÕ£¨HP£©EliteBook 745G5 14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨ÈñÁú5 PRO 2500U 8G 256SSD Win10 FHD OfficeÒ»ÄêÉÏÃÅ£©', 'commit': '3Íò+ÌõÆÀ¼Û', 'shop': '»ÝÆÕ¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤5499.00', 'name': '£¤4999.00', 'commit': '»ÝÆÕ£¨HP£©ÐÇ 14-ce1004TX 14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8265U 8G 1TB+128SSD MX150 2G¶ÀÏÔ FHD IPS£©Òø', 'shop': '¶þÊÖÓÐÊÛ'}
+{'price': '£¤5999.00', 'name': 'ÁªÏëThinkPad T480£¨2NCD£©14Ó¢´çÇá±¡±Ê¼Ç±¾µçÄÔ£¨i5-8250U 8G 16G°ÁÌÚÏµÍ³¼ÓËÙÆ÷ 500G Win10 Ë«µç³Ø£©', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '1.8Íò+ÌõÆÀ¼Û'}
+{'price': '£¤10888.00', 'name': 'Î¢Èí£¨Microsoft£©Surface Pro 6 ¶þºÏÒ»Æ½°åµçÄÔ±Ê¼Ç±¾ 12.3Ó¢´ç£¨µÚ°Ë´úCore i7 8G 256G SSD£©µäÑÅºÚ', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.4Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4399.00', 'name': 'ÁªÏë£¨Lenovo£©IdeaPad340CÏµÁÐ15.6Ó¢´ç¿áî£°Ë´úÇá±¡´óÆÁÉÌÎñ±Ê¼Ç±¾µçÄÔ »ÒÉ« i5-8265U 4G 256G MX110', 'commit': '300+ÌõÆÀ¼Û', 'shop': 'ÁªÏë¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': '£¤7999.00', 'name': 'Ð¡Ã×(MI)ÓÎÏ·±¾ 15.6Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ£¨Ó¢ÌØ¶û°Ë´ú¿áî£I5-8300H 8G 1T+256G SSD GTX1060 6G 72%NTSC¸ßÉ«Óò FHD£©Éî¿Õ»Ò', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '18Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4197.00', 'name': 'ºê³ž(Acer)·äÄñSwift3Î¢±ß¿òÇá±¡±¾ 14Ó¢´çÈ«½ðÊô±Ê¼Ç±¾µçÄÔSF314(i5-8265U 8G 256G PCIe SSD IPS )·ÛÐ¡Ñù', 'commit': '2.1Íò+ÌõÆÀ¼Û', 'shop': 'ºê³ž¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤7999.00', 'name': '»úÐµÊ¦F117 144Hzµç¾ºÆÁÓÎÏ·±¾°Ë´úi7-8750H/GTX1060 6G¶ÀÏÔ³Ô¼¦±Ê¼Ç±¾µçÄÔ Æì½¢°æi7/16G/256G±¶ÒôËÙ¹ÌÌ¬+1T', 'commit': '4700+ÌõÆÀ¼Û', 'shop': 'MACHENIKE»úÐµÊ¦Æì½¢µê'}
+{'price': '£¤5397.00', 'name': 'ÉñÖÛ(HASEE)Õ½ÉñK680E-G6E3 GTX1050Ti 4G¶ÀÏÔ 15.6Ó¢´çÓÎÏ·±Ê¼Ç±¾µçÄÔ(I5-8400 8G 1T+256G SSD 1080P)IPS', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.3Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4786.00', 'name': 'ºê³ž(Acer)·äÄñSwift3Î¢±ß¿ò½ðÊôÇá±¡±¾14Ó¢´ç±Ê¼Ç±¾µçÄÔSF314(i5-8265U 8G 256G PCIe SSD MX250 IPS)·ÛÐ¡Ñù', 'commit': '2.1Íò+ÌõÆÀ¼Û', 'shop': 'ºê³ž¾©¶«×ÔÓªÆì½¢µê'}
+{'price': '£¤3399.00', 'name': '´÷¶û£¨DELL£© ½ðÊô³¬¼¶±¾ÁéÔ½5370 13.3Ó¢´çÇá±¡±ãÐ¯ÉÌÎñ°ì¹«ÊÖÌá±Ê¼Ç±¾µçÄÔÑ§Éú±¾ ²»·²Òø¡¾½ðÊô³¬±¡±¾¡¿ i3-8130U/4G/128G PCIe±êÅä', 'commit': '1.4Íò+ÌõÆÀ¼Û', 'shop': '´÷¶û×¿Ô½×¨Âôµê'}
+{'price': '£¤13999.00', 'name': '´÷¶ûDELL G7 15.6Ó¢´çÓ¢ÌØ¶û¿áî£i7ÓÎÏ·±Ê¼Ç±¾µçÄÔ(i7-8750H 16G 256GSSD 1T RTX2060 6G ÍâÐÇÈË¼¼Êõ 144Hz)', 'commit': '¶þÊÖÓÐÊÛ', 'shop': '2.7Íò+ÌõÆÀ¼Û'}
+{'price': '£¤4899.00', 'name': '´÷¶ûÁéÔ½14 È¼ 14Ó¢´çÇá±¡Õ­±ß¿ò±Ê¼Ç±¾µçÄÔ(i5-8265U 8G 256GSSD FHD ±³¹â¼üÅÌ)ÔªšÝ·Û', 'commit': '13Íò+ÌõÆÀ¼Û', 'shop': '´÷¶û¾©¶«×ÔÓª¹Ù·½Æì½¢µê'}
+{'price': 'ï¿¥3999.00', 'name': 'è£è€€MagicBook 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆAMDé”é¾™5 8G 512G FHD IPS æ­£ç‰ˆOfficeï¼‰å†°æ²³é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '21ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3699.00', 'name': 'è£è€€MagicBook 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆAMDé”é¾™5 8G 256G FHD IPS æ­£ç‰ˆOfficeï¼‰å†°æ²³é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '21ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3899.00', 'name': 'è”æƒ³(Lenovo)330C è‹±ç‰¹å°”é…·ç¿i5 15.6è‹±å¯¸å•†åŠ¡å½±éŸ³ç¬”è®°æœ¬ç”µè„‘(i5-8250U 4G 1T+128G SSD ç‹¬æ˜¾MX110)é»‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6.2ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5899.00', 'name': 'è”æƒ³ThinkPad ç¿¼480 è‹±ç‰¹å°”é…·ç¿i5 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 128GSSD+500G 2Gç‹¬æ˜¾ï¼‰å†°åŽŸé“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4799.00', 'name': 'ï¿¥4487.00', 'commit': 'æˆ´å°”çµè¶Š14 ç‡ƒ 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256GSSD FHD èƒŒå…‰é”®ç›˜)å†°æ²³é“¶', 'shop': 'äºŒæ‰‹æœ‰å”®'}
+{'price': 'ï¿¥6999.00', 'name': 'è”æƒ³(Lenovo)æ‹¯æ•‘è€…Y7000ç¬¬å…«ä»£è‹±ç‰¹å°”é…·ç¿i7 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7 8G 512G GTX1050Ti 72%NTSC é»‘)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '24ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥8099.00', 'name': 'è”æƒ³(Lenovo)æ‹¯æ•‘è€…Y7000Pç¬¬å…«ä»£è‹±ç‰¹å°”é…·ç¿i7 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 512G GTX1060 144Hzé»‘)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '24ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3899.00', 'name': 'è”æƒ³(Lenovo)å°æ–°æ½®7000 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(AMDé”é¾™5 8G 512G PCIe FHD IPS)æžå…‰é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6488.00', 'name': 'Apple MacBook Air 13.3è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ é“¶è‰²(2017æ¬¾Core i5 å¤„ç†å™¨/8GBå†…å­˜/128GBé—ªå­˜ MQD32CH/A)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '14ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5999.00', 'name': 'æˆ´å°”DELLæ¸¸åŒ£G315.6è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i5æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8300H 8G 128G 1T GTX1050Ti 4Gç‹¬æ˜¾ IPS)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '15ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7099.00', 'name': 'è”æƒ³(Lenovo)æ‹¯æ•‘è€…Y7000Pè‹±ç‰¹å°”é…·ç¿i5 15.6è‹±å¯¸é«˜è‰²åŸŸæ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5 8G 512G SSD GTX1060 144Hz)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '24ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5699.00', 'name': 'åŽä¸º(HUAWEI)MateBook 13 å…¨é¢å±è½»è–„æ€§èƒ½ç¬”è®°æœ¬ å…«ä»£é…·ç¿(i5-8265U 8G 512G MX150 office 2K ä¸€ç¢°ä¼ )é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5989.00', 'name': 'æœºæ¢°é©å‘½(MECHREVO) Z2 Air 72% 15.6è‹±å¯¸çª„è¾¹æ¡†æ¸¸æˆç¬”è®°æœ¬i7-8750H 8G 512GSSD GTX1050Ti', 'commit': '3.7ä¸‡+æ¡è¯„ä»·', 'shop': 'æœºæ¢°é©å‘½äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥6099.00', 'name': 'è”æƒ³(Lenovo)æ‹¯æ•‘è€…Y7000è‹±ç‰¹å°”é…·ç¿i5 15.6è‹±å¯¸é«˜è‰²åŸŸæ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8300H 8G 512G GTX1050Ti72%NTSC)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '24ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5699.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4ä»£ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8300H 8G 128G+1TB GTX1050Ti 4Gç‹¬æ˜¾ IPS FHDï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '20ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5199.00', 'name': 'æˆ´å°”çµè¶Š14 ç‡ƒ 14è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i5è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256G MX250 2Gç‹¬æ˜¾ èƒŒå…‰é”®ç›˜)å†°æ²³é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '13ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7799.00', 'name': 'è”æƒ³(Lenovo)æ‹¯æ•‘è€…Y7000è‹±ç‰¹å°”é…·ç¿i7 15.6è‹±å¯¸é«˜è‰²åŸŸæ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 512G GTX1060 72%NTSCé»‘)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '24ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4898.00', 'name': 'è”æƒ³(Lenovo)å°æ–°æ½®7000å…«ä»£è‹±ç‰¹å°”é…·ç¿i514è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘(I5-8250U 8G 512G PCIE SSD R535ç‹¬æ˜¾ )é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3699.00', 'name': 'è£è€€MagicBook 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆAMDé”é¾™5 8G 256G FHD IPS æ­£ç‰ˆOfficeï¼‰æ˜Ÿç©ºç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '21ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3799.00', 'name': 'å°ç±³ (MI)Ruby 2019æ¬¾ 15.6è‹±å¯¸é‡‘å±žè½»è–„ç¬”è®°æœ¬ç”µè„‘(ç¬¬å…«ä»£è‹±ç‰¹å°”é…·ç¿i5-8250U 8G 256G SSD 2G GDDR5ç‹¬æ˜¾ FHD å…¨é”®ç›˜ Office Win10) æ·±ç©ºç°', 'commit': '18ä¸‡+æ¡è¯„ä»·', 'shop': 'å°ç±³äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥4999.00', 'name': 'è£è€€MagicBook è‹±ç‰¹å°”é…·ç¿i5 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 512G MX150 2Gç‹¬æ˜¾ FHD IPSï¼‰å†°æ²³é“¶', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'è£è€€äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥4649.00', 'name': 'ã€äº®é“‚é‡‘é”®ç›˜å¥—è£…ã€‘å¾®è½¯ï¼ˆMicrosoftï¼‰Surface Proï¼ˆç¬¬äº”ä»£ï¼‰äºŒåˆä¸€å¹³æ¿ç”µè„‘ç¬”è®°æœ¬ï¼ˆCore M3 4G 128Gï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '1.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥12588.00', 'name': 'Apple MacBook Pro 13.3è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ æ·±ç©ºç°è‰² 2018æ–°æ¬¾ï¼ˆå››æ ¸å…«ä»£i5 8G 256Gå›ºæ€ç¡¬ç›˜ MR9Q2CH/Aï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5199.00', 'name': 'åŽç¡•é¡½çŸ³(ASUS) äº”ä»£FL8000UF 15.6è‹±å¯¸å½±éŸ³ç¬”è®°æœ¬ç”µè„‘(i7-8550U 8G 128GSSD+1T MX130 2Gç‹¬æ˜¾ FHD)æ˜Ÿç©ºç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7299.00', 'name': 'æˆ´å°”DELLæ¸¸åŒ£G315.6è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i7æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 128G 1T GTX1060MQ 6Gç‹¬æ˜¾ èƒŒå…‰é”®ç›˜ IPS)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '15ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3899.00', 'name': 'è”æƒ³ThinkPad E480ï¼ˆ2XCDï¼‰14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi3-7020U 4G 500G FHD Win10ï¼‰é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '7.1ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5199.00', 'name': 'è”æƒ³(Lenovo)å°æ–°14è‹±å¯¸ è‹±ç‰¹å°”é…·ç¿I5 è½»è–„ç¬”è®°æœ¬ç”µè„‘(I5-8265U 8G 1T+256G PCIE MX230ç‹¬æ˜¾ IPS)æ¸£æ¸£ç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5399.00', 'name': 'è£è€€MagicBook è‹±ç‰¹å°”é…·ç¿i7 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8550U 8G 256G MX150 2Gç‹¬æ˜¾ FHD IPSï¼‰å†°æ²³é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '11ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3999.00', 'name': 'å°ç±³ (MI)Ruby 2019æ¬¾ 15.6è‹±å¯¸é‡‘å±žè½»è–„ç¬”è®°æœ¬ç”µè„‘(ç¬¬å…«ä»£è‹±ç‰¹å°”é…·ç¿i5-8250U 8G 512G SSD 2G GDDR5ç‹¬æ˜¾ FHD å…¨é”®ç›˜ Office Win10) æ·±ç©ºç°', 'commit': '18ä¸‡+æ¡è¯„ä»·', 'shop': 'å°ç±³äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥3799.00', 'name': 'ï¿¥3499.00', 'commit': 'åŽç¡•aè±†(adol) 13.3è‹±å¯¸å››é¢çª„è¾¹æ¡†è½»è–„ç¬”è®°æœ¬ç”µè„‘(i3-8145U 4G 256GSSD IPS)çŽ«ç‘°é‡‘', 'shop': 'äºŒæ‰‹æœ‰å”®'}
+{'price': 'ï¿¥5199.00', 'name': 'åŽç¡•é¡½çŸ³(ASUS) äº”ä»£FL8000UF 15.6è‹±å¯¸å½±éŸ³ç¬”è®°æœ¬ç”µè„‘(i7-8550U 8G 128GSSD+1T MX130 2Gç‹¬æ˜¾ FHD)é¦™æ§Ÿé‡‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3799.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æˆ˜66 AMDç‰ˆ 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆé”é¾™5 8G 256G PCIe SSD Win10 ä¸€å¹´ä¸Šé—¨ï¼‰é“¶è‰²', 'commit': '7700+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥13599.00', 'name': 'Apple MacBook Pro 13.3è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ é“¶è‰² 2018æ–°æ¬¾ï¼ˆå››æ ¸å…«ä»£i5 8G 256Gå›ºæ€ç¡¬ç›˜ MR9U2CH/Aï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6999.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4ä»£ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8750H 8G 128G+1TB GTX1050Ti 4Gç‹¬æ˜¾ 144Hz IPS FHDï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '20ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3799.00', 'name': 'åŽç¡•ï¼ˆASUSï¼‰ç¬”è®°æœ¬ç”µè„‘è¶…è–„K505è½»è–„æœ¬æ‰‹æç”µè„‘è¶…çº§æœ¬ä¸Šç½‘æœ¬å­¦ç”ŸåŠžå…¬ ã€é«˜é…ç‰ˆã€‘åŒæ ¸/8G/512Gå›ºæ€é“¶ç°', 'commit': '3.2ä¸‡+æ¡è¯„ä»·', 'shop': 'åŽç¡•æ©è£ä¸“å–åº—'}
+{'price': 'ï¿¥3899.00', 'name': 'è”æƒ³ThinkPad E485ï¼ˆ03CDï¼‰14è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ï¼ˆé”é¾™5-2500U 8GåŒé€šé“ 500G Win10ï¼‰é»‘è‰²', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '1.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5199.00', 'name': 'å®ç¢(Acer)æš—å½±éª‘å£«3æ¸¸æˆæœ¬ 15.6è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘AN5(i5å…«ä»£æ ‡åŽ‹ 8G 128G SSD+1T GTX1050 4G IPS èƒŒå…‰é”®ç›˜)', 'commit': '1.3ä¸‡+æ¡è¯„ä»·', 'shop': 'å®ç¢äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥4299.00', 'name': 'æˆ´å°”DELLæˆå°±è‹±ç‰¹å°”é…·ç¿i5 14.0è‹±å¯¸å•†åŠ¡è½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8265U 4G 128G PCIe 1T AMD R520 2Gç‹¬æ˜¾ FHD)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4.9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6599.00', 'name': 'æˆ´å°”DELLç‡ƒ7000 pro 15.6è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i7-8565U 8G 128GSSD 1T MX250 2Gç‹¬æ˜¾ é«˜è‰²åŸŸ)å†°æ²³é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6798.00', 'name': 'åŽç¡•(ASUS) é£žè¡Œå ¡åž’6 15.6è‹±å¯¸çª„è¾¹æ¡†æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 256GSSD+1T GTX1050Ti 4G IPS)ç«é™¨çº¢é»‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4.2ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3799.00', 'name': 'è”æƒ³ï¼ˆLenovoï¼‰æ‰¬å¤©V130(V110å‡çº§ç‰ˆ)14è‹±å¯¸å•†åŠ¡ç¬”è®°æœ¬(i5-7200U 8G 1T 2Gç‹¬æ˜¾ é¢„è£…office ä¸¤å¹´ä¸Šé—¨win10)ç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '3.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6799.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4ä»£ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8300H 8G 128G+1TB GTX1060 6Gç‹¬æ˜¾ å››åŒºèƒŒå…‰é”®ç›˜ IPSï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '20ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4999.00', 'name': 'æƒ æ™®(HP)æ˜Ÿ 13-an0007TU 13.3è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘(i7-8565U 8G 256G PCIE SSD UMA FHD IPS 72%è‰²åŸŸ)ç²‰', 'commit': '1.8ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5299.00', 'name': 'æˆ´å°”çµè¶Š14 ç‡ƒ 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256GSSD MX250 2Gç‹¬æ˜¾ èƒŒå…‰é”®ç›˜)å…ƒæ°—ç²‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '13ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5999.00', 'name': 'å°ç±³(MI)Air 13.3è‹±å¯¸å…¨é‡‘å±žè¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(i7-8550U 8G 256G PCIE SSD MX150 2Gç‹¬æ˜¾ 72%NTSC FHD é¢„è£…Office æŒ‡çº¹ç‰ˆ)é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '17ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6099.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air è‹±ç‰¹å°”é…·ç¿i7 13.3è‹±å¯¸2019æ¬¾è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(I7-8565U 8G 512G SSD MX250)è½»å¥¢ç°', 'commit': '6.8ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥4599.00', 'name': 'å°ç±³ (MI)Ruby 15.6è‹±å¯¸é‡‘å±žè½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8250U 8G 1T+128G SSD 2G GDDR5ç‹¬æ˜¾ FHD å…¨é”®ç›˜ æ­£ç‰ˆOffice Win10) ç»å…¸ç™½', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '18ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4599.00', 'name': 'åŽç¡•é¡½çŸ³(ASUS) ç•…çŽ©ç‰ˆY5000 15.6è‹±å¯¸çª„è¾¹æ¡†å¨±ä¹åŠžå…¬ç¬”è®°æœ¬ç”µè„‘(i5-8250U 8G 1T 2Gç‹¬æ˜¾) ç°è‰²', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5888.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4ä»£ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8300H 8G 512G GTX1050Ti 4Gç‹¬æ˜¾ IPS FHDï¼‰', 'commit': '20ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5599.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air è‹±ç‰¹å°”é…·ç¿i5 13.3è‹±å¯¸è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 512G SSDPCIe MX150 )æ¹–å…‰è“', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5979.00', 'name': 'åŽç¡•(ASUS) é£žè¡Œå ¡åž’6ä»£ 15.6è‹±å¯¸çª„è¾¹æ¡†æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8300H 8G 256GSSD+1T GTX1050Ti 4G IPS)ç«é™¨çº¢é»‘', 'commit': '4.2ä¸‡+æ¡è¯„ä»·', 'shop': 'åŽç¡•äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5297.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ7M-KP5SC è‹±ç‰¹å°”é…·ç¿i5 GTX1050Tiç‹¬æ˜¾15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8300H 8G 256GSSD+1T)IPS', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥5799.00', 'name': 'è”æƒ³ThinkPad ç¿¼480 è‹±ç‰¹å°”é…·ç¿i5 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 256GSSD 2Gç‹¬æ˜¾ FHD ï¼‰é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '5.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5499.00', 'name': 'è”æƒ³(Lenovo)å°æ–°é’æ˜¥ç‰ˆ è‹±ç‰¹å°”é…·ç¿i7 14è‹±å¯¸ è½»è–„ç¬”è®°æœ¬ç”µè„‘(I7-8565U 8G 1T+128G FHD 2Gç‹¬æ˜¾)è¿½æ¢¦é“¶', 'commit': '6.2ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥6799.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Airè‹±ç‰¹å°”é…·ç¿i713.3è‹±å¯¸è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(i7-8565U 16G 512G PCIe MX150IPS)é«˜å®šç‰ˆï¼ˆé»‘ï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4699.00', 'name': 'æˆ´å°”DELLæˆå°±5000è‹±ç‰¹å°”é…·ç¿i5ä¸å‡¡é“¶13.3è‹±å¯¸å•†åŠ¡è½»è–„ä¾¿æºç¬”è®°æœ¬ç”µè„‘(i5-8250U 8G 256G PCIe SSD FHD IPS)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4.9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6498.00', 'name': 'ç¥žèˆŸæˆ˜ç¥ž Z7-KP7EC GTX1060 6Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ï¼ˆI7-8750H 16G 1T+256G SSD RGBé”®ç›˜ WIN10 IPS)', 'commit': '1.5ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸæˆ˜ç¥žäº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥8999.00', 'name': 'å°ç±³(MI)æ¸¸æˆæœ¬ 15.6è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆç¬¬å…«ä»£è‹±ç‰¹å°”é…·ç¿I7-8750H 16G 1T+256G SSD GTX1060 6G 72%NTSCé«˜è‰²åŸŸ FHDï¼‰æ·±ç©ºç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '18ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3599.00', 'name': 'è”æƒ³å°æ–°æ½®7000-13.3è‹±å¯¸è¶…è½»è–„æœ¬è¶…æžæœ¬å­¦ç”Ÿå­¦ä¹ ä¾¿æ·å•†åŠ¡åŠžå…¬æ‰‹æ ç¬”è®°æœ¬ç”µè„‘ çª„è¾¹æ¡†é«˜æ¸… åŽŸåŽ‚ é“¶è‰²i3-7100 4G 128Gå›ºæ€ é›†æ˜¾', 'commit': '400+æ¡è¯„ä»·', 'shop': 'è”æƒ³æ’ç›Šç‘žæµ©ä¸“å–åº—'}
+{'price': 'ï¿¥6699.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4ä»£ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8750H 8G 128G+1TB GTX1050Ti 4Gç‹¬æ˜¾ IPS FHDï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '20ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5299.00', 'name': 'è”æƒ³(Lenovo)å°æ–°14è‹±å¯¸ è‹±ç‰¹å°”é…·ç¿i5 è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(I5-8265U 8G 1TB+256G PCIE MX230 IPS)ä»™å¥³ç²‰', 'commit': '4ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥7599.00', 'name': 'å°ç±³ MI Pro-GTX15.6è‹±å¯¸å…¨é‡‘å±žè½»è–„ç¬”è®°æœ¬ï¼ˆå…«ä»£é…·ç¿i7-8550U 16G 256G GTX1050Max-Q 4Gç‹¬æ˜¾ 72%è‰²åŸŸï¼‰æ·±ç©ºç°', 'commit': '18ä¸‡+æ¡è¯„ä»·', 'shop': 'å°ç±³äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥7499.00', 'name': 'æˆ´å°”DELLæ¸¸åŒ£G3çƒˆç„°ç‰ˆ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 512GSSD GTX1060MQ 6Gç‹¬æ˜¾ 72%NTSC)', 'commit': '15ä¸‡+æ¡è¯„ä»·', 'shop': 'æˆ´å°”äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5398.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ7M-KP5GZ è‹±ç‰¹å°”é…·ç¿i5 GTX1050Ti 15.6è‹±å¯¸72%è‰²åŸŸçª„è¾¹æ¡†å±æ¸¸æˆæœ¬(i5-8300H 8G 128G+1TB)', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥17099.00', 'name': 'Apple MacBook Pro 15.4è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ æ·±ç©ºç°è‰² é…å¤‡2018æ–°æ¬¾ï¼ˆå…­æ ¸å…«ä»£i7 16G 256Gå›ºæ€ç¡¬ç›˜ MR932CH/Aï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4954.00', 'name': 'æœºæ¢°é©å‘½(MECHREVO)S1 72%1.18kg14è‹±å¯¸ç‹¬æ˜¾çª„è¾¹æ¡†è½»è–„ç¬”è®°æœ¬ç”µè„‘i7-8550U 8G 256G MX150 ç° OFFICE èƒŒå…‰', 'commit': '2.4ä¸‡+æ¡è¯„ä»·', 'shop': 'æœºæ¢°é©å‘½äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥3997.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žK670D-G4A5 GTX1050 4Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(G5400 8G 512G SSD)IPS', 'commit': '2.3ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥10999.00', 'name': 'Apple MacBook Pro 13.3è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ æ·±ç©ºç°è‰²ï¼ˆ2017æ¬¾Core i5å¤„ç†å™¨/8GBå†…å­˜/256GBç¡¬ç›˜ MPXT2CH/Aï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7888.00', 'name': 'æœºæ¢°å¸ˆï¼ˆMACHENIKEï¼‰F117-S6Cs ç”µç«žç‰ˆæ¸¸æˆæœ¬ç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8750H 16G 256G+1T GTX1060 6G Win10 144Hzï¼‰', 'commit': '4200+æ¡è¯„ä»·', 'shop': 'æœºæ¢°å¸ˆäº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥3797.00', 'name': 'ç¥žèˆŸæˆ˜ç¥ž K670D-G4D5 GTX1050 4Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(G5400 8G 256G SSD 1080P IPS Win10)', 'commit': '1.1ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸæˆ˜ç¥žäº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥8399.00', 'name': 'è”æƒ³ThinkPad ç¿¼480ï¼ˆ12CDï¼‰14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8550U 16G 256GSSD+1T 2Gç‹¬æ˜¾ FHDï¼‰å†°åŽŸé“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4999.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æˆ˜66 äºŒä»£ 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8265U 8G 256G PCIe SSD+1TB MX250 2Gç‹¬æ˜¾ ä¸€å¹´ä¸Šé—¨ï¼‰é“¶è‰²', 'commit': '7700+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥11.50', 'name': 'é½å¿ƒï¼ˆCOMIXï¼‰A5 122å¼ ä¼˜å“å•†åŠ¡ç¬”è®°æœ¬å­/è®°äº‹æœ¬/æ—¥è®°æœ¬ é»‘è‰² åŠžå…¬æ–‡å…·C5902', 'commit': '13ä¸‡+æ¡è¯„ä»·', 'shop': 'é½å¿ƒäº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5697.00', 'name': 'ç¥žèˆŸ (HASEE) æˆ˜ç¥žZ7M-KP7GC è‹±ç‰¹å°”é…·ç¿i7 GTX1050Tiç‹¬æ˜¾15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 128G+1T)IPS', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥4299.00', 'name': 'æˆ´å°”DELLæˆå°±è‹±ç‰¹å°”é…·ç¿i5 15.6è‹±å¯¸è½»è–„å•†åŠ¡åŠžå…¬ç¬”è®°æœ¬ç”µè„‘(i5-8265U 4G 256G PCIe AMD R520 2Gç‹¬æ˜¾ FHD)é“¶', 'commit': '4.9ä¸‡+æ¡è¯„ä»·', 'shop': 'æˆ´å°”äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥4988.00', 'name': 'åŽç¡•(ASUS) çµè€€S 2ä»£ 14è‹±å¯¸ä¸‰é¢å¾®è¾¹è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 512GSSD MX150 2G IPS)æ¶ˆå…‰ç°(S4300)', 'commit': '3.9ä¸‡+æ¡è¯„ä»·', 'shop': 'åŽç¡•äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥4788.00', 'name': 'åŽç¡•aè±†(adol) 13.3è‹±å¯¸å››é¢çª„è¾¹æ¡†è½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256GSSD MX150 IPS)çŽ«ç‘°é‡‘', 'commit': '6.6ä¸‡+æ¡è¯„ä»·', 'shop': 'åŽç¡•äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥8598.00', 'name': 'ç¥žèˆŸ(HASEE)ç²¾ç›¾G97E GTX1070 8Gç‹¬æ˜¾ 17.3è‹±å¯¸120Hzç”µç«žå± å•†åŠ¡æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(I7-8750H 16G 1T+256G SSD)', 'commit': '2.3ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥2799.00', 'name': 'è”æƒ³IdeaPad330 15.6è‹±å¯¸Cè¶…è–„æœ¬å®¶ç”¨å•†åŠ¡å­¦ç”ŸåŠžå…¬ç‹¬æ˜¾è¶…æžæœ¬æ¸¸æˆè½»è–„ä¾¿æºç¬”è®°æœ¬æ‰‹æç”µè„‘ æ˜Ÿç©ºé“¶ æ ‡é…ã€A6-9225/4G/1Tã€‘', 'commit': '3.1ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³èˆªç”µæŽˆæƒä¸“å–åº—'}
+{'price': 'ï¿¥5598.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ7-KP5DC è‹±ç‰¹å°”é…·ç¿i5 GTX1060ç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8300H 8G 128GSSD+1TB)IPS', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥6999.00', 'name': 'è”æƒ³ThinkPad ç¿¼490ï¼ˆ2NCDï¼‰14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8565U 8G 128GSSD+1T RX550X 2Gç‹¬æ˜¾ï¼‰å†°åŽŸé“¶', 'commit': '5.3ä¸‡+æ¡è¯„ä»·', 'shop': 'ThinkPadäº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥5599.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air2018æ¬¾ è‹±ç‰¹å°”é…·ç¿i5 15.6è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘(i5-8250U 8G 512G PCIE SSD ç‹¬æ˜¾MX150)è½»å¥¢ç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '5.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5299.00', 'name': 'è”æƒ³ThinkPad E480ï¼ˆ38CDï¼‰14è‹±å¯¸çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-7200U 8G 500G 2Gç‹¬æ˜¾ Win10ï¼‰é»‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '7.1ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5899.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air13.3è‹±å¯¸è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(è‹±ç‰¹å°”é…·ç¿i7-8565U 8G 512G PCIe MX150 é«˜è‰²åŸŸIPS )æ¹–å…‰è“', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6798.00', 'name': 'åŽç¡•(ASUS) é£žè¡Œå ¡åž’6 15.6è‹±å¯¸çª„è¾¹æ¡†æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 256GSSD+1T GTX1050Ti 4G IPS)ç«é™¨çº¢é»‘', 'commit': '4.2ä¸‡+æ¡è¯„ä»·', 'shop': 'åŽç¡•äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5698.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZX7-CP5G GTX1060 6Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8400 8G 256G SSD RGBé”®ç›˜)IPS', 'commit': '3.2ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥15.00', 'name': 'ï¿¥12.50', 'commit': 'å¾—åŠ›(deli)4æœ¬A5/60å¼ ä¹ç´ ç³»åˆ—ç¬”è®°æœ¬è®°äº‹æœ¬çº¿åœˆæœ¬èžºæ—‹è½¯æŠ„æœ¬å­LA560-01JY ä¹ç´ ç³»åˆ—ï¼Œç´ å‡€ä¼˜é›…ã€‚æ›´æœ‰é›¶ç³»åˆ—åˆ›æ„ç»„åˆï¼Œ3ç§å°ºå¯¸ï¼Œ1å¥—è§£å†³ã€‚æˆ³æˆ‘æŸ¥çœ‹~', 'shop': '5.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7499.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4Pro 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8300H 8G 512G RTX2060 6Gç‹¬æ˜¾ 60Hzï¼‰', 'commit': '20ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥6099.00', 'name': 'æˆ´å°”çµè¶Š14 ç‡ƒ 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i7-8565U 8G 256GSSD MX250 2Gç‹¬æ˜¾ èƒŒå…‰é”®ç›˜)å…ƒæ°—ç²‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '13ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4599.00', 'name': 'åŽç¡•aè±†(adol) 13.3è‹±å¯¸å››é¢çª„è¾¹æ¡†è½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8250U 8G 256GSSD MX150 IPS)çš“æœˆé“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6.6ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7699.00', 'name': 'æˆ´å°”DELLXPS13.3è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i5è¶…è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i5-8250U 8G 256GPCIe IPS 72%é«˜è‰²åŸŸ èƒŒå…‰)é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '3.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5698.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ7M-KP7Z GTX1050Ti 15.6è‹±å¯¸72%è‰²åŸŸçª„è¾¹æ¡†å…¨é¢å±æ¸¸æˆæœ¬ï¼ˆi7-8750H 8G 512G SSD)', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥14.00', 'name': 'å¾—åŠ›(deli)10æœ¬A5/38å¼ æ— çº¿è£…è®¢è½¯æŠ„æœ¬ åŠžå…¬è®°äº‹æœ¬æ–‡å…·ç¬”è®°æœ¬å­33385 ã€10ä¸‡å¥½è¯„ã€‘â‘ çº¸å¼ ç»†è…»ï¼Œä¹¦å†™é¡ºæ»‘â‘¡è¶…é«˜æ€§ä»·æ¯”ï¼ŒåŠžå…¬çš„é€‰æ‹©ã€‚ç‚¹æ­¤å‡çº§3æœ¬è£…çš®é¢æœ¬ï¼Œä¸“ä¸ºä¼ä¸šç ”å‘çš„å¤šæœ¬è£…ï¼', 'commit': '13ä¸‡+æ¡è¯„ä»·', 'shop': 'å¾—åŠ›äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥2499.00', 'name': 'è”æƒ³ï¼ˆLenovoï¼‰æ‰¬å¤©V330 14è‹±å¯¸è½»è–„å¨±ä¹å•†åŠ¡å½±éŸ³å®¶ç”¨ç¬”è®°æœ¬ç”µè„‘(A4 4G 500G 2Gç‹¬æ˜¾win10ä¸¤å¹´ä¸Šé—¨)æ˜Ÿç©ºç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '3.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5999.00', 'name': 'è”æƒ³ThinkPad S2 2019ï¼ˆ00CDï¼‰13.3è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8265U 8G 256GSSD FHDï¼‰é“¶è‰²', 'commit': '9æ¡è¯„ä»·', 'shop': 'ThinkPadäº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥6299.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air è‹±ç‰¹å°”é…·ç¿i7 13.3è‹±å¯¸2019æ¬¾è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(I7-8565U 8G 512G SSD MX250)æ¹–å…‰è“', 'commit': '6.8ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥4999.00', 'name': 'æƒ æ™®(HP)æ˜Ÿ 13-an0005TU 13.3è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘(i7-8565U 8G 256G PCIE SSD UMA FHD IPS 72%è‰²åŸŸ)é“¶', 'commit': '1.8ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥10999.00', 'name': 'æˆ´å°”DELLXPS13.3è‹±å¯¸è¶…è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i7-8550U 16G 512GPCIe IPS 72%é«˜è‰²åŸŸ èƒŒå…‰)é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '3.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6099.00', 'name': 'æˆ´å°”çµè¶Š14 ç‡ƒ 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i7-8565U 8G 256GSSD MX250 2Gç‹¬æ˜¾ èƒŒå…‰é”®ç›˜)å¤ªé˜³é‡‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '13ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6999.00', 'name': 'æˆ´å°”DELLæ¸¸åŒ£G3çƒˆç„°ç‰ˆ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 128GSSD 1T GTX1050Ti 4Gç‹¬æ˜¾ IPS)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '15ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥22.50', 'name': 'ï¿¥20.90', 'commit': 'å¾—åŠ›(deli)12æœ¬A5/40å¼ æ— çº¿è£…è®¢è½¯æŠ„æœ¬åŠžå…¬è®°äº‹æœ¬ æ–‡å…·ç¬”è®°æœ¬å­7651', 'shop': '40ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5699.00', 'name': 'æˆ´å°”DELLç‡ƒ7000 pro 15.6è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i5è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256GSSD MX250 2Gç‹¬æ˜¾)å†°æ²³é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3999.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æˆ˜66 AMDç‰ˆ 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆé”é¾™5 8G 512G PCIe SSD Win10 ä¸€å¹´ä¸Šé—¨ï¼‰é“¶è‰²', 'commit': '7700+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5199.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air è‹±ç‰¹å°”é…·ç¿i5 13.3è‹±å¯¸2019æ¬¾è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(I5-8265U 8G 256G SSD MX250)è½»å¥¢ç°', 'commit': '6.8ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥2498.00', 'name': 'ç¥žèˆŸ(HASEE)ä¼˜é›…X3D1 72%è‰²åŸŸ13.3è‹±å¯¸IPSå±ç¬”è®°æœ¬ç”µè„‘(3867U 8G 256G SSD )', 'commit': '1.1ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥8987.00', 'name': 'ã€ä¸œå®¶æ™ºé€‰ã€‘å¾®è½¯(Microsoftï¼‰Surface Laptop 2è¶…è½»è–„è§¦æŽ§ç¬”è®°æœ¬13.5è‹±å¯¸ 8ä»£é…·ç¿i5 8G 256GSSDç°ç²‰é‡‘', 'commit': '7100+æ¡è¯„ä»·', 'shop': 'å¾®è½¯äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥4299.00', 'name': 'åŽç¡•ï¼ˆASUSï¼‰ æ——èˆ°åº— PX554 15.6è‹±å¯¸æ‰‹æç¬”è®°æœ¬ç”µè„‘ é“¶ç°è‰² i5-8265U/8G/256G SSD/ç‹¬æ˜¾', 'commit': '9400+æ¡è¯„ä»·', 'shop': 'åŽç¡•ç”µè„‘å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥6387.00', 'name': 'å¾®è½¯ï¼ˆMicrosoftï¼‰Surface Pro 6 äºŒåˆä¸€å¹³æ¿ç”µè„‘ç¬”è®°æœ¬ 12.3è‹±å¯¸ï¼ˆç¬¬å…«ä»£Core i5 8G 128G SSDï¼‰äº®é“‚é‡‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6455.00', 'name': 'ã€ä¸œå®¶æ™ºé€‰ã€‘æœºæ¢°é©å‘½(MECHREVO) X3 17.3è‹±å¯¸éž15.6çª„è¾¹æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ i7-8750H 8G 128G+1T GTX1050Ti 4G', 'commit': '1.1ä¸‡+æ¡è¯„ä»·', 'shop': 'æœºæ¢°é©å‘½äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5399.00', 'name': 'è”æƒ³ThinkPad ç¿¼480ï¼ˆ04CDï¼‰è‹±ç‰¹å°”é…·ç¿i5 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 256SSD ï¼‰å†°åŽŸé“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥7499.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æš—å½±ç²¾çµ4Pro 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8300H 8G 512G RTX2060 6Gç‹¬æ˜¾ 60Hzï¼‰', 'commit': '20ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5299.00', 'name': 'è”æƒ³ThinkPad è€€é“¶S2 2018ï¼ˆ0HCDï¼‰è‹±ç‰¹å°”8ä»£é…·ç¿13.3è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 256GSSDï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '7900+æ¡è¯„ä»·'}
+{'price': 'ï¿¥6699.00', 'name': 'å°ç±³(MI)æ¸¸æˆæœ¬ 15.6è‹±å¯¸æ¸¸æˆè½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆè‹±ç‰¹å°”å…«ä»£é…·ç¿I5-8300H 8G 1T+256G SSD GTX1050TI 4G 72%NTSCé«˜è‰²åŸŸ FHDï¼‰æ·±ç©ºç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '18ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5499.00', 'name': 'è”æƒ³(Lenovo)å°æ–°é’æ˜¥ç‰ˆ è‹±ç‰¹å°”é…·ç¿i7 14è‹±å¯¸ è½»è–„ç¬”è®°æœ¬ç”µè„‘(I7-8565U 8G 1T+128G FHD 2Gç‹¬æ˜¾)æ— ç•é»‘', 'commit': '6.2ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥6098.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ7-KP7GA GTX1060 6Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 512G SSD)IPS', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥2969.00', 'name': 'è”æƒ³IdeaPad330 15.6è‹±å¯¸Cè¶…è–„æœ¬å®¶ç”¨å•†åŠ¡å­¦ç”ŸåŠžå…¬ç‹¬æ˜¾è¶…æžæœ¬æ¸¸æˆè½»è–„ä¾¿æºç¬”è®°æœ¬æ‰‹æç”µè„‘ æ˜Ÿç©ºé“¶ å®šåˆ¶ä¸€ã€A6-9225/4G/1T+120Gã€‘', 'commit': '3.1ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³èˆªç”µæŽˆæƒä¸“å–åº—'}
+{'price': 'ï¿¥8199.00', 'name': 'åŽç¡•(ASUS)çµè€€Deluxe14 14.0è‹±å¯¸ 92%å…¨é¢å± è½»è–„ç¬”è®°æœ¬ç”µè„‘ å°Šçˆµè“ i7-8565U 8G 512Gå›ºæ€ 92%å±å æ¯”', 'commit': '100+æ¡è¯„ä»·', 'shop': 'åŽç¡•ç”µè„‘å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5499.00', 'name': 'è”æƒ³(Lenovo)å°æ–°æ½®7000 è‹±ç‰¹å°”é…·ç¿i7 13.3è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘(i7-8550U 8G 512G PCIE SSD ç‹¬æ˜¾MX150)ç«èŠ±é‡‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4399.00', 'name': 'åŽç¡•ï¼ˆASUSï¼‰ç¬”è®°æœ¬ç”µè„‘FL8000æ¸¸æˆæœ¬é¡½çŸ³15.6è‹±å¯¸æ‰‹æç”µè„‘å•†åŠ¡åŠžå…¬ æ˜Ÿç©ºç° ã€ã€‘i7-8550/4G/1TB/2Gç‹¬æ˜¾', 'commit': '7200+æ¡è¯„ä»·', 'shop': 'åŽç¡•æ©è£ä¸“å–åº—'}
+{'price': 'ï¿¥3399.00', 'name': 'è”æƒ³IdeaPad330-15æ–°ä¸€ä»£é…·ç¿I3è¶…æ€§èƒ½æ‰‹æåŠžå…¬ç¬”è®°æœ¬ç”µè„‘è¶…è–„æœ¬æ¸¸æˆè½»è–„æœ¬å•†ç”¨æœ¬å­¦ç”Ÿæœ¬c æ–°ä¸€ä»£é…·ç¿i3/8G/1T+128G/å‡çº§ã€ç§’æ€ã€‘ W10 é“¶è‰² 15.6è‹±å¯¸[é€æ­£ç‰ˆof', 'commit': '3.2ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘æŽˆæƒä¸“å–åº—'}
+{'price': 'ï¿¥4786.00', 'name': 'å®ç¢(Acer)èœ‚é¸ŸSwift3å¾®è¾¹æ¡†é‡‘å±žè½»è–„æœ¬14è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘SF314(i5-8265U 8G 256G PCIe SSD MX250 IPS)ç²‰å°æ ·', 'commit': '2.1ä¸‡+æ¡è¯„ä»·', 'shop': 'å®ç¢äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥6598.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ7-KP7Z è‹±ç‰¹å°”é…·ç¿i7 GTX1060 15.6è‹±å¯¸72%è‰²åŸŸçª„è¾¹æ¡†å±æ¸¸æˆæœ¬(i7-8750H 8G 512G SSD)', 'commit': '11ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥5998.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZX7-CP5A1 GTX1060 6Gç‹¬æ˜¾ 72%è‰²åŸŸ15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i5-8400 8G 512G SSD RGBé”®ç›˜)', 'commit': '3.2ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥3899.00', 'name': 'å®ç¢ï¼ˆAcerï¼‰å¢¨èˆžX349 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ï¼ˆi5-7200U 8G 256GPCIe IPSå…¨é«˜æ¸… 1.53kg èƒŒå…‰é”®ç›˜ é“åˆé‡‘æœºèº«)', 'commit': '6900+æ¡è¯„ä»·', 'shop': 'å®ç¢å•†ç”¨äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥14999.00', 'name': 'Apple MacBook Pro 13.3è‹±å¯¸ç¬”è®°æœ¬ç”µè„‘ é“¶è‰² é…å¤‡2018æ–°æ¬¾ï¼ˆå››æ ¸å…«ä»£i5 8G 512Gå›ºæ€ç¡¬ç›˜ MR9V2CH/Aï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '9ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3799.00', 'name': 'æˆ´å°”ï¼ˆDELLï¼‰ çµè¶Š5370 13.3è‹±å¯¸8ä»£é…·ç¿å››æ ¸è¶…æžæœ¬å•†åŠ¡åŠžå…¬è½»è–„ç¬”è®°æœ¬ç”µè„‘ é‡‘å±žä¾¿æºæ‰‹ææœ¬ 5370-2505S i5-8250U è¶…åŠ¨é“¶ 4Gå†…å­˜ 128G PCIe å®˜æ–¹æ ‡é…', 'commit': '3500+æ¡è¯„ä»·', 'shop': 'æˆ´å°”å¯äºˆä¸“å–åº—'}
+{'price': 'ï¿¥10497.00', 'name': 'ç¥žèˆŸæˆ˜ç¥ž GX8-CP7S2 GTX1070 8Gç‹¬æ˜¾ 17.3è‹±å¯¸94%è‰²åŸŸ120Hzç”µç«žå±æ¸¸æˆç¬”è®°æœ¬ï¼ˆI7-8700 16G 256G SSD+1Tï¼‰', 'commit': '1.1ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸæˆ˜ç¥žäº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥5599.00', 'name': 'è”æƒ³(Lenovo)å°æ–°Air13.3è‹±å¯¸è¶…è½»è–„ç¬”è®°æœ¬ç”µè„‘(è‹±ç‰¹å°”é…·ç¿i7-8565U 8G 256G PCIe MX150 é«˜è‰²åŸŸIPS )å¤å¤é‡‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '6.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥5199.00', 'name': 'è”æƒ³ï¼ˆLenovoï¼‰å°æ–°Air14è¶…è½»è–„çª„è¾¹æ¡†å­¦ç”Ÿå¨±ä¹æ‰‹æ14è‹±å¯¸å›ºæ€ä¸Šç½‘æœ¬ç‹¬æ˜¾åŠžå…¬ç”µè„‘ é“¶è‰²æ ‡é…i5-8265U/8G/512G/ç‹¬æ˜¾ /win10ç³»ç»Ÿ/office', 'commit': '1.5ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³æŽˆæƒæ——èˆ°åº—'}
+{'price': 'ï¿¥5399.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰æˆ˜66 Pro G1 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 360G PCIe SSD+500G æ ‡åŽ‹MX150 2Gç‹¬æ˜¾ï¼‰é“¶è‰²', 'commit': '7.1ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5299.00', 'name': 'è”æƒ³(lenovo)å°æ–°ç¬¬å…«ä»£è‹±ç‰¹å°”é…·ç¿i5 Air15.6è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256G PCIE MX150 )è½»å¥¢ç°', 'commit': '24ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥8198.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žZ8-CR7P1 RTX2060ç‹¬æ˜¾144Hzçª„è¾¹æ¡†ç”µç«žå±15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 512G SSD)', 'commit': '1ä¸‡+æ¡è¯„ä»·', 'shop': 'ç¥žèˆŸç”µè„‘äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥8499.00', 'name': 'æˆ´å°”DELLæ¸¸åŒ£G3 17.3è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i7æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 8G 128G+1T GTX1060MQ 6Gç‹¬æ˜¾ 72%NTSC)é»‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '15ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4399.00', 'name': 'ä¸‰æ˜Ÿï¼ˆSAMSUNGï¼‰35X0AA-X08 15.6è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 1TB+128GSSD 2Gç‹¬æ˜¾ FHD Win10ï¼‰ç™½', 'commit': '1.8ä¸‡+æ¡è¯„ä»·', 'shop': 'ä¸‰æ˜Ÿç¬”è®°æœ¬äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥6769.00', 'name': 'è”æƒ³ThinkPad ç¿¼480 è‹±ç‰¹å°”é…·ç¿i7 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆi7-8550U 8G 128GSSD+1T 2Gç‹¬æ˜¾ FHDï¼‰é“¶', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '5.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4599.00', 'name': 'æƒ æ™®ï¼ˆHPï¼‰EliteBook 745G5 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆé”é¾™5 PRO 2500U 8G 256SSD Win10 FHD Officeä¸€å¹´ä¸Šé—¨ï¼‰', 'commit': '3ä¸‡+æ¡è¯„ä»·', 'shop': 'æƒ æ™®äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥4199.00', 'name': 'åŽç¡•aè±†(adol) 14è‹±å¯¸å››é¢çª„è¾¹æ¡†è½»è–„ç¬”è®°æœ¬ç”µè„‘(i3-8145U 4G 512GSSD IPS)æ¡ƒæµ¦ç²‰(ADOL14)', 'commit': '200+æ¡è¯„ä»·', 'shop': 'åŽç¡•äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥5499.00', 'name': 'ï¿¥4999.00', 'commit': 'æƒ æ™®ï¼ˆHPï¼‰æ˜Ÿ 14-ce1004TX 14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8265U 8G 1TB+128SSD MX150 2Gç‹¬æ˜¾ FHD IPSï¼‰é“¶', 'shop': 'äºŒæ‰‹æœ‰å”®'}
+{'price': 'ï¿¥5999.00', 'name': 'è”æƒ³ThinkPad T480ï¼ˆ2NCDï¼‰14è‹±å¯¸è½»è–„ç¬”è®°æœ¬ç”µè„‘ï¼ˆi5-8250U 8G 16Gå‚²è…¾ç³»ç»ŸåŠ é€Ÿå™¨ 500G Win10 åŒç”µæ± ï¼‰', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '1.8ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥10888.00', 'name': 'å¾®è½¯ï¼ˆMicrosoftï¼‰Surface Pro 6 äºŒåˆä¸€å¹³æ¿ç”µè„‘ç¬”è®°æœ¬ 12.3è‹±å¯¸ï¼ˆç¬¬å…«ä»£Core i7 8G 256G SSDï¼‰å…¸é›…é»‘', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.4ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4399.00', 'name': 'è”æƒ³ï¼ˆLenovoï¼‰IdeaPad340Cç³»åˆ—15.6è‹±å¯¸é…·ç¿å…«ä»£è½»è–„å¤§å±å•†åŠ¡ç¬”è®°æœ¬ç”µè„‘ ç°è‰² i5-8265U 4G 256G MX110', 'commit': '300+æ¡è¯„ä»·', 'shop': 'è”æƒ³äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ï¿¥7999.00', 'name': 'å°ç±³(MI)æ¸¸æˆæœ¬ 15.6è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘ï¼ˆè‹±ç‰¹å°”å…«ä»£é…·ç¿I5-8300H 8G 1T+256G SSD GTX1060 6G 72%NTSCé«˜è‰²åŸŸ FHDï¼‰æ·±ç©ºç°', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '18ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4197.00', 'name': 'å®ç¢(Acer)èœ‚é¸ŸSwift3å¾®è¾¹æ¡†è½»è–„æœ¬ 14è‹±å¯¸å…¨é‡‘å±žç¬”è®°æœ¬ç”µè„‘SF314(i5-8265U 8G 256G PCIe SSD IPS )ç²‰å°æ ·', 'commit': '2.1ä¸‡+æ¡è¯„ä»·', 'shop': 'å®ç¢äº¬ä¸œè‡ªè¥æ——èˆ°åº—'}
+{'price': 'ï¿¥7999.00', 'name': 'æœºæ¢°å¸ˆF117 144Hzç”µç«žå±æ¸¸æˆæœ¬å…«ä»£i7-8750H/GTX1060 6Gç‹¬æ˜¾åƒé¸¡ç¬”è®°æœ¬ç”µè„‘ æ——èˆ°ç‰ˆi7/16G/256Gå€éŸ³é€Ÿå›ºæ€+1T', 'commit': '4700+æ¡è¯„ä»·', 'shop': 'MACHENIKEæœºæ¢°å¸ˆæ——èˆ°åº—'}
+{'price': 'ï¿¥3399.00', 'name': 'è”æƒ³IdeaPad330-15æ–°ä¸€ä»£é…·ç¿I3è¶…æ€§èƒ½æ‰‹æåŠžå…¬ç¬”è®°æœ¬ç”µè„‘è¶…è–„æœ¬æ¸¸æˆè½»è–„æœ¬å•†ç”¨æœ¬å­¦ç”Ÿæœ¬c æ–°ä¸€ä»£é…·ç¿i3/8G/1T+128G/å‡çº§ã€ã€‘ W10 é“¶è‰² 15.6è‹±å¯¸[é€æ­£ç‰ˆoffice]', 'commit': '3.2ä¸‡+æ¡è¯„ä»·', 'shop': 'è”æƒ³ç”µè„‘æŽˆæƒä¸“å–åº—'}
+{'price': 'ï¿¥5397.00', 'name': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žK680E-G6E3 GTX1050Ti 4Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(I5-8400 8G 1T+256G SSD 1080P)IPS', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.3ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥3399.00', 'name': 'æˆ´å°”ï¼ˆDELLï¼‰ é‡‘å±žè¶…çº§æœ¬çµè¶Š5370 13.3è‹±å¯¸è½»è–„ä¾¿æºå•†åŠ¡åŠžå…¬æ‰‹æç¬”è®°æœ¬ç”µè„‘å­¦ç”Ÿæœ¬ ä¸å‡¡é“¶ã€é‡‘å±žè¶…è–„æœ¬ã€‘ i3-8130U/4G/128G PCIeæ ‡é…', 'commit': '1.4ä¸‡+æ¡è¯„ä»·', 'shop': 'æˆ´å°”å“è¶Šä¸“å–åº—'}
+{'price': 'ï¿¥13999.00', 'name': 'æˆ´å°”DELL G7 15.6è‹±å¯¸è‹±ç‰¹å°”é…·ç¿i7æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(i7-8750H 16G 256GSSD 1T RTX2060 6G å¤–æ˜ŸäººæŠ€æœ¯ 144Hz)', 'commit': 'äºŒæ‰‹æœ‰å”®', 'shop': '2.7ä¸‡+æ¡è¯„ä»·'}
+{'price': 'ï¿¥4899.00', 'name': 'æˆ´å°”çµè¶Š14 ç‡ƒ 14è‹±å¯¸è½»è–„çª„è¾¹æ¡†ç¬”è®°æœ¬ç”µè„‘(i5-8265U 8G 256GSSD FHD èƒŒå…‰é”®ç›˜)å…ƒæ°—ç²‰', 'commit': '13ä¸‡+æ¡è¯„ä»·', 'shop': 'æˆ´å°”äº¬ä¸œè‡ªè¥å®˜æ–¹æ——èˆ°åº—'}
+{'price': 'ä¸‹å•ç«‹å‡100å…ƒï¼ (4.18-4.19)', 'name': 'ï¿¥3997.00', 'commit': 'ç¥žèˆŸ(HASEE)æˆ˜ç¥žK670D-G4T5 GTX1050 4Gç‹¬æ˜¾ 15.6è‹±å¯¸æ¸¸æˆç¬”è®°æœ¬ç”µè„‘(G5400 8G 1T+128G SSD Win10)IPS', 'shop': '2.3ä¸‡+æ¡è¯„ä»·'}

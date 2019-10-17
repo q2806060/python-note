@@ -1,0 +1,105 @@
+1.匹配单词边界
+    \b : 单词边界
+    \B : 非单词边界
+    re.findall(r'\bis\b', 'This is a rabbit')   ---->  ['is']
+
+2.正则表达式的转义
+    加'r'
+
+3.捕获组（有名字）和非捕获组（没有名字）
+    捕获组格式：(?P<name>正则表达式)
+
+4.re 模块常用方法
+    1.compile
+        regex = re.compile(pattern, flags=0)
+        功能：生成正则表达式对象
+        pattern     正则表达式
+        re.I/A/S    添加匹配时特殊功能（功能标志位）
+        返回值：正则表达式的对象
+        ret = regex.findall('目标字符串')
+    2.regex对象属性
+        1.pattern       正则表达式
+        2.flags         功能标志位
+        3.groups        分了几组
+        4.groupindex    组名及第几组
+    3.findall(pattern, '目标字符串')
+        1.返回值为列表，如果有分组只获取子组的内容
+        2.re调用和regex对象调用
+            1.re.findall()
+            2.regex = re.compile(pattern)
+              regex.findall(s, pos, endpos)
+              pos/endpos: 位置
+    4.split(pattern, s)
+        功能：使用正则表达式匹配的部分，用来切割目标字符串
+    5.sub(pattern, replaceStr, string, max)
+        功能：替换字符串中符合条件的部分
+        max：替换次数
+    6.subn(pattern, replaceStr, string, max)
+        功能：替换字符串中符合条件的部分   
+        返回值：元组(字符串，替换了几次)
+    7.finditer(pattern, string)
+        1.使用同findall
+        2.返回值：迭代器对象
+        3.遍历迭代器
+        4.用.group()取值
+    8.返回值为match对象的方法
+        1.match(pattern, string)
+            1.功能：匹配目标字符串的起始位置
+            2.返回值：match对象或None
+        2.search(pattern, string)
+            1.功能：匹配目标字符串的第一处匹配内容
+            2.返回值：match对象或None
+        3.fullmatch(pattern, string)
+            1.功能：绝对匹配目标字符串（完全匹配）
+            2.返回值：match对象或None
+    9.match对象的方法
+        1.group()
+            功能：获取match对象中内容
+            参数：默认为0， 表示获取整个正则匹配到内容
+                 组的编号、组的名称，获取这个组的内容
+            返回值：字符串
+        2.groups()
+            功能：获取所有组匹配到的内容
+        3.groupdict()
+            功能：获取捕获组字典，键是组名，值是内容
+        4.span()
+            功能：匹配内容的起止值
+        5.start()
+            功能：起始值
+        6.end()
+            功能：终止值
+
+5.flags参数的使用
+    1.可以使用的函数
+        compile() findall() search() match() fullmatch() finditer() sub() subn() split()
+    2.作用：辅助正则表达式丰富匹配效果
+    3.常用的属性
+        1.re.S : 使 . 可匹配\n
+        2.re.I : 忽略字母大小写
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

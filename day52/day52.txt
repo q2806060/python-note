@@ -1,0 +1,151 @@
+1.BOM - Browser Object Model
+    1.浏览器对象模型
+        提供一系列操作浏览相关的属性和方法
+        核心对象是window对象，每个页面在浏览器中打开时，都会新建窗口，window对象会自动创建，直接访问
+    2.window对象的属性和方法
+        1.属性：
+            history location screen navigator document 等
+            都是window对象的属性
+            以上属性又都是对象类型，包含自身的属性和方法
+            例：
+                window.document.write();
+        2.方法：
+            alert("") 普通对话框
+            prompt("") 带有输入框的弹框
+            confirm("") 确认框，如果用户点击“确认”返回true，点击“取消”返回false
+            定时器方法
+        3.使用：
+            1.window对象可以省略，直接访问相关的属性和方法
+            2.所有的全局变量和全局函数都是window对象的属性和方法
+            3.定时器使用
+                1.周期性定时器（间歇调用）
+                    1.根据指定的时间间隔，不断调用代码
+                    2.语法：
+                        1.var timer = setInterval(function,interval)
+                            作用：开启间歇调用
+                            参数：
+                                1.function: 表示需要执行的代码段
+                                2.interval: 时间间隔，默认以毫秒为单位 1s = 1000ms
+                            返回：定时器ID（整数值），用于清除定时器
+                        2.clearInterval(timer)
+                2.一次性定时器（超时调用）
+                    1.在指定的时间间隔后，执行一次代码
+                    2.语法 
+                        1.var timer = setTimeout(function,timeout)
+                            开始超时调用
+                        2.clearTimeout(timer);
+                            根据定时器id关闭超时调用
+        4.属性详解
+            1.window对象大多的属性都是对象类型，包含自身的属性和方法
+            2.screen对象
+                1.保存于屏幕相关的信息
+                2.属性
+                    1.width/height:获取屏幕宽高
+                    2.availWidth/availHeight:获取屏幕实际可用的宽高（减去任务栏）
+            3.history
+                1.历史记录对象，保存当前窗口访问过的历史记录（url）
+                2.属性：
+                    length:保存当前窗口访问过的url数量
+                    注意：只有窗口地址栏中url发生变化时，会增加历史记录，url不变只是刷新页面不会增加历史记录
+                3.方法：
+                    back():相当于浏览器后退按钮，访问上一条历史记录
+                    forword():相当于前进按钮，访问下一条历史记录
+                    go(n):指定访问上/下第n条记录
+                          n可取正负值，
+            4.location
+                操作浏览器地址栏中的url
+                属性： 
+                    href:可以读取或设置当前窗口地址栏的URL
+                方法： 
+                    reload(param):表示重新加载页面，参数选填，默认为false，表示从缓存中加载；设置为true表示强制从服务器端加载
+
+2.DOM - Document Object Model 
+    1.文档对象模型，核心为document对象，提供对文档本身的操作，HTML文件称为文档。
+    2.文档的层次结构在JS中对应表现为节点的层次结构
+        整个文档被解析为节点树
+    3.节点及分类
+        节点：对文档中的标签，标签属性，文本进行封装，称为节点对象
+        分类：
+            1.元素节点 ---> 标签
+            2.属性节点 ---> 标签属性
+            3.文本节点 ---> 标签中的文本内容
+            4.文档节点 ---> document
+        节点操作：
+            1.获取节点对象
+            2.读取修改节点内容
+            3.创建节点
+            4.添加节点
+            5.删除节点
+    4.获取元素节点
+        1.document.getElementsByTagName("标签名");
+            根据标签名获取文档中所有对应的元素节点
+            返回：节点列表
+            参数：标签名
+        2.document.getElementsByClassName("类名");
+            作用：根据元素的class属性值（类名）获取节点列表
+            返回：节点列表，可以通过下标访问元素节点
+            参数：class属性值
+        3.document.getElementById("id属性值");
+            作用：根据元素的id属性值获取具体元素节点
+            返回：元素节点（id具有唯一性）
+            参数：id属性值
+        4.document.getElementsByName("name");
+            作用：根据元素的name属性值获取节点列表
+            返回：列表，借助下标访问具体元素节点
+            参数：name属性值
+            常用于表单元素获取
+        5.元素节点常用属性
+            1.读取或设置元素节点的内容
+                innerHTML : 可以识别标签语法
+                innerText : 不能识别HTML标签
+            2.读取或设置表单控件的值
+                value
+    5.操作标签属性
+        1.getAttribute("attrName")
+            根据指定的属性名，获取属性值
+        2.setAttribute("attrName","attrValue[ attrValue]")
+            为元素节点设置属性
+        3.removeAttribute("attrName")
+            根据属性名移除属性
+        4.标签属性都是元素节点对象的属性
+            操作标签属性可以使用对象点语法
+            例： 
+                h1.id = "d1"; //设置标签属性
+                h1.className = "c1"; //设置class属性，需要更名
+                h1.id = null; //移除属性值
+    6.操作元素的样式
+        1.通过添加id/class属性对应选择器，设置元素样式
+        2.直接操作行内样式
+            行内样式：
+                <h1 style="color:red;"></h1>
+            使用：
+                对象点语法获取样式对象 h1.style 
+                在样式对象中访问CSS属性，操作元素样式
+                注：
+                    1.样式对象访问CSS属性，出现连接符的CSS属性一律更名为驼峰标识，去掉连接符
+                    2.CSS属性值以字符串形式给出，单位不能省略
+                例：
+                    h1.style.fontSize = "16px";
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

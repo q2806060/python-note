@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="07-mtm-exer" method="POST">
+        <p>
+            StudentName:<input type="text" name="sname">
+        </p>
+        <p>
+            StudentAge:<input type="number" name="sage">
+        </p>
+        <p>
+            SelectedTeacher:
+            <select name="StuTea" multiple="multiple">
+                <optgroup label="teachers">
+                    {% for t in params.teachers %}
+                    <option value={{t.id}}>{{t.tname}}</option>
+                    {% endfor %}
+                </optgroup>
+            </select>
+            <span>{{params.msg}}</span>
+        </p>
+        <p>
+            <input type="submit" value="Saved">
+        </p>
+    </form>
+</body>
+</html>

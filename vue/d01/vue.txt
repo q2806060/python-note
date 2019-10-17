@@ -1,0 +1,183 @@
+1.安装
+    npm install -g @vue/cli
+    # OR
+    yarn global add @vue/cli
+
+2.什么是MVVM
+    M:model 模型
+    V:view  视图
+    VM:viewmodel 中间连接
+    
+3.vue开发基础流程
+    1.定义view
+    2.定义model
+    3.创建Vue实例(ViewModel)
+        new Vue();用于连接(view/model)
+        创建vue实例，需要传入选项：
+        数据       data:数据
+        挂载元素   el:元素id
+    4.将数据绑定view元素 一对大花括号写法{{message}},获取变量中值显示内容
+
+4.vuejs指令
+    vuejs指令以v-开头特性属性，他们作用Html元素，指令提供一些特性，指定绑定元素产生不同行为
+    1.v-if
+    2.v-show
+    3.v-else
+    4.v-for
+    5.v-bind
+    6.v-on
+    基础指令：vue具有良好扩展性，我们可自定义指令
+
+5.v-if
+    条件渲染指令，它根据表达式的true/false来删除或添加元素
+    v-if="条件" 根据true/false来显示元素内内容
+
+6.v-show 
+    条件渲染指令，和v-if指令不同，使用v-show指令元素始终会渲染到HTML，它只是设置style属性 dispaly:block{true}/display:none{false}
+
+7.v-else
+    指令必须跟一个v-if或v-show元素后，否则不能够被识别
+
+8.v-for 
+    指令基于一个数组渲染，它的语法与js遍历相似
+    v-for="item in items"
+
+9.v-bind
+    指令后带一个参数，中间放一个冒号，这个参数通常html特性
+    语法：
+        v-bind:arguments="expression"
+    示例：
+        <img v-bind:src="imgUrl">
+        <p v-bind:style="{backgroundColor:myBg}">
+
+10.v-on 
+    指令用于监听dom事件，用法与上面指令相似
+    用法：<a v-on:click="方法名"></a>
+        <a v-on:click.stop="方法名"></a>
+    .stop       停止事件冒泡
+    .prevent    阻止事件默认行为
+    .13.enter   只当前事件触发时，才会触发
+    .once       只触发一次
+    .left       鼠标左键
+    .right      鼠标右键
+    .middle     鼠标中键
+
+11.v-model
+    指令用于与当前元素绑定，value值
+    用法：<input type="text" v-model="变量">
+    注意事项：
+        v-model.lazy="变量"     懒惰#回车，onblur触发
+        v-model.number="变量"   #输入数值
+        v-model.trim="变量"     #去除字符串前后空格
+
+12.vue 自定义指令
+    vue自带的指令很多：v-for/v-else/v-if...
+    但是这些指令比较偏向工具化，有些时候需要具体业务功能，发现不够用，可以自定义指令。
+
+13.vue自定义指令创建
+    1.创建vue添加指令
+        new Vue({
+            el:
+            data:
+            directives:{        //自定义指令 
+                change:{        //指令名称 v-change
+                    bind:function(el,bindings){},  //bind：指令绑定到元素
+                    update:function(el,bindings){},//如果调用指令，传参数，参数变化，执行
+                    unbind:function(el,bindings){} //解除绑定的操作，
+                }
+            }
+        })
+        el:自定义指令绑定dom元素
+        bindings:自定义指令对象
+
+14.自定义的过滤器的创建和使用
+    1.创建过滤器
+        new Vue({
+            filters:{
+                myCurency:function(myInput){
+                    //处理数据
+                    return 处理后的数据
+                }
+            }
+        })
+
+        #使用
+        <any>{{表达式|过滤器}}<any>
+        示例：
+        <h1>{{price|myCurency}}</h1>
+
+
+
+15.组件之间数据传递
+
+
+16.组件 
+    组件：是一个可以被反复使用的，带有指定的功能视图（view）
+    
+
+17.创建组件
+    1.创建组件
+        Vue.component("组件名称",{组件内容,template:'<h3>模块</h3>'});
+        示例:
+            Vue.component("my-component",{template:'<h3>模块</h3>'});
+    2.组件的使用
+        组件的使用就像一个普通Html标签一样
+        <my-component></my-component>
+        
+        注意事项：  
+            1.罪案的命名和使用建议使用烤串命名规则
+            2.如果一个组件中渲染多个元素，将多个元素放到一个根标签，否则报错
+
+18.创建复合组件
+    复合组件并不是一个新概念，就是一个组件，只不过该组件又调用其他组件。
+    一个完整VUE项目，可以比作一颗组件树：根组件->层次组件->登录->注册->用户列表...
+
+19.组件的生命周期
+    分为4个阶段
+    create/mount/update/destroy
+    每个阶段都有对应处理函数
+    create:beforeCreate     created {创建：初始化操作}
+    mount:beforeMount       mounted {挂在DOM树}
+    update:beforeUpdate     updated {数据更新->操作或逻辑判断}
+    destroy:beforeDestroy   destroyed{清理工作}
+
+20.组件的监听  --- watch
+    可用于监听组件中变量是否发生改变
+
+21.组件之间的通信   父组件--->子组件
+    步骤：
+    1.父组件在调用子组件传值
+        <child myValue="123"></child>
+    2.子组件中获取父组件传来值
+        Vue.component("child",{
+            props:["myValue"],      //声明父组件
+        })
+    
+22.组件之间通信（子组件-->数据-->父组件）
+    1.在父组件中先定义一个方法，用于接收子组件通过事件发送来的数据
+        methods:{
+            getData:function(msg){
+                // 参数msg就是子组件通过事件传递过来的数据
+            }
+        }
+    2.在父组件模板绑定事件处理函数
+        <child @自定义事件名="方法名"></child>
+        示例：
+        <child @dataEvent="getData"></child>
+    3.在子组件中触发事件，并且传递数据
+        this.$emit("触发事件名",传递数据);
+        示例： 
+        this.$emit("dataEvent","交话费");
+
+23.组件之间通信 （$parent; $refs）
+    父组件获取子组件的（数据）
+        1.调用子组件时，指定属性 ref 
+            <child ref="自定义变量名"></child> // 表示子组件的数据
+            示例： 
+            <child ref="mySon"></child>
+        2.根据指定名称，找到子组件实例对象
+            this.$refs.mySon 
+    子组件向获取父组件数据
+        1.this.$parent
+    
+    注意事项：需要获取数据保存在data属性，使用本方法

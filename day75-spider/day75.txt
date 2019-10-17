@@ -1,0 +1,119 @@
+1.数据的分类
+    1.结构化数据：固定格式(HTML, JSON, XML)
+    2.非结构化数据：图片(一般存储为二进制)
+
+2.re解析模块
+    1.使用流程
+        使用方式1：
+        rList = re.findall("表达式", html, re.S)
+        使用方式2：
+        p = re.compile("正则", re.S)
+        rList = p.findall(html)
+    2.元字符
+        . : 匹配任意一个字符(不包括\n)
+        \d : 匹配任意一个数字
+        \s : 空白字符
+        \S : 非空白字符
+        \w : 普通字符
+        \W : 特殊字符
+    3.贪婪匹配和非贪婪匹配
+        加 ? 
+    4.分组
+        1.先按照整体正则匹配
+        2.再提取分组的数据
+
+3.csv模块的使用
+    1.导入模块
+        import csv 
+    2.打开csv文件
+        with open("test.csv", "w", encoding="utf-8", newline="") as f:
+        注：
+            newline 设置为空，让文件内不会出现空行
+    3.初始化写入对象
+        writer = csv.writer(f)
+    4.写入数据
+        writer.writerow(["小姐姐", "20"])
+        ...
+
+    5.csv扩充
+        1.读取open后的file文件内容,并将每行内容转为字典格式
+            data = csv.DictReader(file, delimiter=",", quotechar='"')
+        1.CSV文件的初始化设置
+            writer = csv.DictWriter(f=file,filednames=["first_name","last_name"],delimiter=",",quotechar='"',quoting=csv.QUOTE_ALL,lineterminator='\n')
+            writer.writeheader()
+        2.遍历数据，写入文件
+            for row in DATA:
+                writer.writerow(row)
+    
+
+4.数据持久化存储(mongodb)
+    1.pymongo 
+        1.创建连接对象
+            conn = pymongo.MongoClient("IP", 27017)
+        2.创建库对象
+            db = conn["库名"]
+        3.创建集合对象
+            myset = conn["集合名"]
+        
+        show dbs
+        use 库名
+        show collections
+        db.集合名.find().pretty()
+        db.集合名.drop()
+        db.dropDatabase()
+    2.mysql
+        1.创建连接
+            db = pymysql.connect("localhost", "root", "123456", charset="utf8")
+        2.创建游标
+            cursor = db.cursor()
+        3.忽略警告
+            import warnings
+            warnings.filterwarnings("ignore")
+        4.创建数据库
+            cdb = "create database if not exists maoyandb"
+            cursor.execute(cdb)
+        5.提交
+            db.commit()
+        6.关闭
+            cursor.close()
+            db.close()
+    3.远程存入mysql数据库
+        1.开启mysql远程连接
+            1.sudo -i 
+            2.cd /etc/mysql/mysql.conf.d 
+            3.subl mysqld.cnf 
+                [mysqld]
+                #bind-address = 127.0.0.1 加#注释
+            4./etc/init.d/mysql restart
+        2.添加授权用户
+            1.mysql>grant all privileges on *.* to "monkey"@"%" identified by "123" with grant option;
+                                                                                    可授权其他用户
+            2.mysql>flush privileges;
+                刷新授权
+        3.关闭Ubuntu防火墙
+            sudo ufw disable
+
+5.ubuntu中防火墙基本操作
+    1.查看状态：sudo ufw status
+    2.打开：sudo ufw enable
+    3.关闭：sudo ufw disable
+    4.添加规则：sudo ufw allow 3306
+
+6.Fiddler 抓包工具
+    1.配置Fiddler 
+        1.Tools - > Options
+            HTTS ：Decrypt Https Traffic(选中，添加证书信任)
+                    ... from browsers only
+            Connections : 监听端口 8888
+        2.重启Fiddler
+    2.配置浏览器代理
+        1.浏览器右上角：SwitchOmega -> 选项 -> 新建情景模式 -> NAME -> 创建
+        2.HTTP:// 127.0.0.1 8888(Fiddler端口)
+        3.点击  应用选项
+        4.点击 SwitchOmega 可切换代理(NAME)
+
+7.Fiddler 常用菜单
+    1.Inspector:查看抓到数据包详细内容
+    2.Headers:请求头
+        WebForms:显示POST请求的数据 <body>中
+        Raw:将整个请求显示为纯文本

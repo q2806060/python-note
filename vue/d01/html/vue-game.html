@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-game></my-game>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("my-game",{
+            data:function(){
+                return {
+                    randomNumber:0,
+                    userInput:0,
+                    result:''
+                }
+            },
+            mounted:function(){
+                var num = Math.floor(Math.random()*20);
+                this.randomNumber = num;
+            },
+            template:'<div><input type="text" v-model="userInput"><br><p>{{result}}</p></div>',
+            watch:{
+                userInput:function(){
+                    if(this.userInput>this.randomNumber){
+                        this.result = "大了";
+                    }else if(this.userInput<this.randomNumber){
+                        this.result = "小了";
+                    }else{
+                        this.result = "厉害了";
+                    }
+                }
+            }     
+        })
+        var exampleData = {
+            msg:"hello vue",
+        };
+        new Vue({
+            el:"#app",
+            data:exampleData
+        })
+    </script>
+</body>
+</html>

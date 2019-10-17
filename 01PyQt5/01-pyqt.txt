@@ -1,0 +1,42 @@
+1.添加QtDesigner、PyUIC、pyrcc
+    路径：Settings -> Tools -> Externam Tools
+    1.添加QtDesigner工具
+        功能：直接打开designer工具
+        Name:QtDesigner 
+        Program:designer.exe
+        Working directory:工作目录
+    2.添加PyUIC工具
+        功能：将.ui文件转为.py文件
+        Name:PyUIC 
+        Program:Python.exe
+        Arguments:-m PyQt5.uic.pyuic  $FileName$ -o $FileNameWithoutExtension$.py
+        Working directory:工作目录 
+    3.添加pyrcc工具
+        功能：将资源文件如图片转为python代码识别的文件
+        Name:pyrcc 
+        Program:Python.exe
+        Arguments:$FileName$ -o $FileNameWithoutExtension$_rc.py
+        Working directory:工作目录 
+
+
+
+
+
+1.相关属性
+    1.objectName:控件对象名称
+    2.geometry:相应宽和高与坐标
+    3.sizePolicy:控件大小的策略
+    4.minimumSize:最小的宽和高
+    5.maximumSize:最大的宽和高
+    6.font:字体
+    7.cursor:光标
+
+2.右下角的部分为 Resource Browser(资源浏览器)
+    功能：添加对应的如图片素材，作为Label或Button等控件的背景图片
+
+3.将.ui 文件转换成为.py文件
+    语法：pyuic5 - o 目标文件名.py 源文件名.ui 
+
+4.frame控件
+    相当于一个框，很关键
+    

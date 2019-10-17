@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="exchange()">exchanges</button>
+    <script>      
+        function exchange(){
+            var num = Number(prompt("Please input num:"));
+            var lst = [];
+            do{
+                var quotient = parseInt(num / 2);
+                var remainder = num % 2;
+                num = quotient;
+                lst.unshift(remainder);
+                
+            }while(quotient != 0)
+            console.log(lst.join(""))
+        }
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

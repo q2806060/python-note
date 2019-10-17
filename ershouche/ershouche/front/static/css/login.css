@@ -1,0 +1,37 @@
+#login {
+  position: relative;
+}
+#login img {
+  width: 100%;
+  opacity: 0.6;
+  z-index: -1;
+}
+#login form {
+  color: #fff;
+  width: 400px;
+  height: 260px;
+  background-color: #000;
+  opacity: 0.8;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  border-radius: 10px;
+  padding: 20px;
+}
+#login form p {
+  padding: 20px 20px;
+}
+#login form p input {
+  width: 70%;
+  float: right;
+  height: 25px;
+  margin-right: 30px;
+}
+#login form p button {
+  padding: 10px;
+  color: #fff;
+  border: 1px dashed #fff;
+  position: absolute;
+  right: 30px;
+  background: inherit;
+}

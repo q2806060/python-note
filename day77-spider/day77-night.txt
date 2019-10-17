@@ -1,0 +1,143 @@
+运维概述
+1.什么是运维 ：服务器运行维护
+2.名词
+    1.IDC(互联网数据中心)
+        机柜租用、服务器租用
+    2.监控软件
+        zabbix、nagios、cactti
+    3.常用Linux操作系统
+        1.CentOS
+        2.RedHat
+        3.Ubuntu
+    4.虚拟化
+3.xshell运维工具
+    1.xshell使用方法
+        文件 - 新建 - 输入服务器IP地址 - 用户名 - 密码 - 确认连接
+        
+    2.互传文件 Windows <-> Linux
+        1.安装lrzsz
+            sudo apt-get install lrzsz
+
+        2.Windows文件 -> Linux
+            xshell终端 ：rz
+
+        3.Linux文件 -> Windows
+            xshell终端 ：sz 文件名
+
+4、Linux常用命令
+    1.ifconfig : 查看IP和MAC地址
+
+    2.ping : 测试网络连通性
+        ping IP/域名 -c 2
+
+    3.top ：Linux任务管理器,动态显示进程所占用资源
+        按q退出
+
+    4.ps -aux : 显示进程PID号
+        ps -aux | grep 'mysql'
+
+    5.sudo kill PID : 杀死进程
+
+    6.ssh ：远程连接到服务器(端口号22)
+        ssh 用户名@IP地址
+
+    7.scp ：远程复制
+        scp 文件名 用户名@IP地址:绝对路径
+        scp a.tar.gz tarena@X.X.X.X:/home/tarena
+
+    8.df -h ：查看磁盘使用情况
+
+    9.ls -lhd ：l长格式,h提供易读单位,d显示目录本身属性
+
+    10.chmod ：修改文件权限
+        chmod 644 文件名
+        644 : rw-r--r--   # r(4),w(2),x(1)
+
+    11.wc -l
+        作用 ：统计文件行数
+        示例 ：wc -l /etc/passwd
+
+    12.sort
+        作用 ：对文件中内容进行排序
+        示例 ：sort 文件名
+        sort -r : 倒序
+        sort -n : 以数值方式排序
+        sort -k 1 : 对第1列排序
+        sort -rnk 1 : 对第1列按照数值方式排序排列
+
+
+    13.uniq -c
+        作用：去除相邻行重复行，并统计每行出现的次数
+        示例：sort 文件名 | uniq -c
+
+    14.find:根据指定文件去查找文件/目录
+        1.根据名称搜索
+            find 路径 -name 文件名
+            find /home/tarena/ -name '*猫眼电影*'
+        2.根据大小搜索
+            find 路径 -size +10M(大于10兆) / -10M(小于10兆)
+        3.根据时间查找
+            find 路径 -ctime +1(1天之前的文件) / -1(1天之后的文件)
+        4.处理动作： -exec Linux命令 {} \;
+            find 路径 -name "xxx" -exec rm -rf {} \;
+
+    15.重启网络服务
+        sudo /etc/init.d/networking restart
+
+5.周期性计划任务
+    1.进入周期性计划任务设置
+        crontab -e 
+    2.设置周期性计划任务
+        * * * * * 
+        分时日月周
+        分：0-59
+        时：0-23
+        日：1-31
+        月：1-12
+        周：0-6 周天到周六
+        
+        *：代表所有可能值
+        ,：指定多个时间点
+            0 2 1,5 * *   --> 每个月的1号和5号的2点0分
+        /：指定时间间隔频率
+            */10 * * * *   --> 每10分钟执行一次命令
+        -：指定一个时间段
+            0 0-6/1 * * *   --> 0点到6点之间每小时执行命令
+
+6.防火墙
+    1.查看状态：sudo ufw status
+    2.打开：sudo ufw enable
+    3.关闭：sudo ufw disable
+    4.设置规则：sudo ufw allow 端口
+    5.删除规则：sudo ufw delete allow 端口
+
+7.awk使用
+    1.语法格式：awk 选项 '动作' 文件 
+    2.用法：Linux命令 | awk 选项 '动作'
+    3.使用示例
+        1.把根分区的使用率取出来
+            df -h | awk '{print $5}' | tail -5 | head -1
+        2. ifconfig | head -2 | tail -1 | awk '{print $2}'
+        3.awk '{print $1}' access.log | sort | uniq -c 
+        4.把访问我次数最多的3个ip输出
+            awk '{print $1}' access.log | sort |uniq -c | sort -rn -k 1 | head -3
+
+
+8.nginx 反向代理实现负载均衡
+    1.流程
+        客户端 -> nginx反向代理服务器(公司内部) -> Web服务器
+    2.作用 
+        1.保证内网的安全，阻止web攻击
+        2.负载均衡，优化网站的负载
+    3.负载均衡规则
+        1.轮询：逐一循环调度
+        2.权重(weight)：指定轮询几率，权重值和访问比例成正比
+        3.ip_hash：根据客户端IP分配固定的后端服务器
+    4.nginx配置负载均衡(修改配置文件)
+        upstream servers{
+            # 定义集群
+            server 10.10.10.11;
+            server 10.10.10.12 weight=2;
+            server 10.10.10.13;
+            server 10.10.10.14 backup;
+        }

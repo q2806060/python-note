@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-login></my-login>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("my-login",{
+            template:'<div><h3>父组件</h3>username<my-input tips="用户名"></my-input>password<my-input tips="密码"></my-input></div>',
+
+        });
+        Vue.component("my-input",{
+            props:["tips"],
+            template:'<input type="text" :placeholder="tips">',
+        });
+        new Vue({el:"#app"});
+    
+    </script>
+</body>
+</html>

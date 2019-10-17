@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+
+@media screen and (min-width:992px){
+    .box{background: red;color:#fff;
+    font-size: 14px};
+    h1{font-size: 2em};
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .box{background: green;color:#fff;
+    font-size: 12px};
+    h1{font-size: 1em};
+}
+@media screen and (max-width:767px){
+    .box{background: blue;color:#fff;
+    font-size: 10px};
+    h1{font-size: 1em};
+}

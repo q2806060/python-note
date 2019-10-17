@@ -1,0 +1,175 @@
+1.网络编程
+    1.创建流式套接字（TCP）流程
+        1.服务器
+            1.导入模块
+                import socket
+            2.创建TCP套接字
+                server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+                socket.AF_INET ---> IPV4
+                socket.SOCK_STREAM ---> TCP
+            3.设置端口复用
+                server.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
+                socket.SOL_SOCKET ---> 套接字基本参数
+                socket.SO_REUSEADDR ---> 复用端口
+                1 ---> 开启
+            4.绑定地址
+                server.bind(("IP",端口号))
+            5.监听
+                server.listen(num)
+                num ---> 最大监听数
+            6.等待客户端连接
+                client,addr = server.accept()
+            7.接收客户端
+                data = client.recv(1024)
+            8.向客户端发消息
+                client.send(msg.encode())
+            9.关闭与客户端通信套接字
+                client.close()
+            10.关闭监听套接字
+                server.close()
+        2.客户端
+            1.导入模块
+                import socket
+            2.创建TCP套接字
+                client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+            3.连接服务端
+                client.connect(("IP",端口号))
+            4.向服务端发消息
+                client.send(msg.encode())
+            5.接收服务器消息
+                data = client.recv(1024).decode()
+            6.关闭客户端套接字 
+                client.close()
+        3.注意的点
+            1.服务器端（先接收，再发送）
+                client,addr = server.accept()
+                data = client.recv(1024).decode()
+                slient.send("".encode())
+            2.客户端（先发送，再接收）
+                client.connect(("IP",端口))
+                client.send(msg.encode())
+                data = client.recv(1024)
+    
+    2.创建数据包套接字（UDP）流程
+        1.服务器 
+            1.导模块 
+            2.创建UDP套接字
+            3.设置端口复用 
+            4.绑定地址
+            5.接收客户端消息
+            6.发送消息(sendto())
+        2.客户端 
+            1.导入模块 
+            2.创建UDP套接字 
+            3.连接服务端 
+            4.发消息 
+            5.收消息
+        3.注意 
+            1.服务器端（先接收，再发送）
+                data,addr = server.recvfrom(1024)
+                server.sendto(msg.encode(),addr)
+            2.客户端（先发送，再接收）
+                client.sento(msg.encode(),addr)
+                data,addr = client.recvfrom(1024)
+
+2.进程线程
+    1.os.fork()基本使用
+        import os,sys
+        pid = os.fork()
+        if pid < 0:
+            sys.exit("Create failed")
+        elif pid == 0:
+            son-pid do something
+        else:
+            fa-pid do something
+    2.僵尸进程
+        使用二级子进程处理
+
+3.网络通信模型（多进程多线程并发）
+    1.每当有一个客户端连接，则新创建一个进程/线程来处理客户端请求
+    2.优点：每个客户端都可以长期占有度武器，使用多核进行IO处理或CUP运算 
+    3.缺点：资源消耗多（进程线程都增加资源消耗）
+    4.多进程并发流程（基于fork)
+        1.创建套接字，绑定，监听
+        2.等待客户端请求（accept())
+        3.当新的客户端连接后，则创建新的子进程处理客户端请求
+        4.父进程继续等待其他客户端连接
+        5.如果客户端退出，则销毁该客户端对应的子进程
+
+4.多进程并发流程实现（）
+
+5.聊天室项目
+    1.功能确定
+        1.进入聊天室：输入姓名（不能重复）
+        2.进入聊天室后会向其他所有成员发送消息
+        3.任何一个人发消息，其他人都会收到
+        4.某人退出聊天室，其他成员也会收到通知
+        5.管理员可从后台发送消息
+    2.技术分析
+        1.发消息（UDP套接字）
+        2.成员存储(服务器：{} [])
+        3.消息发送模式
+            转发：消息先给服务器，再转发给其他成员
+        4.管路员
+            保证收发消息不影响（每个人收发消息都随机），发消息和收消息分别使用一个进程
+    3.整体设计
+        1.封装方式（函数）
+        2.编写流程：先确保通信实现，然后逐个功能实现
+        3.测试，实现一个功能测试一个功能
+
+6.聊天室项目实现
+    1.网络通信实现
+        1.服务端（创建一个UDP套接字，绑定地址）
+            多进程，一个进程接收消息，一个进程管理员喊话   
+
+
+        2.客户端 
+        
+
+    2.进入聊天室实现
+        1.客户端 
+            1.输入姓名
+            2.把姓名包装发给度服务器端
+            3.接收服务端反馈结果
+                1.不允许进入，重新输入姓名
+                2.允许进入，创建进程，一个发消息，一个收消息
+        
+        2.服务器 
+            1.接收姓名，判断是否存在
+                1.如果存在返回不许进入
+                2.如果不存在
+                    1.将用户加入存储结构
+                    2.通知其他成员：XXX 进入了聊天室
+                   
+    3.退出聊天室
+        1.客户端发送退出消息
+        2.客户端父子进程退出
+        3.服务器端接收退出请求
+        4.服务端通知其他成员 
+        5.服务端从user中删除用户
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

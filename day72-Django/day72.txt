@@ -1,0 +1,108 @@
+1.关系映射
+    1.一对一映射
+        1.语法
+            在关联的两个类中的任何一个类中：
+            属性 = models.OneToOneField(Entry)
+        2.示例 
+            class Author(models.Model):
+                xxx
+            class Wife(models.Model):
+                xxx  
+                author = models.OneToOneField(Author)
+        3.查询
+            在Wife中，通过author属性找到对应的author对象
+            在Author中，通过wife属性找到对应的wife对象
+    2.一对多映射
+        1.语法
+            在"多"实体中，对"一"的实体进行引用
+            属性 = models.ForeignKey(Entry)
+        2.示例
+            一个出版社可以出版多本图书
+            一本图书只能属于一个出版社
+            class Publisher(models.Model):
+                xxx
+            class Book(models.Model):
+                xxx 
+                publisher = models.ForeignKey(Publisher, null=True)
+        3.查询
+            1.
+                通过 Book 查询 Pubisher 
+                通过 publisher 属性查询即可
+            2.
+                通过 Publisher 查询对应的所有的 Books
+                Django会在Publisher中增加一个属性来表示对应的Book们的查询引用
+                属性： book_set  (Entry.objects)
+    3.多对多映射
+        1.语法
+            在关联的两个类中的任意一个类中，增加
+            属性 = models.ManyToManyField(Entry)
+        2.示例
+            一个作者可以出版多本图书
+            一本图书可以被多名作者同时编写
+            class Author(models.Model):
+                xxx
+            class Book(models.Model):
+                xxx
+                authors = models.ManyToManyField(Author)
+        3.查询 
+            1.通过 Book 查询对应的所有的 Authors 
+                可以通过authors表示对应所有Author的查询对象
+                book.authors.all()  -- 获取 book 对应的所有的author的信息
+            2.通过 Authors 查询对应的所有的 Books
+                book_set 方法
+
+2.request - 请求对象
+    1.HttpRequest, 在Django中就是请求对象，默认会被封装到视图处理函数的参数中 - request 
+    2.request 中的成员
+        1.request.scheme:请求协议
+        2.request.body:请求主体(POST, PUT)
+        3.request.path:请求的具体资源路径
+        4.request.get_full_path:请求的完整路径
+        5.request.get_host():请求的主机
+        6.request.method:请求方式
+        7.request.GET:get请求方式中封装的数据
+        8.request.PST:post请求方式中封装的数据
+        9.request.COOKIES:请求cookies中的相关数据
+        10.request.META:请求中的元数据(消息头)
+            request.META["HTTP_REFERER"]:请求源地址
+    3.request.method
+        使用：判断 request.method 的值，分析用户的请求意图
+        if request.method == "GET":
+            去往指定的模板进行显示
+        else:
+            接收请求提交的数据
+    4.获取请求提交的数据
+        1.使用 get 方式
+            1.语法
+                request.GET["参数名"]
+                request.GET.get("参数名","默认值")
+                request.GET.getlist("参数名")
+            2.能够产生get请求方式的场合
+                1.地址栏的请求
+                    1.<a href="地址?参数=值&参数=值">
+                    2.location.href="地址?参数=值&参数=值"
+                2.表单中的method为get
+                    <form method="get">
+                        name : <input type="text" name="uname">
+                    </form>
+                注意：
+                    url(r"^01-xxx/(\d{4})/$", request_views)
+        2.使用post方式
+            1.语法
+                request.POST["参数名"]
+                request.POST.get("参数名", "")
+                request.POST.getlist("参数名")
+            2.CSRF
+                Cross-Site Request Forgey 
+                跨    站点  请求    伪装
+                解决方案：
+                    1.取消 csrf 验证(不推荐)
+                        删除 settings.py 中 MIDDLEWARE 中的 CsrfViewMiddleware
+                    2.开放验证
+                        在视图处理函数增加：@csrf_protect
+                        @csrf_protect
+                        def post_views(request):
+                            pass    
+                    3.通过验证
+                        需要在表单中增加一个标签
+                        {% csrf_token %}

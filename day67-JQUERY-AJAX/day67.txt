@@ -1,0 +1,114 @@
+1.JQUERY AJAX
+    1.$.get()
+        1.作用：
+            采用get方式，并且异步的向服务器发送请求
+        2.语法：
+            $.get(url[,data][,callback][,type])
+                1.url:异步请求的地址，字符串
+                2.data:请求提交的数据，可以省略
+                    1.可以是字符串
+                        "name1=value&name2=value2"
+                    2.可以是json对象
+                        {
+                            "name1":"value1",
+                            "name2":"value2",
+                        }
+                3.callback:请求完成后要执行的操作，可以省略
+                    取值：匿名函数
+                    function(resText){
+                        resText:表示的是响应回来的数据
+                    }
+                4.type:响应回来的数据的类型
+                    1.html:响应的文本是html文本
+                    2.text:响应的文本是普通文本
+                    3.json:响应回来的数据是JSON对象
+    2.$.post()
+        1.作用：
+            使用post方式向服务器端发送请求
+        2.语法：
+            $.post(url[,data][,callback][,type])
+            使用方式与$.get()一模一样
+    3.$.ajax()
+        1.作用：    
+            自定义所有的请求参数，向服务器端发送请求
+        2.语法 
+            $.ajax(JSON)
+                JSON中允许包含的属性：
+                    1.url:字符串，表示请求地址
+                    2.type:字符串，表示请求方式"get"或"post"
+                    3.data:传递到服务器端的请求参数
+                        1.可以是字符串
+                            "name=wangwc&age=18"
+                        2.可以是JSON 
+                            {
+                                "name":"wangwc",
+                                "age":18
+                            }
+                    4.async:是否使用异步方式发送请求
+                        true：使用异步方式
+                        false：使用同步方式
+                    5.dataType:字符串，响应回来的数据格式
+                        1."html"
+                        2."text"
+                        3."json"
+                        4."script"
+                        5."josnp":跨域时需要使用
+                    6.success:回调函数，请求和响应成功时的回调函数    ---  跨域时，为"callback"对应的函数
+                    7.error:回调函数，请求或响应失败时的回调函数
+                    8.beforeSend:回调函数，发送ajax请求之前要执行的操作，如果返回true，则继续发送请求，返回false则终止请求的发送
+
+2.跨域 
+    HTTP中有一个策略 - 同源策略
+    同源：在多个地址中，相同协议、相同域名、相同端口的被视为同源
+    注意：
+        1.非同源地址是不能发送ajax请求的
+        2.<img> 和 <script> 是不受同源策略限制的
+    2.解决同源策略
+        通过<script>向服务器发送请求
+        1.动态创建<script>元素
+            var script = document.createElement("script");
+        2.为script元素设置属性 - type
+            script.type = "text/javascript";
+        3.为script元素设置属性 - src 
+            script.src = "非同源地址";
+        4.将script元素加载到DOM树上，即加载到网页中，也就是向src的地址发送请求并接收响应
+            var body = $("body")[0]; //获取body元素
+            body.append(script); //添加到body内
+        注： 
+            接收的数据为符合JS语法的语句
+            跨域时，前端接收的数据不需要转JSON格式
+
+
+1.bootstrap
+
+    1.起步
+    2.全CSS样式
+    3.组件
+    4.JS插件
+    5.定制
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

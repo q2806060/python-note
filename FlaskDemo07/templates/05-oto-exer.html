@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/05-oto-exer" method="POST">
+        <p>
+            Wife姓名：<input type="text" name="wname" value={{params.wname}}>
+        </p>
+        <p>
+            Wife年龄：<input type="number" name="wage" value={{params.wage}}>
+        </p>
+        <p>
+            丈夫：<select name="user">
+                {% for u in params.users %}
+                <option value={{u.id}}>{{u.username}}</option>
+                {% endfor %}
+            </select>
+            <span>{{params.errMsg}}</span>
+        </p>
+        <P>
+            <input type="submit" value="Register">
+        </P>
+    </form>
+</body>
+</html>

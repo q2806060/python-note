@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        <a href="{% url 'birth' '1994' '08' %}">访问 birth</a>
+    </h2>
+    <h2>
+        <a href="{% url 'auth' %}">访问 auth</a>   
+    </h2>
+    <h2>This is parent's inner text.</h2>
+    <h2>
+        {% block content %}
+        This is allowed exchange inner text in parent.
+        {% endblock %}
+    </h2>
+    <ul>
+        {% for name in lst %}
+            <li>
+                {{name}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+1.JSON
+    1.JSON: JavaScript Object Notation
+            JS         对象    表示法
+        本质上就是按照JS的对象的格式来约束交互的数据的格式
+    2.JS对象的格式(JSON格式)
+        1.JSON表示单个对象
+            1.使用{}表示单个对象
+            2.在{}中使用key:value来表示属性(数据)
+            3.key必须使用""引起来
+            4.value如果是字符串的话，也必须使用""引起来
+            5.多对key:value之间使用,分隔
+        2.JSON表示数组
+            1.使用[]表示一个数组(多个对象)
+            2.数组中允许包含若干字符串或JSON对象
+                1.使用JSON数组来表示若干字符串
+                    var arr = ["1", "2", "3"];
+                2.使用JSON数组来表示若干对象
+                    var arr = [{}, {}, {}];
+    3.使用jq的each()函数迭代数组
+        1.$arr.each()
+            $arr:jq中的数组
+            $arr.each() 的语法：
+                $arr.each(function(i,obj){})
+                i 为迭代元素的下标
+                obj 为迭代出的元素
+        2.$.each()
+            $:表示的就是jQuery
+            语法：
+                $.each(arr,function(i,obj){})
+                arr: 表示的是JS中的原生数组
+    4.JSON前后端的交互
+        1.解决思路
+            在后端将响应的数据构建成JSON格式的字符串
+            在前端将JSON格式的字符串解析成JS对象再取值
+        2.python中JSON的处理
+            在python中，是允许将字典，列表，元组直接转换成JSON格式的字符串
+            在python中使用json对象，来完成格式的转换
+            import json 
+            jsonStr = json.dumps(字典|元组|列表)
+            return jsonStr
+            注意：
+                使用 json.dumps 时，要保证字典|元组|列表中的内容也必须能被JSON序列化(Serializable)
+                允许被JSON序列化的内容
+                    1.字符串 - str
+                    2.字典 - dict
+                    3.元组 - tuple
+                    4.列表 - list
+        3.前端中的JSON处理
+            由于在服务器端响应回来的数据是string，如果想当成JS对象或数组进行解析的话，则必须将string转换成JSON
+            在JS中：
+                JS对象 = JSON.parse(JSON格式字符串);
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="verificationCode">verificationCode</button>
+    <script>
+        var arr = [0,1,2,3,4,5,6,7,8,9,"a","b","c","d","A","C"];
+        var show = "";
+        for(var i = 0; i < 4; i++){
+            var index = parseInt(Math.random()*arr.length);
+            show += arr[index];
+        }
+
+        var input = prompt("Please input verificationCode"+show);
+        if(input.toUpperCase() == show.toUpperCase()){
+            alert("Good");
+        }else{
+            alert("Laji");
+        }
+    
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

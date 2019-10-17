@@ -1,0 +1,125 @@
+1.Django 中的模板 - Templates
+    1.Django中的模板是Django自己提供的，而非Jinja2，所以Django中的模板语法与Flask中的模板语法会稍有不同
+    2.模板的配置
+        在 settings.py 中有一个 TEMPLATES 变量
+        1.BACKEND:指定模板的引擎
+        2.DIRS:指定保存模板的目录们
+        3.APP_DIRS:是否要在应用中搜索模板
+        4.OPTIONS:有关模板的选项们
+    3.模板加载方式
+        1.通过 loader 获取模板，通过HttpResponse进行相应
+            from django.template import loader 
+            #1.通过Loader加载模板
+            t = loader.get_template("模板名称")
+            #2.将t转换成字符串
+            html = t.render()
+            #3.响应
+            return HttpResponse(html)
+        2.使用 render() 直接加载并响应模板
+            from django.shortcuts import render
+            return render(request, "模板名称", locals())
+    4.模板的语法
+        1.变量
+            1.变量的语法
+                1.后端中
+                    必须将变量封装到字典中才允许传递到模板中
+                    dic = {
+                        "变量1":"值1",
+                        "变量2":"值2",
+                        ...
+                    }
+                    1.使用 loader 加载模板
+                        t = loader.get_template("xxx.html")
+                        html = t.render(dic)
+                        return HttpResponse(html)
+                    2.使用 render 加载模块
+                        return render(request, "xxx.html", dic)
+                2.模板中使用变量
+                    {{变量名}}
+        2.标签
+            1.作用：
+                将一些服务器端的功能嵌入到模板中
+            2.标签语法
+                {% 标签 %}
+                {% 结束标签 %}
+                ex：
+                    {% if 条件 %}
+                    {% endif %}
+                1.if 标签
+                    ...
+                2.for 标签
+                    1.语法
+                        {% for 变量 in 可迭代对象 %}
+                        {% endfor %}
+                    2.内置变量 - forloop
+                        1.forloop.counter
+                            得到当前循环遍历的次数，从1开始
+                        2.forloop.counter0
+                            得到当前循环遍历的下标，从0开始
+                        3.forloop.first
+                            是否为第一次循环
+                        4.forloop.last
+                            是否是最后一次循环
+        3.过滤器
+            1.作用
+                在变量输出前第变量的值进行筛选
+            2.语法 
+                {{变量|过滤器：参数值}}
+            3.有用的过滤器
+                1.default
+                2.default_if_none
+                3.floatformat
+                4.truncatechars
+                5.truncatewords
+        4.静态文件
+            1.不能与服务器端做动态交互的文件都是静态文件
+            2.静态文件配置
+                在settings.py 中配置一下两项内容：
+                1.配置平台文件的访问路径
+                    通过哪个url地址找静态文件
+                    STATIC_URL = "/static/"
+                    说明：
+                        指定访问静态文件时是需要通过 /static/xxx或localhost:8000/static/xxx表示具体的静态资源位置
+                2.配置静态文件的存储路径
+                    静态文件在服务器端的保存位置
+                    STATICFILES_DIRS=(os.path.join(BASE_DIR, "static"),)  --- 必须是元组
+            3.访问静态文件
+                1.使用静态文件的访问路径进行访问
+                    访问路径：STATIC_URL = /static/
+                    ex:
+                        <img src="/static/images/a.jpg">
+                        <img src="http://127.0.0.1:8000/static/images/a.jpg>
+                2.通过{% static %}标签访问静态文件
+                    {% static %}表示的就是静态文件访问路径
+                    1.加载 static 
+                        {% load static %}
+                    2.使用静态资源时
+                        语法：{% static "静态资源路径" %}
+                        <img src="{% static 'images/a.jpg' %}>
+        5.模板的继承
+            1.在父模板中
+                要标识出哪些在子模板中是允许被修改的
+                {% block 块名 %}
+                {% endblock %}
+                block 作用：    
+                    1.在父模板中正常显示
+                    2.在子模板中
+                        不重写，将按照父模板的效果显示
+                        重写，则按照重写效果显示
+            2.在子模板中   
+                1.指定要继承自哪个父模板
+                    {% extends "父模板名称" %}
+                2.重写父模板中的内容
+                    {% block 块名 %}
+                    {% endblock %}
+            3.注意
+                模板继承时，服务器端的动态内容无法继承
+        6.url()的name参数
+            1.url语法
+                url(regex, views, kwargs=None, name="别名")
+                ex:
+                    url(r"^user_login/$", views.login, name="login")
+            2.通过别名实现地址的反向解析
+                在模板中：{% url %}
+                    {% url '别名' %}
+                    {% url '别名' '参数值1' '参数值2' %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/common.js"></script>
+    <script>
+        function btnClick(){
+            //1.创建 xhr 对象
+            var xhr = createXhr();
+            //2.创建请求 - open
+            xhr.open("get", "/01-server", true);
+            //3.设置回调函数 - onreadystatechange
+            xhr.onreadystatechange = function () {
+                //判断readyState为4并且status为200的时候，再接收响应数据
+                if(xhr.readyState==4&&xhr.status==200){
+                    //将响应数据显示在#show元素中
+                    document.getElementById("show").innerHTML = xhr.responseText;
+                }
+            }
+            //4.发送请求 - send
+            xhr.send(null);
+        }
+    </script>
+    <a href="/01-server">同步请求</a>
+    <button onclick="btnClick()">异步请求</button>
+    <div id="show"></div>
+</body>
+</html>

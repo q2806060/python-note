@@ -1,0 +1,84 @@
+
+
+
+
+用户名： 密码： UID ：GID : 用户描述 ：主目录 ：登录权限
+
+导入完成，在第一列添加一个ID字段---->主键，自增长，显示宽度为3，位数不够用0填充
+
+select * from sanguo
+into outfile 'C:/sanguo.csv'
+fields terminated by '-'
+lines terminated by '\n';
+
+
+create table customers(
+c_id int primary key auto_increment,
+c_name varchar(20),
+c_age tinyint unsigned,
+c_sex enum('M','F'),
+c_city varchar(20),
+c_salary float(12,2));
+
+
+
+for num in range(10):
+if (num % 2 == 1):
+continue
+print(num)
+
+
+
+insert into customers values
+(1,'zhangsan',18,'M','beijing',8000),
+(2,'lisi',20,'F','shanghai',7000),
+(3,'wangwu',21,'M','shenzhen',10000)
+
+
+
+create table orders(
+o_id int,
+o_name varchar(30),
+o_price float(12,2),
+foreign key(o_id)
+references customers(c_id)
+on delete cascade
+on update cascade);
+
+
+
+insert into orders values
+(1,'iphone',3000),
+(1,'mate9',3000),
+(1,'mate10',4000),
+(1,'iwatch',2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-article></my-article>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("my-title",{
+            template:'<h4>副标题</h4>'
+        });
+        Vue.component("my-detail",{
+            template:'<p>详细信息</p>'
+        });
+        Vue.component("my-article",{
+            template:'<div><my-title></my-title><my-detail></my-detail></div>'
+        })
+        var exampleData = {
+            msg:"hello vue",
+        };
+        new Vue({
+            el:"#app",
+            data:exampleData
+        })
+    </script>
+</body>
+</html>

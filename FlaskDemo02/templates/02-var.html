@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>姓名：{{params['name']}}</h2>
+    <h2>年龄：{{params['age']}}</h2>
+    <h2>元组：{{params['tup']}}</h2>
+    <h2>元组中的第三个元素：{{params['tup'][2]}}</h2>
+    <h2>元组中的第三个元素：{{params['tup'].2}}</h2>
+    <h2>列表：{{params['lst']}}</h2>
+    <h2>字典：{{params['dic']}}</h2>
+    <h2>字典中的LEG:{{params['dic']["LEG"]}}</h2>
+    <h2>对象：{{params['person']}}</h2>
+    <h2>对象元素的姓名：{{params['person'].name}}</h2>
+    <h2>对象元素说：{{params['person'].say()}}</h2>
+
+</body>
+</html>

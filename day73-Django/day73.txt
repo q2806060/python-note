@@ -1,0 +1,192 @@
+1.Django中的forms模块
+    1.作用
+        通过forms模块，允许将表单与class相结合
+        允许通过 class 生成表单
+    2.使用 forms 模块的步骤
+        1.在应用中创建 forms.py 
+        2.导入 django 提供的 forms
+            from django import forms 
+        3.创建 class ,一个class 会生成一个表单
+            class ClassName(forms.Form):
+        4.在 class 中创建属性   
+            一个属性对应到表单中是一个控件
+    3.forms.Form 的语法
+        属性 = forms.类型(参数)
+        1.类型
+            forms.CharField() : 文本框 <input type="text">
+            forms.ChoiceField() : 下拉选项框 <select>
+            forms.DateField() : 日期框 <input type="date">
+            ...
+        2.参数
+            1.label
+                控件前的文本
+            2.widget
+                指定小部件
+            3.initial
+                控件的初始值(主要针对文本框类型)
+                value=""
+    4.在模板中解析 form 对象
+        1.注意
+            1.需要自定义 <form>
+            2.表单中的按钮需要自定义
+        2.解析 form 对象
+            在视图中创建form对象并发送到模板中解析
+            ex：
+                form = RemarkForm()
+                return render(request, "xxx.html", locals())
+            1.手动解析
+                {% for field in form %}
+                    field : 表示的是form对象中的每个属性(控件)
+                    {{field.label}} : 表示的是label参数值
+                    {{field}} : 表示的就是控件
+                {% endfor %}
+            2.自动解析
+                1.{{form.as_p}}
+                    将 form 中的每个属性(控件/文本)都使用p标记包裹起来再显示
+                2.{{form.as_ul}}
+                    将 form 中的每个属性(控件/文本)都使用li标记包裹起来再显示
+                    注意：必须手动提供ol 或 ul标记
+                3.{{form.as_table}}
+                    将 form 中的每个属性(控件/文本)都使用tr标记包裹起来再显示
+                    注意：必须手动提供table标记
+    5.通过 forms 模块获取表单数据
+        1.通过 forms.Form 子类的构造器来接收 post 数据
+            form = RemarkForm(request.POST)
+        2.必须是 form 通过验证后，才能取值
+            form.is_valid()
+                返回True:通过验证，可以取值
+                返回False:暂未通过验证，则不能取值
+        3.通过 form.cleaned_data 属性接收数据
+            form.cleaned_data : dict 类型
+    6.forms 模块的高级处理
+        允许将Models实体类和Forms模块结合到一起使用
+        1.在 forms.py 中创建 class 
+            继承自 forms.ModelForm 
+        2.创建内部类meta，关联Model类
+            关联信息的属性如下：
+            1.model：指定要关联的实体类
+            2.fields：指定要从Model中取哪些字段生成控件
+                1.取值为"__all__"
+                    取全部的属性生成控件
+                2.取值为 列表
+                    将允许生成控件的属性名放在列表中
+            3.labels:指定每个属性对应的label值
+                取值为字典
+                labels = {
+                    "属性名":"label值",
+                    ...
+                }
+    7.内置小部件 - widget
+        1.表示的是生成到网页上的控件以及一些其他的html属性
+        2.常用的小部件类型
+            1.TextInput : type="text"
+            2.PasswordInput : type="password"
+            3.NumberInput : type="number"
+            4.EmailInput : type="email"
+            5.URLInput : type="url"
+            6.HiddenInput : type="hidden"
+            7.CheckboxInput :type="checkbox"
+            8.CheckboxSeleceMultiple : type="checkbox"
+            9.RadioSelect : type="radio"
+            10.Textarea : <textarea></textarea>
+            11.Select : <select>
+            12.SelectMultiple : <select multiple>
+        3.小部件的使用
+            1.继承自forms.Form
+                1.基本版
+                    1.语法
+                        属性 = forms.CharField() #无预选值使用
+                            text, password, email, url, textarea, checkbox 
+                        属性 = forms.ChoiceField() #有预选值使用
+                            checkbox, radio, select
+                        属性 = forms.CharField(
+                            label="xxx",
+                            widget=forms.小部件类型
+                        )
+                2.高级版
+                    1.特征
+                        在指定控件类型的基础之上还能指定控件的一些html属性值
+                    2.语法
+                        属性 = forms.CharField(
+                            label="xxx",
+                            widget=forms.小部件类型(
+                                attrs = {
+                                    "html属性名" : "值",
+                                    ...
+                                }
+                            )
+                        )
+            2.继承自forms.ModelForm
+                语法：
+                    class ClassName(forms.ModelForm):
+                        class Meta:
+                            model = xxx
+                            field = "__all__" / ["",""]
+                            labels = {
+                                "xxx":"xxx",
+                                ...
+                            }
+                            widgets = {
+                                "属性名":forms.小部件类型，
+                                "属性名2":forms.小部件类型(
+                                    attrs = {
+                                        "html属性名":"值",
+                                        ...
+                                    }
+                                )
+                            }
+
+2.cookies 和 session
+    1.cookies
+        1.保存在客户端浏览器上的一段存储空间
+        2.Django中的cookies
+            使用 响应对象 将cookies保存进客户端
+            1.响应对象
+                1.HttpResponse()
+                    resp = HttpResponse()
+                2.render()
+                    resp = render(request,"xxx.html",locals())
+                3.redirect()
+                    resp = redirect("/")
+            2.保存cookie 
+                响应对象.set_cookie(key,value,expires)
+                    key:cookie的名字
+                    value:cookie的值
+                    expires:保存时长，以s为单位的数字(s不写)
+            3.获取cookie
+                request.COOKIES
+                    封装了当前站点下所有的cookie - 字典
+    2.session
+        1.session - 会话
+            在服务器上开辟一段空间用于保存浏览器和服务器交互时的重要数据
+        2.保存 session 的值到服务器
+            request.session - 字典
+            request.session["KEY"] = VALUE 
+        3.获取 session 的值 3
+            VALUE = request.session["KEY"]
+        4.删除 session 的值 
+            del request.session["KEY"]
+        5.在 settings.py 中有关session的设置
+            1.SESSION_COOKIE_AGE
+                作用：指定sessionid在cookies中的保存时长
+                SESSION_COOKIE_AGE = 60*30
+            2.SESSION_EXPIRE_AT_BROWSER_CLOSE = True 
+                设置只要浏览器关闭时，session就失效
+                 
+密码加密
+from django.contrib.auth.hashers import make_password, check_password
+
+make_password('密码','任意字符串','加密方式')   返回的加密后的密码
+check_password('密码','加密后的密码')    返回的bool值
+
+得到的是一串随机的字符串，并且每次生成的都不一样
+
+from django.contrib.auth import authenticate,login
+
+user = authenticate(username=username,password=password)
+验证用户及密码，返回一个user对象
+login(request,user)     user为上面返回的user
+django自动校验用户及密码，并存储到session
+
+
+STATIC_ROOT

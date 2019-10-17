@@ -1,0 +1,148 @@
+1.MySQL 语句顺序
+    3.select 聚合函数 from 表名            #聚合
+    1.where 条件                        #筛选
+    2.group by ...                      #分组
+    4.having ...                        #进一步筛选
+    5.order by ...                      #排序
+    6.limit ...                         #显示数据量
+    注：先分组，再聚合
+
+2.group by :给查询的结果进行分组
+
+3.having 语句：对分组聚合后的结果，进一步筛选，通常跟group by语句联合使用，弥补了where语句不能与聚合函数使用的不足，where只能操作表中实际存在的字段
+
+4.distinct :不显示字段的重复值
+    select distinct 字段1，字段2 from sanguo;
+
+5.查询表记录时，做数学运算
+    + - * / %
+    select name,gongji*2 from sanguo;
+
+
+6.嵌套查询（子查询）
+    1.定义：把内层的查询结果作为外层的查询条件
+    2.select .. from 表名 where 字段名 运算符（查询）;
+        例：select .......  where age > (select ......);
+
+7.多表查询
+    1.笛卡尔积： select ... from 表1，表2 ...   
+    2.多表查询：加where条件
+
+
+8.连接查询
+    1.内连接(inner join ... on ...)
+        1.select ... from 表1 inner join 表2 on 条件 [inner join 表3 on 条件 ...]；
+
+    2.外链接
+        左外链接(left join)
+            以左表为主显示查询结果
+                select ... from 表1 left join 表2 on 条件
+        右外链接(right join)
+            以右表为主显示查询结果
+                select ... from 表1 right join 表2 on 条件
+
+9.约束
+    1.非空约束（not null）
+        不允许该字段值有Null记录
+        例：create ....(name varchar(10) not null)
+    2.默认约束（default 值）
+        插入记录时，不给该字段赋值，则使用默认值
+        例：create ...(sex enum("m","f","s") default "s")
+
+10.索引
+    1.定义：对数据表的一列或多列的值进行排序的一种结构（BTree）
+    2.优点：加快数据索引速度
+    3.缺点：
+        1.占用物理存储内存
+        2.当对表中数据更新时，索引需要动态维护，降低数据维护速度
+    4.索引的示例
+        1.开启运行时间监测 ：set profiling=1;
+        2.执行一条查询语句（无索引）
+        3.在name字段创建索引 : create index 字段名 on 表名（字段名）；
+        4.再执行一条查询语句（有索引）
+        5.查看执行时间 : show profiles;
+    5.查看变量状态
+        show variables like "%pro%";
+    6.索引分类
+        1.普通索引（index）/唯一索引（unique）
+            使用规则：1.可创建多个字段
+                     2.普通索引无约束，唯一索引要求字段值不允许重复，但可以为null
+                     3.key标志：普通（mul） 唯一（uni） 
+                     4.经常用来查询的字段，where后，order by排序字段创建索引
+            创建：
+                create table t1(.....,......,.....,index(字段名),index(字段名),unique(字段名),unique(字段名)...);
+                create index 索引名 on 表名（字段名）；
+                create unique index 索引名 on 表名（字段名）；
+            查看：
+                1.desc 表名； 
+                2.show index from 表名\G；
+            删除索引：
+                drop index 索引名 on 表名；
+
+        2.主键
+        3.外键
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

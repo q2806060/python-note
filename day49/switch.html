@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var year = prompt("Please input year");
+        var month = prompt("Please input month");
+        var day = Number(prompt("Please input day"));
+        var days = 0;
+        if((year % 4 == 0 && year % 100 != 0)||year % 400 == 0){
+            isRun = 1;
+        }else{
+            isRun = 0;
+        }
+        switch(month){
+            case "12":
+                days += 30;
+            case "11": 
+                days += 31
+            case "10":
+                days += 30; 
+            case "9":
+                days += 31; 
+            case "8": 
+                days += 31; 
+            case "7": 
+                days += 30; 
+            case "6":
+                days += 31; 
+            case "5": 
+                days += 30; 
+            case "4":
+                days += 31;
+            case "3":
+                days += 28;
+                if(isRun)
+                    days += 1;
+            case "2":
+                days += 31;
+            case "1":
+                days += day;
+        }
+        console.log(days)
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

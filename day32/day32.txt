@@ -1,0 +1,140 @@
+1.文档查找：db.collectionName.find({条件},{域})
+    例：db.acct.find().pretty()
+    条件查询：db.collectionName.find({条件1，条件2...}).pretty()
+    查找一条：db.collectionName.findone({条件}).pretty()
+    指定_id域不显示：db.collectionName.find({条件},{_id:0,域：0 or 1}).pretty()  0为不显示，1为显示，除_id之外，其他域必须数值相同
+    查找结果的个数：db.collectionName.find().count()
+
+2.比较操作符
+    等于、不等于：$eq  $ne  例：db.acct.find({acct_type:{$eq:1}})
+    大于：$gt   (greater than简写)
+    小于：$lt   (less than简写)
+    大于等于、小于等于：$gte  $lte  
+
+3.逻辑操作符：$and, $or, $not, $nor
+    $and:和
+        例： db.acct.find({
+            $and:[
+                {条件1},
+                {条件2},
+                ...
+            ]
+        })
+
+    $or:或
+        例： db.acct.find({
+            $or:[
+                {},
+                {},
+                ...
+            ]
+        })
+
+    $not:非
+        例： db.acct.find({
+            balance:{$not:{$gt:5000}}
+        })
+
+    $nor:既不也不
+    例： db.acct.find({
+            $nor:[
+                {},
+                {},
+                ...
+            ]
+        })
+
+4.涉及数组的操作
+    一个字段多个条件： $all
+    例： db.student.find({score:{$all:[70,90]}})
+    一个字段包含的元素个数： $size
+    例： db.student.find({score:{$size:3}})
+    一个字段的值在某个列表内： $in
+    例： db.student.find({age:{$in:[24,30,40]}})
+
+5.其他操作
+    1.$exists:判断域是否存在
+    例：db.student.find({sex:{$exists:true}})
+    2.$mod:求余数
+    例：查找年龄为奇数的学生信息
+        db.student.find({age:{$mod:[2,1]}})
+    3.$type:根据域的类型查找
+        db.student.find({age:{$type:1}})
+
+6.查找函数
+    1.distinct:去重，查看某个域的取值范围
+        例：查看acct集合中acct_type一共有多少种
+            db.acct.distinct('acct_type')
+    2.limit:显示查找结果的前N笔
+        例：查看acct集合中前3笔数据
+            db.acct.find().limit(3)
+    3.skip:跳过查找结果前面的N笔数据
+        db.acct.find().skip(3)
+    4.sort:对查询结果排序
+        db.acct.find().sort({域名称:1/-1})
+
+7.文档删除
+    1.格式：db.collectionName.remove(query,justOne)
+        参数：
+            query   筛选条件，如不写条件，则删除所有
+            justOne 布尔值，指定是否删除一笔
+                    true:删除一笔
+                    false:删除所有符合条件的数据
+    2.格式：db.collectionName.deleteOne({条件})
+            db.collectionName.deleteMany({条件})
+
+8.文档修改
+    1.格式：db.collection.update(query,update,upsert,multi)
+        参数：
+            update:修改操作符，表示修改的内容
+            upsert:布尔值，指定在没有找到满足条件数据的时候，要不要执行插入，true-插入，false-不插入
+            multi:布尔值，指定是否修改多笔数据，true-修改所有满足条件的数据，false-只修改第一条
+        例：
+            db.acct.update({acct_no:'622345000003'},{$set:{balance:9999}},false,false)
+            不加$set(设置某个域的值)会使的修改列只剩需要修改的内容
+            $unset:删除域   ------->    设置成''
+
+    2.修改的域不存在，则创建
+        例：db.acct.update({acct_no:'622345000003'},{$set:{balance:9999,reg_date:Date()}},false,false)
+
+    3.修改域的名称  ------------>   $rename:{域：新域名}
+    
+    4.  $inc:加法修改器，完成域的加减计算
+            例： db.acct.update({acct_no:'622345000003'},{$inc:{balance:1000}},false,false)
+        $mul:乘法修改器，完成域的乘法计算
+            例： db.acct.update({acct_no:'622345000003'},{$mul:{balance:1.02}},false,false)
+        $min:用指定域的值与给定值比较，取小，限制最大值
+            例： db.student.update({name:'Irris'},{$min:{score:100}},false,false)
+        $max:取大
+            例： db.student.update({name:'Irris'},{$max:{score:60}},false,false)
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

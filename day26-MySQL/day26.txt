@@ -1,0 +1,126 @@
+
+MySQL 用户账户管理
+    1.Ubuntu 系统下
+        1.开启MySQL远程连接
+            1.sudo -i
+            2.cd /etc/mysql/mysql.conf.d/
+            3.vi mysqld.cnf 
+                bind-address = 127.0.0.1   #注释掉
+            4./etc/init.d/mysql restart    #重启
+        2.添加授权用户
+            1.用root用户登录MySQL
+                mysql -uroot -p123456
+            2.授权
+                grant 权限列表 on 库.表 to '用户名'@'%' identified by '密码' with grant option;
+                权限列表：all privileges、 select、 update
+                库名.表名：*.* 、 库名.*
+                % :地址
+    2.windows 系统下
+        1.use mysql;
+        2.update user set host='%' where user='root' and host='localhost';  #更改访问地址
+        3.flush privileges;   #刷新
+        4.create user '新用户名'@'访问地址' identified by '密码'；
+        5.grant 权限列表 on 库.表 to '用户名'@'%';
+    
+2.事务和事务回滚
+    1.定义：一件事从开始发生到结束的整个过程
+    2.事务基本操作
+        1.开启事务： begin;
+        2.终止事务： commit;   或者 rollback;      #终止提交
+    3.注意
+        事务机制只针对于表记录操作（增删改）有效，对于库和表操作无效
+
+3.与python交互
+    1.python3: pymysql(模块名)
+      python2: MySQLdb(模块名)
+    2.安装
+        1.在线
+            sudo pip3 install pymysql
+            sudo pip install mysql-python 
+        2.离线
+            下载安装包.tar.gz
+            解压 tar -xf 包.tar.gz
+            cd到路径
+            sudo python3 setup.py install
+        3.pymysql.connect() 参数
+            1.host : 主机地址 
+            2.user : 用户名
+            3.password : 密码
+            4.database : 访问的库
+            5.charset : 字符集
+            6.port : 访问端口
+        4.数据库连接对象（db）方法
+            1.db.cursor(): 创建游标对象
+            2.db.commit(): 提交到数据库执行
+            3.db.rollback(): 回滚
+            4.db.close(): 断开数据库的链接
+        5.游标对象（cur）的用法
+            1.cur.execute('SQL命令') : 执行sql命令
+              cur.execute('SQL命令', []) : 列表内为SQL命令内的占位符参数
+            2.cur.close() : 关闭游标对象
+            3.cur.fetchone() : 取1条数据
+            4.cur.fetchmany(n) : 取n条数据
+            5.cur.fetchall() : 取所有查询结果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

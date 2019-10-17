@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("parent",{
+            data:function(){
+                return {money:3000}
+            },
+            template:'<div><h4>父组件</h4><child :myValue="money"></child></div>'
+        });
+        Vue.component("child",{
+            template:'',
+            props:["myValue"], // 声明变量保存父组件数据
+            mounted:function(){
+                // 声明变量结束，获取父元素数据
+                console.log(this.myValue)
+            }
+        });
+        new Vue({
+            el:"#app",
+        })
+    
+    </script>
+</body>
+</html>

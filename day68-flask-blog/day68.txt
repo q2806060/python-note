@@ -1,0 +1,36 @@
+Blueprint:蓝图，蓝本
+    作用：关联主路由系统(@app)以及各个子路由系统
+        ex:
+            main的views,使用main的路由系统(子路由)
+            users的views,使用users的路由系统(子路由)
+    步骤：
+        1.将子路由添加到蓝图中
+            from flask import Blueprint
+            main = Blueprint("main", __name__)
+            from . import views
+        2.再将蓝图中的内容托管给app
+            from .main import main as main_blueprint
+            app.register_blueprint(main_blueprint)
+        3.在main下的views内些路由
+            @main.route("/")
+            def ...
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

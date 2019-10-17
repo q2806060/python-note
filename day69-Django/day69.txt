@@ -1,0 +1,109 @@
+Django 
+1.介绍
+    2005年发布，python 编写的开源框架
+    Django自带强大的后台管理功能
+
+2.Django框架的使用
+    1.创建项目的指令
+        指令：django-admin
+        语法：django-admin startproject 文件夹名
+    2.Django项目的目录结构
+        1.manage.py
+            功能：包含项目管理的子命令
+            如：
+                启动服务：runserver
+                创建应用：startapp
+                数据库迁移：migrate
+        2.主文件夹
+            1.__init__.py 
+                项目初始化文件，服务启动时自动运行
+            2.wsgi.py 
+                WEB服务网关接口的配置文件
+                部署项目时使用
+            3.urls.py
+                项目的基础路由配置文件
+                所有的动态路径必须先走该文件进行匹配
+            4.settings.py 
+                功能：项目的配置文件，启动服务时自动调用
+                1.BASE_DIR
+                    作用：表示当前项目的绝对路径
+                2.DEBUG
+                    作用：是否启用调试模式
+                    1.开发环境中使用True - 启用调试
+                    2.生产环境中使用False - 不启用调试
+                3.ALLOWED_HOSTS
+                    作用：设置允许访问到本项目的地址列表
+                    取值：
+                        1.如果为空
+                            表示只有localhost和127.0.0.1能访问本项目
+                        2.["*"]
+                            任何表示本机的地址都能访问到当前项目
+                            如：
+                                localhost / 127.0.0.1 / 0.0.0.0 / IP
+                                局域网内也允许访问
+                            注意：
+                                如果要在局域网内访问的话，启动方式：
+                                python manage.py renserver 0.0.0.0:端口号
+                4.INSTALLED_APPS
+                    作用：指定已安装的应用
+                5.MIDDLEWARE
+                    作用：注册中间件
+                6.TEMPLATES
+                    作用：指定模板的配置信息
+                7.DATABASES
+                    作用：指定数据库的配置信息
+                8.LANGUAGE_CODE
+                    作用：指定语言配置
+                    取值：
+                        中文：zh-Hans
+                9.TIME_ZONE
+                    作用：时区
+                    取值：
+                        中国时区：Asia/Shanghai   
+
+3.URL的使用
+    1.urls.py 
+        默认是存在于主文件夹内，主路由配置文件
+        包含最基本的路由-视图的映射关系
+        该文件会包含 urlpatterns 的列表用于表示路由-视图映射，通过 url() 表示具体映射
+    2.url()的语法
+        from django.conf.urls import url 
+        语法：
+            url(regex, views, kwargs=None, name=None)
+                1.regex:字符串类型，匹配的请求路径，允许是正则表达式
+                2.views:指定路径所对应的视图处理函数的名称
+                3.kwargs:向视图中传递的参数
+                4.name:为地址起别名，反向解析时使用
+    3.带参数的url
+        使用正则表达式的子组进行传参 - ()
+        一个子组表示一个参数，多个参数需要使用多个子组，并且使用 / 隔开
+        例： url(r"^show-02/(\d{4})/()/()/$", views.show_02)
+             def show_02(request, year, ..., ...):
+                return ...
+        
+4.Django中的应用 - app 
+    1.应用在Django项目中是一个独立的业务模块，可以包含自己的路由，视图， ...
+        Django中，主文件夹是不处理用户具体请求的，主文件夹的作用是做项目的初始化以及请求的分发（分布式请求处理），具体的请求时由应用来进行处理的
+    2.创建 & 配置应用
+        1.创建应用的指令
+            python manage.py startapp 应用名称  
+        2.在settings.py中配置应用
+            INSTALLED_APPS = ["应用名称"]
+    3.应用的结构组成
+        1.migrations 文件夹
+            保存数据迁移的中间文件
+        2.__init__.py
+            应用的初始化文件
+        3.admin.py 
+            应用的后台管理配置文件
+        4.apps.py 
+            应用的属性配置文件
+        5.models.py 
+            与数据库相关的模型映射类文件
+        6.tests.py 
+            应用的单元测试文件
+        7.views.py 
+            视图处理函数的文件
+    4.分布式路由系统
+        1.在应用中，创建urls.py
+        2.路由改版

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("my-component",{
+            template:'<div><button @click="handleClick">clickMe</button><h4>Hello {{count}}</h4></div>',
+            data:function(){
+                return {count:0}
+            },
+            methods:{
+                handleClick:function(){
+                    this.count++;
+                }
+            },
+            beforeCreate:function(){},
+            created:function(){},
+            beforeMount:function(){},
+            mounted:function(){},
+            beforeupdate:function(){},
+            updated:function(){},
+            beforeDestroy:function(){},
+            destroyed:function(){},
+        })
+
+        var exampleData = {
+            msg:"hello vue",
+            isShow:true,
+        };
+        new Vue({
+            el:"#app",
+            data:exampleData
+        })
+    </script>
+</body>
+</html>

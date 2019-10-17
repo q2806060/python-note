@@ -1,0 +1,135 @@
+1.元素节点的层次属性
+    1.parentNode
+        获取父节点
+    2.childNode
+        获取子节点数组，包含文本节点
+        只获取直接子节点，不包含后代
+    3.children
+        获取子节点数组，不含文本节点，只取元素标签
+        只获取直接子节点，不包含后代
+    4.nextSibling
+        获取下一个兄弟节点
+      nextElementSibling
+        获取下一个元素兄弟节点
+    5.previousSibling
+        获取上一个兄弟节点
+      previousElementSibling
+        获取上一个元素兄弟节点
+    6.attributes
+        获取属性节点的数组
+
+2.节点的增删改
+    1.节点创建
+        语法：
+            document.createElement("标签名");
+            创建元素节点并返回
+    2.节点的添加
+        节点的添加和删除操作，必须由父元素执行
+        1.添加在父元素的末尾
+            语法：
+                parentNode.appendChild(childNode)
+        2.指定位置添加节点
+            语法： 
+                parentNode.insertBefore(newNode,oldNode);
+                将newNode插入在页面已有的oldNode之前
+        3.注意：
+            节点对象不能重复添加，页面中想要出现几个元素，JS中就需要创建几个节点，一一对应
+    3.节点的删除 
+        语法：
+            parentNode.removeChild(node);
+            
+3.事件处理
+    1.事件指用户的行为，对页面的操作（鼠标，键盘等）
+      事件处理指对用户行为的影响（单击，键盘）
+    2.事件处理函数
+        1.系统提供的，在用户行为触发后能够自动调用的函数
+        2.分类：
+            1.鼠标事件
+                onclick     鼠标单击事件
+                ondblclick  鼠标双击事件
+                onmouseover 鼠标移入
+                onmousemove 鼠标移动
+                onmouseout  鼠标移出
+            2.键盘事件
+                onkeydown   键盘按键被按下
+                onkeypress  键盘字符按键被按下
+                onkeyup     按键抬起
+            3.onload事件
+                文档或元素加载完毕后触发执行
+            4.表单空间状态改变
+                onfocus     输入框获取焦点时触发
+                onblur      输入框失去焦点触发
+                oninput     实时监听用户输入
+                onchange    监听转态改变（输入框，按钮）
+                            输入框状态改变：验证两次输入是否发生变化，只有前后两次输入不一致并且失去焦点时才触发
+                onsubmit    当用户点击提交按钮时自动触发，验证表单数据是否可以发送给后台
+    3.元素绑定事件方式
+        1.内联
+            将事件处理函数作为标签属性，绑定到具体元素上
+        2.动态绑定
+            语法：  
+                h1.onclick = function (){};
+        3.W3C标准事件监听函数
+            语法：  
+                h1.addEventListener("click",function(){},false);
+            参数：
+                1.省略on前缀的事件名
+                2.事件触发要执行的操作
+                3.可选参数，默认为false，表示时间的传递机制
+                    false:冒泡传递
+                    true:捕获传递
+    4.事件行为 
+        1.onload事件
+            等待文档，窗口，元素加载完毕后执行
+            例：
+                window.onload = function (){};
+        2.鼠标事件 
+        3.键盘事件 
+        4.表单事件
+            onsubmit:监听表单数据是否允许发送
+            由form元素监听，在点击提交按钮时自动触发
+            允许返回布尔值，决定是否提交数据，true表示允许，false表示不允许，常用于表单提交之前最后一步验证
+        5.this关键字
+            this：指代当前函数或方法的调用对象
+    5.事件对象
+        1.事件对象伴随事件产生，包含了当前时间相关的所有信息，浏览器自动以参数的形式传入事件处理函数中，我们只需要接收即可
+        2.使用
+            1.不同事件对应不同事件对象，其包含的属性也有所区别，共有的属性：
+                1.srcElement 获取事件目标
+                2.targrt 获取事件目标（事件触发对象）
+            2.鼠标事件对象
+                1.offsetX   offsetY
+                    获取鼠标在元素坐标系中的位置信息
+                    元素坐标系：元素左上角为原点，向右向下为X轴/Y轴的正方向
+                2.clientX clientY
+                    获取鼠标在窗口坐标系中的位置信息
+                3.screenX screenY
+                    获取鼠标在屏幕坐标系中的位置信息
+        3.键盘事件对象
+            onkeydowm/onkeyup 
+                1.which
+                    获取键盘按键的编码
+                2.key
+                    获取按键名称
+            onkeypress
+                1.which 
+                    获取按键的字符编码（ASC码）
+                2.key 
+                    获取字符
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h4>{{ message }}</h4>
+        <h4>{{3+5}}</h4>
+        <h4>{{car.brand}}</h4>
+        <h4>{{count>totalNum?"success":"error"}}</h4>
+        <h4>{{hasMore}}:{{!hasMore}}</h4>
+        <hr>
+        <input type="text" v-model="message">
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var exampleData = {
+            message:"hello vue",
+            count:3,
+            totalNum:10,
+            hasMore:true,
+            car:{
+                brand:"volvo",
+                price:30
+            }
+        };
+        new Vue({
+            el:"#app",          // el:vue对象挂在app元素
+            data:exampleData    // 数据：exampleData
+        });
+    </script>
+</body>
+</html>

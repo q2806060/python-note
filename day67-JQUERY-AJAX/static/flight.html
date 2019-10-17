@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $("#btnFlight").click(function(){
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "http://localhost:5000/01-flight?callback=process";
+                var body = $("body")[0];
+                body.append(script);
+            });
+        });
+        function process(data){
+            console.log("航班号："+data.flightNO);
+            console.log("出发："+data.from);
+            console.log("到达："+data.to);
+            console.log("出发时间："+data.time)
+        };
+    </script>
+
+    <button id="btnFlight">获取航班信息</button>
+</body>
+</html>

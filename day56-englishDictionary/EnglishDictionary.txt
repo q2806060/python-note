@@ -1,0 +1,127 @@
+1.电子词典项目（英英词典）
+    1.功能确定
+        1.用户可以登录注册
+            登录凭借用户名及密码
+            注册输入用户名及密码
+        2.服务端和客户端，可满足多个客户端登录
+        3.客户端启动后进入一级界面
+            1.一级界面功能：登录 注册 退出
+            2.如果登录或注册失败，返回一级界面
+        4.登录成功进入二级界面
+        5.二级界面的功能
+            1.查词：循环查词，输入##退出查词
+            2.历史记录：显示用户之前的查询记录
+            3.注销用户：回到一级界面
+    2.技术分析
+        1.确定单词查询方法：数据库内查询
+        2.确定套接字和并发：TCP + 多进程
+        3.数据库使用：MySQL
+        4.建库建表
+            1.将单词和解释插入数据表中
+            2.确定项目需要几张表，字段，关系
+        5.项目结构分析，分为几部分，几个功能模块
+            1.一级界面
+                注册 登录 退出 
+            2.二级界面  
+                查询 历史记录 注销 
+
+2.项目实现
+    1.数据库设计
+
+        1.改变字体颜色
+            print("\033[31m*********\033[0m"])
+        2.getpass模块
+            password  = getpass.getpass()
+
+
+
+        1.建库 ：create database dict character set utf8;
+        2.建表 
+            1.用户表user
+                字段： id username password(加密)
+                create table user(
+                id int primary key auto_increment,
+                username varchar(30) not null,
+                password char(40) not null
+                )charset=utf8;
+
+            2.单词表words 
+                字段： id word interpret(解释)
+                create table words(
+                id int primary key auto_increment,
+                word varchar(128),
+                interpret text
+                )charset=utf8;
+
+            3.历史记录表history
+                字段： id username word time 
+                create table history(
+                id int primary key auto_increment,
+                username varchar(30) not null,
+                word varchar(128),
+                time varchar(50)
+                )charset=utf8;
+
+    2.项目结构分析 
+        1.服务器端
+            创建套接字->创建父子进程->子进程负责与客户端交互->父进程等待其他客户端连接
+            请求类型：注册 登录 退出 查询 记录 注销 
+        2.客户端 
+            创建套接字->发起请求->进入一级界面->循环发请求->登录后进入二级界面->循环发请求
+    3.搭建通信模型
+
+    4.具体功能实现
+        1.注册功能
+            1.输入注册用户名
+            2.输入密码，确认密码
+            3.把消息发给服务端，服务端做比对
+            4.客户端等待接收服务端反馈
+                1.OK:注册成功
+                2.EXISTS:该用户已存在
+                3.其他:注册失败
+            5.注册成功后，返回一级界面
+        2.接收服务端反馈
+            1.OK：登录成功（进入二级页面）
+            2.NAMEERROR：用户名错误
+            3.其他：密码错误
+        3.二级子界面（功能）
+            1.查词 
+            2.查询历史记录
+            3.注销 
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/base.css"/>
+    <link rel="stylesheet" href="/static/css/login.css"/>
+</head>
+<body>
+    <div id="login">
+        <img src="/static/img/timg.jfif" alt=""/>
+        <form action="/user/login_" method="POST">
+            {% csrf_token %}
+            <p>
+                <b>用户登录</b>
+            </p>
+            <p>
+                用户名：<input type="text" name="username" placeholder="请输入用户名"/>
+            </p>
+            <p>
+                密码：<input type="password" name="userpwd" placeholder="请输入密码"/>
+            </p>
+            <p>
+                <button type="submit">登录</button>
+            </p>
+        </form>
+    </div>
+    <script src="/static/js/jquery-3.2.0.js"></script>
+    <script src="/static/js/header.js"></script>
+</body>
+</html>

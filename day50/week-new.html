@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="caculateDays()">caculatedays</button>
+    <script>
+        
+        function isRun(year){
+            if((year % 4 == 0 && year % 100 != 0)||year % 400 == 0){
+                return 1;
+            }else{
+                return 0;
+            }
+        }
+
+        function caculateDays(){
+            var year = Number(prompt("Please input year:"));
+            var month = Number(prompt("Please input month:"));
+            var day = Number(prompt("Please input day:"));
+            var days = 0;
+            for(var baseYear = 1900; baseYear < year; baseYear++){
+                if(isRun(baseYear)){
+                    days += 366;
+                }else{
+                    days += 365
+                }
+            }
+            for(var baseMonth = 1; baseMonth < month; baseMonth++){
+                switch(baseMonth){
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                        days += 31;
+                        continue;
+                    case 2:
+                        if(isRun(year)){
+                            days += 1;
+                        }
+                        days += 28;
+                        continue;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        days += 30;
+                        continue;
+                }
+            }
+            days += day;
+            var week = days % 7;
+            var show = "";
+            switch(week){
+                case 0:
+                    show = "Sunday";
+                    break;
+                case 1:
+                    show = "Monday";
+                    break;
+                case 2:
+                    show = "Tuesday";
+                    break;
+                case 3:
+                    show = "Wednesday";
+                    break;
+                case 4:
+                    show = "Thursday";
+                    break;
+                case 5:
+                    show = "Friday";
+                    break;
+                case 6:
+                    show = "Saturday";
+                    break;
+            }
+            console.log(show)
+        }
+
+        
+        
+    
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

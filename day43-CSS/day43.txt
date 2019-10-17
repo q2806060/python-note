@@ -1,0 +1,153 @@
+1.表单
+    1.表单元素
+        <form action="" method="" enctype=""></form>
+    2.表单控件
+        1.文本框与密码框
+        2.单选钮和复选框
+            优化用户体验，实现文本与按钮的绑定
+            label for id
+            1.使用label标签标示文本内容
+            2.为相关的控件添加id属性，id具有唯一性
+            3.为label标签添加for属性，属性值为控件的id值
+        3.隐藏域和文件选择框
+            1.隐藏域
+                对用户不可见的控件，某些用户不需要知道但是服务器需要获取的数据，可以放在隐藏域中随表单一起发送给服务器
+                例如：用户id
+                语法：
+                    <input type="hidden" name="" value="">
+            2.文件选择框
+                语法：
+                    <input type="file" name="">
+                注：    
+                    对于图片或文件这类二进制数据，提交时，必须设置提交方式为post，编码类型为"multipart/form-data"
+        4.下拉菜单
+            表示下拉列表或滚动列表
+            语法：
+                <select name="address" multiple="multiple">
+                    <option value="beijing">北京</option>
+                    ...
+                </select>
+            属性：
+                multiple 为复选设置
+                可以为option添加selected表示默认选中
+                正常情况下，第一个option的文本就是默认选中项
+                name:控件的名称
+                size:默认显示选项的数量，默认为1，为下拉列表，如果取值>1的话，则为滚动列表
+            其他标记：
+                1.label元素
+                    作用：关联文本域表单控件的，单击文本时就如同点击表单空间一样
+                2.为控件分组
+                <fieldset>
+                    <legend>分组的标题</legend>
+                    分组中的内容
+                </fieldset>
+        5.多行文本域
+            语法：
+                <textarea name="uinfo"></textarea>
+            特点：
+                支持多行输入，支持用户调整尺寸
+            属性：
+                1.name
+                2.cols
+                    指定文本域的列数，变相指定宽
+                3.rows
+                    指定文本域的行数，变相指定高
+                4.readonly
+                    只读
+        6.按钮控件
+            1.提交按钮
+                当用户点击时，将表格中的数据按照指定的提交方式和提交地址发送给服务器
+                <input type="submit" name="" value="">
+                value 表示按钮的显示文本，默认显示为“提交”
+            2.重置按钮
+                当用户点击时，将表单中的数据还原成初始化状态
+                <input type="reset" value="">
+                默认按钮显示“重置”字样，可以通过value修改显示文本
+            3.普通按钮
+                需要自行绑定按钮事件
+                <input type="button" value="">
+                没有默认显示文本，必须设置value
+            4.<button></button>
+                标签内容就是按钮显示文本
+                例：
+                    <button>点击</button>
+                注：
+                    1.button标签如果书写在form外部，表示普通按钮，需要自定义按钮事件
+                    2.如果书写在form内部，等同于submit，可以实现数据提交
+
+2.浮动框架
+    1.作用
+        将其他页面导入到当前页面中来
+    2.语法 
+        标记：<iframe></iframe>
+        属性：  
+            1.src
+                要引入的页面的url
+            2.frameborder
+                指定浮动框架的边框，默认为1，则显示边框
+                不需要边框则设置为0
+            3.width
+            4.height
+
+3.新input元素（HTML5）
+    1.电子邮件类型
+        作用：提交时会验证数据是否符合Email的规范
+        标记：<input type='email'>
+    2.搜索类型
+        作用：在文本框的基础上，提供了快速清除操作
+        标记：<input type='search'>    
+    3.URL类型
+        作用：提交时会验证数据是否符合web站点的url规范（绝对路径）
+        标记：<input type='url'>
+    4.电话号码类型
+        作用：在移动端设备中，能展开拨号键盘，在PC中无效
+        标记：<input type='tel'>
+    5.数字类型
+        作用：只能让用户输入或选择数字
+        标记：<input type='number'>
+        属性：1.min 2.max 3.step:微调数字时每次变化的长度，默认为1
+    6.范围类型
+        作用：提供一个滑块，让用户选择数字
+        标记：<input type='range'>
+        属性：1.min 2.max 3.value:设定初始值
+    7.颜色类型
+        作用：提供一个颜色失去控件
+        语法：<input type='color'>
+    8.日期类型
+        作用：提供一个日期输入控件
+        标记：<input type='data'>
+    9.周类型
+        作用：提供一个日期控件，用于选取周
+        标记：<input type='week'>
+    10.月份类型
+        作用：选取月份
+        标记：<input type='month'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

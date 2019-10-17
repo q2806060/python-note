@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("my-component",{
+            data:function(){
+                return {
+                    myAddress:"",
+                    myPhone:139
+                }
+            },
+            template:'<div><input type="text" v-model="myAddress"><input type="text" v-model="myPhone"><h5>{{myAddress}}</h5><h5>{{myPhone}}</h5></div>',
+            watch:{
+                myAddress:function(){
+                    console.log("数据发生修改："+this.myAddress);
+                },
+                myPhone:function(){
+                    console.log("数据发生修改："+this.myPhone);
+                }
+            }            
+        })
+        var exampleData = {
+            msg:"hello vue",
+        };
+        new Vue({
+            el:"#app",
+            data:exampleData
+        })
+    </script>
+</body>
+</html>

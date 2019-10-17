@@ -1,0 +1,37 @@
+select sum(age) from users
+select count(*) from users 
+select avg(age) from users 
+select avg(age) from users where age > 18
+select isActive,count(*) from users group by isActive 
+select isActive,count(*) from users group by isActive having(count(*) > 2)
+select isActive,count(*) from users where age > 18 group by isActive having(count(*) > 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

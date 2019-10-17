@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/11-get/">
+        产品名称：<input type="text" name="pname">
+        <input type="submit">
+        <input type="button" value="普通按钮" onclick="btn()">
+    </form>
+    <script>
+        function btn(){
+            var pname=document.getElementsByName("pname")[0].value;
+            location.href="/11-get/?pname="+pname;
+        }
+    </script>
+</body>
+</html>

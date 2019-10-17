@@ -1,0 +1,85 @@
+
+
+user
+    -id   int  主键
+    -name   varchar(30)
+    -idcard  int  身份证
+    -logindate  int  登录天数
+    -birthday  datetime  生日
+    -wechat  varchar(30)  微信
+    -qq     int      QQ
+    -blance int   账户余额
+    -address varchar(100)
+    -phonenum  int   手机号
+    -loginname   varchar(30)
+    -password   varchar(40)
+    -sex        单选按钮 -保密(0) -男(1) -女(2)
+    -allowbuy     bool 可以买车
+    -agreeservice  bool  是否同意服务协议
+
+    -buyserver varchar(100) 购买服务
+
+
+
+usercard       银行卡
+    -userid
+    -cardid
+    -cardname
+
+
+    -usedcar    发布二手车信息(编号)      --生成二手车订单信息
+        
+    -collection     收藏的车(编号) --车订单编号
+
+    -histtory       浏览历史(编号)
+    -successbuy    int   成功交易订单编号
+
+    
+
+
+
+usedcar 
+    -id   int 主键 关联user 索引
+    -carid  int   订单编号  索引
+    -carbrand varchar(30) 索引
+    -cartype varchar(30)   索引
+    -caryear  datetime 提车时间
+    -carrun     float   车行公里数
+    -carengine  varchar(30) 引擎号
+    -carfixed   bool   是否维修
+    -carimgfront     select
+    -carimgside      select
+    -carimgbehind    select
+    -carprice   float  车价
+    -caraddress varchar(100)  卖车地址
+    -carprocedures bool  手续齐全
+    -cardebt    bool  债务
+    -carpubdate  datetime  订单提交时间
+    -carviews  int  浏览量
+    -carinfo  text  车况
+    -carhistory text   车辆历史
+
+
+sysmsg
+    -id int 主键
+    -userid  int 关联用户id 
+    -time  datetime 发布时间
+    -msginfo text  发送内容
+
+
+leavemsg
+    -id      int 主键
+    -pubdate  datetime  发布时间
+    -carid     int  关联usedcar-id
+    -userid    int  关联user-id
+    -msg        text 留言信息
+
+replymsg
+    -id  int 主键
+    -pubdate  datetime 发布时间
+    -userid  int 用户id
+    -msgid   int 关联carmsgid
+    -msg   text  回复信息
+
+
+

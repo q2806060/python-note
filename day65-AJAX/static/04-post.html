@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            name:<input type="text" id="uname">
+        </p>
+        <p>
+            password:<input type="password" id="upwd">
+        </p>
+        <p>
+            <button onclick="btnClick()">异步请求</button>
+        </p>
+        <div id="show"></div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        function btnClick(){
+            var xhr = createXhr();
+            
+            xhr.open("post", "/04-server", true);
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState==4&&xhr.status==200){
+                    $("#show").html(xhr.responseText)
+                }
+            }
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            var uname = $("#uname").val();
+            var upwd = $("#upwd").val();
+            xhr.send("uname="+uname+"&upwd="+upwd);
+        }
+    </script>
+</body>
+</html>

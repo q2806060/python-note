@@ -1,0 +1,184 @@
+192.168.214.128
+
+
+
+1.静态地址的反向解析
+    1.语法
+        url_for("static", filename="<file_path>")
+    2.示例：
+        <img
+            src="url_for('static', filename='img/a.jpg')"
+        >
+
+        <img src="/static/img/a.jpg">
+
+2.模板的继承
+    1.模板继承类似于类继承，如果一个模板中的内容大部分与另一个模板一样时，可以使用继承的方式简化模板开发
+    2.语法
+        1.父模板文件
+            需要定义出那些内容在子模板中是可以被重写的
+            {% block 块名 %}
+                定义在父模板中要正常显示的内容
+            {% endblock %}
+            block:
+                1.在父模板中是可以正常显示的，没任何影响
+                2.在子模板中是可以被重写的
+        2.子模板文件
+            1.需要制定继承自哪个模板
+                {% extends '父模板名称' %}
+            2.重写父模板中指定的内容
+                {% block 块名 %}
+                {% endblock %}
+
+3.修改配置
+    1.构建flask应用时指定配置信息
+        app = Falsk(
+            __name__,
+            template_folder="文件夹名称",
+            static_url_path="/s",  --->  路径,默认为/static
+            static_folder="文件夹名称",
+        )
+    2.启动程序时的运行配置
+        app.run(
+            debug=True,
+            port=5555,
+            host="0.0.0.0"
+        )
+        host:指定访问到本项目的地址，0.0.0.0表示局域网内任何机器都可以访问本项目，其他访问本机项目时需要使用ip地址
+
+4.请求(request) 和响应 (response)
+    1.HTTP协议
+        1.作用:
+            HTTP：Hyper Text Transfer Protocol
+            规范了数据是如何打包以及传递的 
+        2.两大核心内容
+            1.请求消息
+                由客户端带给服务器端的消息
+                请求消息由三部分组成：
+                    1.请求起始行
+                        GET / HTTP/1.1
+                        1.请求方法 - GET 
+                        2.请求资源路径 - /
+                        3.HTTP协议及版本 - HTTP/1.1
+                    2.请求消息头
+                        所有以key:value格式存在的内容都是消息头
+                        每个消息头都是要传递给服务器的信息
+                    3.请求主体
+                        只有post,put请求方式才有请求主体
+            2.响应消息
+                由服务器端带给客户端的消息
+                1.响应起始行
+                    HTTP/1.1 200 OK 
+                    1.协议以及版本号 - HTTP/1.1
+                    2.响应状态码 - 200
+                    3.原因短句 - OK
+                2.响应消息头
+                    以key:value格式存在的内容
+                    服务器要传递给浏览器的消息
+                3.响应主体
+                    服务器端响应回来的数据
+    2.请求对象 - request
+        1.请求对象中会封存所有与请求相关的信息
+            如：请求数据，请求头，路径，...
+        2.语法
+            from flask import request
+            通过request来表示请求
+        3.request中的常用成员
+            1.scheme:获取请求协议
+            2.method:获取本次请求的请求方式
+            3.args:获取使用get请求方式所提交的数据
+            4.form:获取使用post请求方式所提交的数据
+            5.cookies:获取cookies相关数据
+            6.files:获取上传的文件们
+            7.path:获取请求的资源路径(不包含请求参数)
+            8.full_path:获取请求的资源的完整路径(包含请求参数)
+            9.url:获取完整的请求地址，从协议处开始
+            10.headers:获取请求消息头的信息
+            11.headers.get('Referer'):记录请求源地址
+    3.获取请求提交的数据
+        1.get 请求方式
+            1.get方式的场合
+                1.表单中使用get请求方式
+                    <form method="get" action="xxx">
+                        姓名：<input name="uname">
+                        <input type="submit">
+                    </form>
+                2.通过地址栏访问的全部是get请求
+                    1.<a href="/01-test?参数名=值&名=值">xxx</a>
+                    2.window.location.href="/01-test?名=值&名=值"
+                get请求要通过 request.args 获取请求参数值
+                (允许按照字典的方式操作request.args)
+        2.post 请求方式
+            1.场合
+                <form method="post">
+            2.获取post请求数据 
+                通过request.form 获取post方式提交的数据 
+                (可以按照字典的方式操作 request.form)
+            3.注意
+                在路由里面添加请求方式
+                @app.route("/xxxx", methods=["POST", "GET"])
+        3.put 请求方式
+            表示要把文件放到服务器上（禁用）
+            特点：有请求主体
+        4.delete
+            表示客户端向删除服务器上指定的文件（禁用）
+        5.head
+            表示指向获取指定的响应头
+        6.connect
+            测试连接
+        7.trace
+            追踪请示路径
+        8.options
+            选项，保留以后使用...
+
+5.缓存
+    1.缓存的工作原理
+        客户端可以自动保存已访问过的文档的副本，这些副本就是缓存
+        当客户端在向同一URL发送请求时，那么就直接从缓存中将文件取出来
+    2.优点
+        1.减少了冗余的数据阐述，节省流量
+        2.环节服务器带宽瓶颈的问题，服务器可以节省更多的带宽
+        3.降低了对服务器的资源消耗和运行要求
+        4.降低了由于远距离而造成的加载延迟
+    3.与缓存相关的消息头
+        1.Cache-Control
+            作用：从服务器将文档传来之时起，认为新鲜的秒数
+            取值：秒数 60 / 3600 / ...
+            如果取值为 0 / no-cache，表示每次都要重新刷新网页
+        2.Expires
+            作用：明确指定缓存的过期时间，取值是格林尼治标准时间(GMT)
+            Expires:Fir,25 Aug 2017,08:00:00 GMT
+            Expires:0 表示不需要缓存
+
+6.如何在网页中设置消息头
+    1.http-equiv:指定消息头的名称
+    2.content:指定消息头对应的内容
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="Content-Type" content="test/html">
+    </head>
+
+flask 加密方式：
+    from werkzeug.security import generate_password_hash, check_password_hash 
+
+
+    generate_password_hash(password)
+        password:原始密码
+        返回：加密密码
+        用于加密
+    check_password_hash(password, rawpwd)
+        password:原始密码
+        rawpwd:加密密码
+        返回：True or Flase
+        用于加密后的对比
+
+
+
+
+
+
+
+
+
+
+

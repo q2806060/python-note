@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <table border="1" width="400">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>邮箱</th>
+            <th>操作</th>
+        </tr>
+        {% for u in params.users %}
+            <tr>
+                <td>{{u.username}}</td>
+                <td>{{u.age}}</td>
+                <td>{{u.email}}</td>
+                <td><a href="">删除</a><a href="">修改</a></td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td>
+                <a href="/09-page?page=1">首页</a>
+            </td>
+            <td>
+                <a href="/09-page?page={{params.prevPage}}">上一页</a>
+            </td>
+            <td>
+                <a href="/09-page?page={{params.nextPage}}">下一页</a>
+            </td>
+            <td>
+                <a href="/09-page?page={{params.lastPage}}">尾页</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

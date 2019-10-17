@@ -1,0 +1,73 @@
+1.Cookies / Cookie
+    1.cookie 是一种数据存储的手段
+        将一段文本保存在客户端(浏览器)的一种手段，并可以长时间保存数据
+    2.cookies 使用场合
+        1.记住密码
+    3.Flask 中使用cookies
+        1.使用响应对象，将数据存入cookies
+            1.响应对象的构建
+                1.重定向就是响应对象
+                    resp = redirect() #resp 就是响应对象
+                2.通过 make_response() 构建响应对象
+                    form flask import make_response
+                    resp = make_response(""或render_template())
+                    特点：将字符串/模板构建成响应对象
+            2.保存cookies语法
+                响应对象.set_cookies(key, value, max_age)
+                key:保存的cookies的名称
+                value:保存的值
+                max_age:最大存活时间
+        2.获取cookies的值
+            每次向服务器发送请求时，都会将cookies的数据封装到request中带到服务器
+            通过 request.cookies 获取所有的cookies值
+            再通过集体的cookie名称，得到具体的cookie的值
+        3.删除cookie的值
+            响应对象.delete_cookie("key")
+            建议：删除之前先判断是否存在
+        注：
+            1.各个浏览器中的cookie是不共享的
+            2.不同域名下的cookie也是不共享的
+
+2.session - 会话
+    1.当浏览器打开时，跟一个服务器交互的完整过程就是一次会话
+        session 的目的：保存会话中所涉及到的一些信息
+        session 是保存在服务器上的，会为每个浏览器开辟一段空间，就是为了保存当前浏览器和服务器在会话过程中所涉及到的一些信息
+    2.session 在 Flask 中的实现
+        1.配置 SECRET_KEY(密钥)
+            app.config["SECRET_KEY"] = "自定义"
+        2.使用session
+            from flask import session
+            1.向session中保存数据
+                session["key"]=value
+            2.从session中获取数据
+                value = session["key"]
+                value = session.get("key")
+            3.从session中删除数据
+                del session["key"]
+
+3.session 与 cookie 
+    1.cookie 
+        1.保存在客户端
+        2.长久保存
+        3.因为明文，可以修改，安全性较低
+    2.session 
+        1.保存在服务器
+        2.临时存储
+        3.安全性较高
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

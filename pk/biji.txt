@@ -1,0 +1,100 @@
+pygame 中的方法
+
+    display: 访问显示设备
+        set_mode(size, flags, depth): 设置屏幕大小
+            size:(x, y)
+            flags: 
+                FULLSCREEN ---> 全屏
+                DOUBLEBUF ---> 创建双缓冲窗口
+                HWSURFACE ---> 创建硬件加速窗口，必须和FULLSCREEN一起使用
+                OPENGL ---> 创建一个opengl渲染的窗口
+                RESIZABLE ---> 创建一个可改变大小的窗口
+                NOFRAME ---> 创建一个没有边框的窗口
+        set_caption(str): 设置窗口标题
+        update(): 更新画面
+        
+    draw: 绘制形状、线和点
+        绘制矩形 ：rect(Surface, color, Rect, width=0)             
+        绘制多边形：polygon(Surface, color, pointlist, width=0)           
+        绘制圆：circle(Surface, color, pos, radius, width=0)
+        绘制椭圆：ellipse(Surface, color, Rect, width=0)
+        绘制圆弧：arc(Surface, color, Rect, start_angle, stop_angle, width=1)
+        绘制线：line(Surface, color, start_pos, end_pos, width=1)
+        绘制一系列的线：lines(Surface, color, closed, pointlist, width=1)
+        绘制一根平滑的线：aaline(Surface, color, start_pos, end_pos, blend=1)
+        绘制一系列平滑的线：aalines(Surface, color, closed, pointlist, blend=1)
+        width参数：为0或省略，则填充
+        Surface.fill()填充的矩形更快
+
+
+    event: 管理事件
+        get(): 获取事件
+        wait(): 等待获取事件
+        set_blocked(type):用来完成指定类型的事件
+            type为事件类型,type可以为一个列表
+            若type设置为none,则所有对象都被打开
+        set_allowed():用来设置允许的事件
+        Event(type,*args/*kwargs):设置事件类型
+        post(new_events):将新事件放到队列的最后
+        
+
+    image: 加载和存储图片
+        load(url): 加载图片 
+            convert(): 将图片转化为surface对象，加载图像后使用
+            convert_alpha(): 可以使光标为不规则的形状
+
+    key: 读取键盘按键
+
+    mixer: 声音
+
+    mouse: 鼠标
+        get_pos(): 获取鼠标位置
+
+    music: 播放音频
+
+    movie: 播放视频
+
+    rect(left, top, width, height): 管理矩形区域
+
+    sprite: 操作移动对象
+
+    Surface(size,flags,depth): 管理图像和屏幕
+        set_clip(screen_rect=None):设定绘制区域，为None时，重置
+        get_clip():得到裁剪区域，返回一个Rect对象
+
+    time: 管理时间和帧信息
+        clock = pygame.time.Clock()
+            clock.tick(最大帧率)
+
+    transform: 缩放和移动图像
+
+    font: 使用字体
+        SysFont(字体, size): 设置字体
+        get_fonts():用来获取当前系统所有可用字体
+        Font(filename,size)/Font(object,size):使用当前文件名字体
+
+    cursors: 加载光标
+
+screen 的设置
+    blit(source, (坐标)):
+        坐标为图片左上角位置
+
+    fill(color, rect=None, spacial_flags=0):
+        当rect参数为默认时，整个surface都会被填充
+
+
+按键事件
+    KEYDOWN/KEYUP:按键的按下及松掉
+    K_A/K_UP/...:对应键盘按钮事件
+    ...&KMOD_CTRL:表示同时按下...及ctrl键
+
+使用设置后的字体
+    render(text,bool,color,background)
+        text:为参数文字
+        bool:是否开启抗锯齿，开启--->字体较平滑
+        color:字体颜色
+        background:背景色，不加则为透明
+
+
+
+

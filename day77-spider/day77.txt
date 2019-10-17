@@ -1,0 +1,65 @@
+1.Ajax动态加载网站数据抓取
+    1.特点：滚动鼠标滑轮时加载
+    2.抓包工具(F12)：QueryString
+
+2.豆瓣电影数据抓取
+    1.网址：豆瓣电影 - 排行榜 - 剧情
+    2.目标：电影名称、评分
+    3.F12/抓包工具 
+        滚动鼠标滑轮抓包，需要注意2点
+        1.Request URL:GET的地址
+        2.：Query String
+    4.升级案例
+        1.输入要抓取的电影类型：剧情、喜剧、爱情
+        2.输入要抓取的电影数量：100
+
+3.selenium+phantomjs/Chrome请打网络爬虫组合
+    1.selenium
+        1.定义：Web自动化测试工具，应用于Web自动化测试
+        2.特点：
+            1.可运行在浏览器，根据指定命令操作浏览器，让浏览器自动加载页面
+            2.只是工具，必须与第三方浏览器结合使用
+        3.安装selenium
+            Anaconda Prompt : conda install selenium
+    2.phantomjs浏览器
+        1.定义：无界面浏览器(无头浏览器)
+        2.特点：把内存进行页面加载，进行高效
+        3.安装：下载对应的安装包(.exe),把文件放到python安装目录的Scripts目录中
+    3.chromedriver安装
+        1.查找对应安装包
+        2.安装
+            1.查看本机Chrome版本
+            2.把文件放在python安装目录的Scripts目录中
+
+4.浏览器对象常用方法
+    1.driver = webdriver.PhantomJS(executable_path="")
+    2.driver.get(url)
+    3.driver.page_source：获取响应的html内容
+    4.driver.page_source.find("字符串")
+        功能：从html源码中搜索指定字符串
+        返回值：
+            -1：查找失败
+    5.单元素查找
+        1.driver.find_element_by_id("")
+        2.driver.find_element_by_name("")
+        3.driver.find_element_by_class_name("")
+        4.driver.find_element_by_xpath("xpath表达式")
+    6.多元素查找
+        1.driver.find_elements_by_...("")
+    7.节点对象.send_keys("")
+    8.节点对象.click()
+    9.driver.quit()
+
+5.Chrome设置无界面模式
+    1.options = webdriver.ChromeOptions()
+    2.options.set_headless()
+    3.driver = webdriver.Chrome(options=options)
+
+6.京东商品信息爬取 "http://www.jd.com/"
+    1.搜索框属性值：class -> text
+    2.搜索按钮属性值：class -> button
+    3.下一页
+        能点：class -> pn-next
+        不能点：class -> pn-next disabled
+    4.页面商品信息xpath表达式
+        //div[@id="J_goodsList"]/ul/li

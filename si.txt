@@ -1,0 +1,3 @@
+name: zhangsan  age: 18  score: 80.0
+name: wangwu  age: 19  score: 90.0
+name: lisi  age: 16  score: 98.0

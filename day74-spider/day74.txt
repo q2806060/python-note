@@ -1,0 +1,85 @@
+1.爬虫分类
+    1.通用网络爬虫(搜索引擎用，遵守robots协议)
+        robots协议：网站通过robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取
+    2.聚焦网络爬虫：自己写的爬虫程序
+
+2.爬取数据步骤
+    1.确定要爬取的URL地址
+    2.通过HTTP/HTTPS协议获取相应页面
+    3.提取有用的数据
+        1.所需数据，保存
+        2.页面中有其他的URL，继续第2步
+
+3.爬虫环境
+    1.Anaconda 和 Spyder
+        1.Anaconda：集成开发环境
+        2.Spyder：代码编辑器
+            1.注释 / 取消注释 ： Ctrl + 1
+            2.运行程序 ：F5
+    2.Chrome浏览器插件
+
+4.WEB回顾
+    1.HTTP 和 HTTPS 
+        HTTP : 80 
+        HTTPS : 443,HTTP 的升级版，加了SSL安全套阶层，在传输层对网络连接进行加密，保障数据传输的安全
+    2.GET 和 POST
+        1.GET：查询参数在URL地址上显示出来
+        2.POST：在Form表单中
+    3.URL：统一资源定位符
+        https://item.jd.com:443/31902812049.html
+        协议    域名/ip地址  端口   访问资源路径
+    4.User-Agent
+        记录用户浏览器、操作系统等，为了让用户获取更好的页面效果
+
+5.请求模块(urllib.request)
+    1.python2 和 python3 的区别
+        python2 : urllib、urllib2
+        python3 : urllib
+    2.常用方法
+        1.urllib.request.urlopen("url地址")
+            1.获取响应
+                resp = urllib.request.urlopen("url地址")
+            2.转换类型
+                字节流 = resp.read()
+                字符串 = resp.read().decode("utf-8")
+                decode():bytes -> 字符串
+                encode():字符串 -> bytes
+            2.urlopen()方法不支持重构User-Agent
+        2.urllib.request.Request("URL", headers={})
+            1.创建请求对象
+                request = urllib.request.Request("url", headers={})
+            2.发请求获取响应
+                resp = urllib.request.urlopen(request)
+            3.获取响应内容
+                html = resp.read().decode("utf-8")
+        3.响应对象(resp)的方法
+            1.resp.getcode()
+                返回响应码
+                200：成功
+                4xx：服务器页面出错
+                5xx：服务器出错
+            2.resp.geturl()
+                返回响应地址        
+
+6.编码模块(urllib.parse)
+    1.urllib.parse.urlencode({必须为字典})
+        字典内为请求参数
+        例：{"wd":"美女", ...}
+            wd=%dh%da...
+    2.urllib.parse.quote("字符串")
+        例： "美女" ---> %dh%da...
+    3.解码 ：urllib.parse.unquote("字符串")
+
+7.请求方式及案例
+    1.GET：查询参数在URL地址中
+    2.POST：查询参数在Form表单中
+        1.在Request()中添加data参数
+            urllib.request.Request(url, data=data, headers={})
+            data : 表单数据以bytes数据类型提交
+        2.处理表单数据data为bytes数据类型
+            1.将data定义成字典
+            2.进行url编码(字符串)
+            3.转成bytes类型(encode())
+    3.结果处理
+        1.可以用json模块中的loads()方法将json格式字符串转为字典
+

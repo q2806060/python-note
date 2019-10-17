@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background: red;
+        }
+        .yellow{
+            background: yellow;
+        }
+        .pink{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        {% for i in params.lst %}
+            <li
+                {% if loop.index % 2 == 1 %}
+                    class="red"
+                {% else %}
+                    class="yellow"
+                {% endif %}
+            >{{i}}</li>
+
+        {% endfor %}
+        {% for u in params.dic %}
+            <li
+                {% if loop.first %}
+                    class="red"
+                {% elif loop.last %}
+                    class="yellow"
+                {% else %}
+                    class="pink"
+                {% endif %}
+            >{{params.dic[u]}}</li>
+
+        {% endfor %}
+    </ul>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

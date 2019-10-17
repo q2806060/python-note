@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .myRed{color: red}
+        .myYellow{color: yellow}
+        .mySize{font-size:39px}
+        .active{color:red}
+        .page{list-style: none}
+        .page>li{
+            float: left;
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            background: #eee;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="app">
+        <h3 v-bind:style="{backgroundColor:bgBG}">我是标题，当点击下面的按钮时会改变颜色</h3>
+        <button @click="modifyColor">修改背景色</button>
+        <hr>
+        <!-- <h3 v-bind:style="{backgroundColor:bgBG,color:myColor">修改颜色</h3> -->
+        <ul class="page">
+            <li>
+                <a href="#" @click='prev'>上一页</a>
+            </li>
+            <li v-for="n in pageCount">
+                <a href="#" v-bind:class="activeNumber==n?'active':''">{{n}}</a>
+            </li>
+            <li>
+                <a href="#" @click='next'>下一页</a>
+            </li>
+        </ul>
+    
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var exampleData = {
+            bgBG:"#ff0000",
+            myColor:"#00ff00",
+            imgUrl:"p3.png",
+            isRed:true,
+            isCustome:true,
+            hasMore:true,
+            pageCount:10,
+            activeNumber:3
+        }
+        var app = new Vue({
+            el:"#app",
+            data:exampleData,
+            methods:{
+                modifyColor:function(){
+                    this.bgBG = this.getRandomColor();
+                },
+                getRandomColor:function(){
+                    var r = Math.floor(Math.random()*256);
+                    var g = Math.floor(Math.random()*256);
+                    var b = Math.floor(Math.random()*256);
+                    return "rgb("+r+","+g+","+b+")";
+                },
+                prev:function(){
+                    var pageNo = this.activeNumber;
+                    pageNo--;
+                    if(pageNo<=0){
+                        return
+                    }
+                    this.activeNumber = pageNo;
+                },
+                next:function(){
+                    var pageNo = this.activeNumber;
+                    pageNo++;
+                    if(pageNo>this.pageCount){
+                        return
+                    }
+                    this.activeNumber = pageNo;
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <!-- <li><span>red</span><input></li> -->
+    </ul>
+    <input type="button" id="btSubmit" value="提交试卷">
+    <script>
+        var html = "";
+        for(var i=0;i<localStorage.length;i++){
+            var k = localStorage.key(i);
+            html += "<li><span>"+k+"</span><input /></li>";
+        }
+        console.log(html);
+        list.innerHTML = html;
+        btSubmit.onclick = function(){
+            var total = localStorage.length;
+            var correct = 0;
+            var error = 0;
+            var inputList = document.querySelectorAll("#list input");
+            for(var i=0;i<inputList.length;i++){
+                var inputC = inputList[i].value;
+                var key = localStorage.key(i);
+                var val = localStorage.getItem(key);
+                if(val==inputC){
+                    correct++;
+                }
+            }
+            sessionStorage.setItem("total",total);
+            sessionStorage.setItem("correct",correct);
+            sessionStorage.setItem("error",total-correct);
+            location.href = "result.html";
+        }
+    </script>
+</body>
+</html>

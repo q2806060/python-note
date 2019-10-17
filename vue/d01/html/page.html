@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        <br>
+        <button v-on:click="say">点一下</button>
+        <br>
+        <button @click="run('vue')">点一下2</button>
+        <br>
+        <input type="text" @click="clickMe">
+        <br>
+        <input type="text" @click.stop="clickMe">
+        <br>
+        <input type="text" @keydown.enter="clickMe">
+        <br>
+        <input type="text" @keydown.13="clickMe">
+        <br>
+        <form action="#" @submit.prevent="handleSubmit">
+            <button>login</button>
+        </form>
+        <select name="" id="" @change="handleChange">
+            <option value="red">红色</option>
+            <option value="green">绿色</option>
+            <option value="blue">蓝色</option>
+        </select>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var exampleData = {
+            message:"hello",
+        }
+        var app = new Vue({
+            el:"#app",
+            data:exampleData,
+            methods:{
+                say:function(){
+                    alert(this.message);
+                },
+                clickMe:function(){
+                    alert(this.message);
+                },
+                run:function(mes){
+                    this.message = mes;
+                },
+                handleSubmit:function(){
+                    console.log("提交事件被触发了.........")
+                },
+                handleChange:function(e){
+                    var target = e.target;
+                    console.log(target.value);
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

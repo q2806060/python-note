@@ -1,0 +1,177 @@
+设置文件权限：chmod 644 文件名 
+ rw-r--r--
+ r:4
+ w:2
+ x:1
+
+
+主键（primary key）&& 自增长属性（auto_increment）
+    1.使用规则
+        1.一张表只能有一个主键字段
+        2.约束：字段值不允许重复，且不能为null
+        3.key标志：PRI
+        4.通常设置记录编号的字段ID为主键，能够唯一锁定1条记录
+    2.创建表时创建
+        例：id int primary key auto_increment, .....   #创建字段不允许重复，且自增长
+            create table ....(........)auto_increment=xxx,charset=utf8,...    #创建表，选择从xxx开始记录
+    3.已有表中添加主键
+        alter table 表名 add primary key(id);
+    4.删除主键
+        1.无自增长
+            alter table 表名 drop primary key;  
+        2.有自增长
+            alter table 表名 modify id int;     #更改主键类型
+            alter table 表名 drop primary key;  #删除主键
+
+外键（foreign key）
+    1.定义： 让当前表字段值在另一个表的范围内选择
+    2.语法
+        foreign key(从表字段名)
+        references 主表（主表字段名）
+        on delete 级联动作
+        on update 级联动作
+    3.使用规则
+        1.主表、从表字段数据类型要一致
+        2.主表被参考字段：主键
+    4.级联动作
+        1.cascade :数据级联删除、更新（参考字段）
+        2.set null ：主表更新、删除时，从表相关联记录该字段值设置为null
+        3.restrict :从表有相关联记录，不允许主表操作
+    5.删除外键
+        show create table 表名;    #查看外键名
+        alter table 表名 drop foreign key 外键名；
+    6.在已有表中添加外键
+        alter table 表名 add foreign key(stuid)
+        references 主表(id)
+        on delete 级联动作
+        on update 级联动作；
+
+锁：目的是解决客户端并发访问的冲突问题
+    1.锁的类型分类
+        1.读锁（共享锁）
+            select: 加读锁后别人不能更改表记录，但可查询
+        2.写锁（互斥锁、排他锁）
+            update: 加写锁后别人不能查询，不能改
+    2.锁粒度
+        1.行级锁 ：InnoDB
+            可以加读锁、写锁
+        2.表级锁 ：MyISAM
+            可以加读锁、写锁
+
+1.基本操作
+    1.查看所有的存储引擎：show engines
+    2.查看已有表的存储引擎：show create table 表名；
+    3.创建表时指定存储引擎：create table 表名(......)engine=Innodb/MyISAM
+    4.已有表：alter table 表名 engine=MyISAM
+
+InnoDB 的特点
+    1.支持行级锁，支持外键
+    2.支持事务和事务回滚
+    3.共享表空间
+        表名.frm : 表结构和索引信息
+        表名.ibd : 表记录
+
+MyISAM 的特点
+    1.支持表级锁
+    2.独享表空间
+        表名.frm : 表结构
+        表名.myd : 表记录
+        表名.myi : 索引文件
+
+MEMORY 特点
+    1.表结构在硬盘中，表记录在内存中
+    2.服务重启或主机重启后，表记录消失
+
+如何决定使用哪个存储引擎
+    1.执行查询多的表： MyISAM (使用 InnoDB浪费资源)
+    2.执行写操作多的表： InnoDB
+
+数据导入
+    把文件系统内容导入到数据库表中
+    1.语法
+        load data infile '文件名的绝对路径'
+        into table 表名
+        fields terminated by '分隔符'
+        lines terminated by '\n'
+    2.数据导入步骤
+        1.把文件拷贝到数据库搜索路径中
+            1.查看搜索路径 show variables like 'secure_file_priv';
+            2.拷贝文件 sudo cp 文件名 地址
+            3.执行数据导入语句
+
+数据导出
+    把表中的记录保存到系统文件里
+    语法:
+        select ... from 表名 where 条件
+        into outfile '文件名绝对路径'
+        fields terminated by '分隔符'
+        lines terminated by '分隔符'
+    
+数据备份（mysqldump，在Linux终端操作）
+    1.命令格式
+        musqldump -u用户名 -p 源库名 > xxx.sql     #完全备份
+    2.源库名表示方式
+        --all-databases   #备份所有库
+        库名               #备份单个库
+        -B 库1 库2 库3     #备份多个库
+        库名 表1 表2 表3   #备份多张表   
+
+数据恢复（Linux 终端中操作）
+    1.命令格式
+        mysql -u用户名 -p 目标库名 < xxx.sql
+    2.从所有库的备份中恢复某一个库
+        mysql -u用户名 -p --one-database 目标库名 < xxx.sql
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

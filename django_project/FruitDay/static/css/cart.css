@@ -1,0 +1,215 @@
+/* 清除默认样式 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+/* 页面基础样式 */
+body{
+	font:12px "微软雅黑","黑体";
+	color:#9a9a9a;
+}
+a{
+	text-decoration:none;
+	color:#9a9a9a;
+}
+a:hover{
+	color:#64a131;
+}
+/* 页面的整体宽度和居中效果 */
+#container{
+	width:990px;
+	margin:0 auto;
+}
+/* 1.导航 */
+#nav{
+	background:#eee;
+	height:30px;
+}
+/* 右侧导航 */
+#nav .rightNav{
+	float:right;
+}
+#nav .rightNav>li{
+	float:left;
+	border-right:1px solid gray;
+	/* 通过边框模拟导航项之间的分隔符,只能通过边距调整垂直显示位置,不能使用line-height  */
+	margin-top:7px;
+	padding:0 10px;
+}
+#nav .rightNav>.lastItem{
+	border:none;
+	margin-right:0;
+	padding-right:0;	
+}
+/* 左侧导航 */
+#nav .leftNav>li{
+	float:left;
+	padding-left:10px;
+	height:30px;
+	line-height:30px;
+}
+/* 三角标 */
+#nav .leftNav>li>i{
+	display:inline-block;
+	width:0;
+	height:0;
+	border:6px solid transparent;
+	border-top:6px solid black;
+/* 调整显示位置 */
+	position:relative;
+	top:4px;
+}
+
+/* 2. 横幅 */
+#banner{
+	margin:15px 0;
+	height:207px;
+}
+#banner img{
+	width:100%;
+	height:207px;
+}
+/* 3. 推荐 */
+#commend{
+	height:112px;
+	font-size:0;
+}
+#commend img{
+	width:240px;
+	margin-right:10px;
+}
+#commend .lastImg{
+	margin:0;
+}
+/* 4. 主体 */
+#main{
+	margin:25px 0;
+	padding-bottom:50px;
+}
+#main .title{
+	background:#f3f3f3;
+	border:1px solid #e9e9e9;
+	height:32px;
+}
+#main .title>p{
+	float:left;
+	line-height:32px;
+}
+#main .check-box{
+	width:132px;
+}
+#main .goods{
+	width:378px;
+}
+#main .price{
+	width:160px;
+	text-align:center;
+}
+#main .count{
+	width:80px;
+	text-align:center;
+}
+#main .sum{
+	width:140px;
+	text-align:center;
+}
+#main .action{
+	width:85px;
+	text-align:center;
+}
+#main #checkAll{
+	vertical-align:middle;
+}
+
+/* 商品记录 */
+#main .g-item{
+	border-top:2px solid #999;
+	border-bottom:1px solid #999;
+	padding:10px 0;
+	margin-top:25px;
+/* 清除浮动 */
+	overflow:hidden;
+}
+#main .g-item p{
+	float:left;
+}
+#main .check-box img{
+	width:80px;
+	height:80px;
+}
+/* #main .g-item .check-box>input */
+#main .check-box [name=check]{
+	vertical-align:top;
+}
+/* 数量 */
+#main .count a{
+	float:left;
+	width:16px;
+	height:18px;
+	text-align:center;
+	line-height:18px;
+	border:1px solid #cacbcb;
+	padding:1px 0;
+}
+#main .count input{
+	float:left;
+	width:42px;
+	height:18px;
+	text-align:center;
+	border-top:1px solid #cacbcb;
+	border-bottom:1px solid #cacbcb;
+	border-left:0;
+	border-right:0;
+	padding:1px;
+	font-size:12px;
+}
+/* 底部工具栏 */
+#cart-toolbar{
+	position:fixed;
+	bottom:0;
+	height:50px;
+	line-height:50px;
+	/* 元素脱离文档流之后,不再具有默认宽度,由内容决定  */
+	width:990px;
+	background:#ccc;
+}
+#cart-toolbar .right-toolbar{
+	float:right;
+}
+#cart-toolbar p{
+	float:left;
+}
+#cart-toolbar span{
+	font-weight:bold;
+	color:#e4393c;
+	font-size:16px;
+	margin:0 10px;
+}
+
+#cart-toolbar .submit-btn{
+	width:80px;
+	height:50px;
+	text-align:center;
+	font-weight:bold;
+	background:#e4393c;
+	color:#fff;
+	font-size:20px;
+}
+
+#cart-toolbar .submit-price{
+	margin:0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

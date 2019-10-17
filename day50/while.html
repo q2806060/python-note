@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 1;
+        var sum = 0;
+        while(a <= 100){
+            console.log(a);
+            sum += a;
+            a++;
+        }
+        console.log(sum)
+
+        var b = 1;
+        while(b <= 100){
+            while(b % 3 == 0){
+                console.log(b);
+                b ++;
+            }
+            b ++;
+        }
+
+        var isRun = 0;
+        var days = 0;
+        var year = prompt("Please input year:");
+        var month = Number(prompt("Please input month:"));
+        var day = Number(prompt("Please input day:"));
+        if((year % 4 == 0 && year % 100 != 0)||year % 400 == 0){
+            isRun = 1;
+        }
+        
+        var lastMonth = month - 1;
+        while(lastMonth >= 1){
+            switch(lastMonth){
+                case 1:
+                case 3: 
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                    days += 31;
+                    lastMonth -= 1;
+                    break;
+                case 2:
+                    days += 28;
+                    lastMonth -= 1;
+                    if(isRun){
+                    days += 1;
+                    }
+                    break;
+            
+                case 4:
+                case 6:
+                case 9:
+                    days += 30;
+                    lastMonth -= 1;
+                    break;
+            }
+        }
+        days += day;
+        console.log(days)
+
+
+
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

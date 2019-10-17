@@ -1,0 +1,135 @@
+/* 1.设置默认样式 */
+body,h2,p{
+    margin: 0;
+    color: #999;
+
+}
+a{
+    text-decoration: none;
+
+}
+
+/* 2.外部容器 */
+#container{
+    width: 990px;
+    margin: 0 auto;
+
+}
+
+/* 3.顶部标题 */
+h2{
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    margin-bottom: 30px;
+
+}
+
+/* 4.主体 */
+#main{
+    /* 解决子元素浮动造成的父元素高度为0 */
+    overflow: hidden;
+
+}
+
+#main .left{
+    float: left;
+    position: relative;
+
+}
+
+.left a{
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    right: 173px;
+    bottom: 20px;
+    text-align: center;
+    line-height: 45px;
+    border: 1px solid #64a131;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #64a131;
+
+}
+
+#main .right{
+    float: right;
+    margin-top: 70px;
+    margin-right: 40px;
+
+}
+
+.form-line{
+    margin-bottom: 30px;
+
+}
+
+.form-line>p{
+    float: left;
+    width: 64px;
+    height: 40px;
+    text-align: right;
+    margin-right: 40px;
+    line-height: 40px;
+}
+
+.form-line>.uinput{
+    /* 修改元素盒模型计算方式 */
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.form-line>div>p{
+    float: right;
+}
+
+.form-line .isSave{
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+
+}
+
+.form-line>div>p>a{
+    color: #999;
+
+}
+
+.form-line .btn{
+    width: 140px;
+    height: 40px;
+    border: 1px solid #64a131;
+    border-radius: 5px;
+
+}
+
+.loginBtn{
+    background: #64a131;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+.registBtn{
+    box-sizing: border-box;
+    float: right;
+    color: #64a131;
+    background: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+
+}
+
+
+
+
+

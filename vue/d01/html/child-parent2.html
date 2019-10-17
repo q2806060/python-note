@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("parent",{
+            data:function(){
+                return {isUserLogin:true,lists:[10,20,30,40,50]}
+            },
+            template:'<div><ul v-if="isUserLogin"><li v-for="item in lists">{{item}}</li></ul><child @dataEvent="getData"></child></div>',
+            methods:{
+                getData:function(msg){
+                    console.log("父组件接收到子组件的数据："+msg);
+                    this.isUserLogin = msg;
+                }
+            }
+        });
+        Vue.component("child",{
+            template:'<div><button @click="sendData">点击按钮发送数据给父组件</button></div>',
+            methods:{
+                sendData:function(){
+                    this.$emit("dataEvent",false);
+                },
+            },
+        });
+        new Vue({
+            el:"#app",
+        })
+    
+    </script>
+</body>
+</html>

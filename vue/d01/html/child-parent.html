@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("parent",{
+            methods:{
+                getData:function(msg){
+                    console.log("父组件接收子组件数据："+msg);
+                },
+            },
+            template:'<div><h4>父组件</h4><child @dataEvent="getData"></child></div>'
+        });
+        Vue.component("child",{
+            template:'<div><h4>子组件</h4><button @click="setData">点击按钮发送数据给父组件</button></div>',
+            methods:{
+                setData:function(){
+                    // 触发绑定自定义事件dataEvent并且传递数据
+                    this.$emit("dataEvent","交话费");
+                },
+            },
+        });
+        new Vue({el:"#app"});
+    
+    </script>
+</body>
+</html>

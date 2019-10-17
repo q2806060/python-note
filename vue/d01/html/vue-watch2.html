@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("my-component",{
+            template:'<h2 v-bind:style="{opacity:opacityValue}">透明度变化</h2>',
+            mounted:function(){
+                var vm = this;
+                setInterval(function(){
+                    vm.opacityValue+=0.1;
+                    if(vm.opacityValue>1){
+                        vm.opacityValue=0;
+                    }
+                },200);
+            },
+            data:function(){
+                return {opacityValue:0.2}
+            }
+        })
+        var exampleData = {
+            msg:"hello vue",
+        };
+        new Vue({
+            el:"#app",
+            data:exampleData
+        })
+    </script>
+</body>
+</html>

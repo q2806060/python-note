@@ -1,0 +1,160 @@
+1.修改器
+    $push:向数组中添加一个值
+        例：db.student.update({name:'Dekie'},{$push:{score:44}},false,false)
+    $pushAll:向数组中添加多个值
+        例：db.student.update({name:'Dekie'},{$pushAll:{score:[22,33]}},false,false)
+
+    $pull:从数组中删除某个值
+        例：db.student.update({name:'Dekie'},{$pull:{score:33}},false,false)
+    $pullAll:从数组中删除多个值
+        例：db.student.update({name:'Dekie'},{$pullAll:{score:[44,33]}},false,false)
+
+    $each:逐一取出其中的值进行操作
+        例：db.student.update({name:'Dekie'},{$push:{score:{$each:[77,88,99]}}},false,false)
+
+    $position:将值插入到数组中指定的位置，需要和$push,$each结合使用
+        例：db.student.update({name:'Dekie'},{$push:{score:{$each:[100],$position:0}}},false,false)
+        注：指定位数不能为负
+
+    $sort:对数组域的内容进行排序
+        例：db.collectionName.find().sort({排序条件})
+
+    $pop:弹出数组中的一项
+        例：db.student.update({name:'Dekie'},{$pop:{score:1}},false,false)
+        注：1 ---->  最后一项       -1  ------>   第一项
+
+    $addToSet:向数组中添加一个值，并且不和已有重复
+        例：db.student.update({name:'Dekie'},{$addToSet:{score:99}},false,false)
+
+    通过索引访问数组：域.索引值
+        例：db.student.find({'score.2':70})
+
+
+2.其他类型数据
+    1.时间类型
+        计算机中时间：记录一个整数，表示从1970-01-01 00:00:00时间到当前时间点的秒
+        MongoDB中，存储的是ISODate（格林尼治时间）
+            Date():取当前时间，字符串
+            new Date():取当前时间，对象
+            ISODate():取当前时间，对象
+        按照指定时间创建时间对象：
+            new Date('2018-01-01T18:02:54')
+        转换成当地时间
+            ISODate().toLocalString()
+
+    2.Null类型：表示键/对象不存在，未设置值
+        例：db.student.find({sex:null})   #查询没有sex域的数据
+
+    3.内嵌文档
+        1.文档的某个域还是一个文档，叫内嵌文档
+        2.内嵌文档的引用方式：
+            外部分档.内部文档.域名称
+            例：db.acct.update({acct_no:'622345000004'},{$set:{cust_info:{tel:'13599999999',email:'aaa@qq.com',addr:'Beijing'}}},false,false)
+            查找：db.acct.find({"cust_info.tel":'13599999999'})
+            修改：db.acct.update({acct_no:'622345000004'},{$set:{'cust_info.tel':'13588888888'}},false,false)
+
+    4.索引
+        1.通过建立键值及其所在文档位置的对照关系，来避免全表扫描，从而，提高查询效率
+            全表扫描：将集合中所有数据逐一取出进行条件匹配
+        2.注意事项：
+            建立适当的索引，索引不是越多越好
+            数据太少不适合建立索引
+        3.查看和创建索引
+            查看：db.collectionName.getIndexes()
+            创建：db.collectionName.createIndex({name:1})
+            删除：db.collectionName.dropIndex('name_1')
+                注：不带索引名称，则会删除所有索引
+        4.复合索引：根据多个域创建索引
+            例：db.collectionName.createIndex({acct_no:1,acct_name:1})
+        5.唯一索引
+            如果在某个域创建了唯一索引，域的值不重复，查询效率高  ----->   unique:true
+            例：db.collectionName.createIndex({acct_no:1},{unique:true})
+        6.稀疏索引
+            稀疏索引（间隙索引）：如果文档的域不存在，则不对该文档创建索引  ------->   sparse:true
+            例：db.collectionName.createIndex({acct_no:1},{sparse:true})
+
+    5.聚合操作
+        1.对文档的高级筛选、统计
+        2.聚合函数：db.collectionName.aggregate()
+            功能：完成聚合操作
+            参数：聚合条件，配合聚合操作符使用
+            返回：返回聚合结果
+        3.常用聚合操作
+            $group:分组聚合，需要和统计操作符$sum配合
+                例：db.collectionName.aggregate({$group:{'_id':'$acct_type',num:{$sum:1}}})
+            $sum:对某个域求和
+                例：db.collectionName.aggregate({$group:{'_id':'$acct_type',total:{$sum:'$balance'}}})
+                    db.collectionName.aggregate({$group:{'_id':'',total:{$sum:'$balance'}}})
+            $max:求最大值
+                例：db.collectionName.aggregate({$group:{'_id':'$acct_type',max_bal:{$max:'$balance'}}})
+            $min:求最小值
+            $avg:求平均值
+                例：db.collectionName.aggregate({$group:{'_id':'$acct_type',avg_bal:{$avg:'$balance'}}})
+            $project:从集合中查询指定域，类似于关系数据库的投影运算
+                例：db.collectionName.aggregate({$project:{'_id':0,AcctNo:'$acct_no',AcctName:'$acct_name'}})
+            $match:对数据过滤
+                例：db.collectionName.aggregate({$match:{bala500nce:{$lt:0}}})
+            $sort:排序
+                例：db.collectionName.aggregate({$sort:{balance:-1}})
+                    注：1表示正序排列，-1表示倒序排列    
+            管道聚合：
+                一个操作处理完成后，将结果传递给下一个操作进行处理
+                格式：db.collectionName.aggregate([聚合1，聚合2，...])
+                例：db.acct.aggregate({$match:{acct_type:1}},{$sort:{acct_no:-1}})
+
+    6.固定集合（Cappend Collection）
+        1.存储空间大小、存储文档个数有限制，当集合存储用完后，后面存储的数据会覆盖头部的数据
+            特点：插入速度、顺序查找速度快，能够淘汰早起的数据，可以控制集合的大小
+            应用场景：日志，临时缓存
+        2.创建固定集合
+            语法：
+                db.createCollection(collection,{capped:true,size:1000,max:100})
+                参数：size:最大存储空间，单位bytes     max:最大存储笔数     capped:是否为固定集合
+                例：db.createCollection('log',{capped:true,size:1000,max:3})
+
+    7.文件存储
+        1.两种存储方式
+            1.数据库存路径，文件存磁盘
+                优点：节约数据库空间
+                缺点：当存储的路径和文件实际路径不一致，则找不到文件
+            2.将文件直接存入数据库
+                优点：不存在路径问题
+                缺点：占用数据库空间
+        2.GridFS:把文件存入数据库集合中的一种方式
+            语法：
+                存：mongofiles -d gridfs put 原始的路径
+                删：rm 原始的路径
+                取：mongofiles -d gridfs get 原始的路径
+            实现原理：将文件分成很多小片段（chuck），读文件时将小片段组合
+            两个集合存储：fs.file：存储跟文件相关的信息
+                         fs.chucks:存储文件数据
+            优点：
+                同一目录下，没有文件数目限制
+                能存放较大文件
+                分布式环境下能自动同步
+                仅加载部分文件内容到内存中，不必将整个加载
+            缺点：
+                整体读写效率不如直接从磁盘快
+                只能整体更换
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

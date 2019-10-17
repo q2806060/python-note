@@ -1,0 +1,245 @@
+实体完整性：确保一张表的记录不能重复，靠"主键"实施
+域完整性
+检查完整性
+
+
+
+Blog DB(简约版):
+    1.用户表 - Users
+        id, 主键
+        username, - 用户名称
+        email, - 用户邮箱
+        url, - 个人主站地址
+        upwd, - 密码
+    2.主题表 - Topic
+        id, 主键
+        title, - 博客标题
+        blog_type, - 博客类型
+        content, - 博客内容
+        user_id, - 发表用户id,引用自user表的id列
+    3.博客类型表 - BlogType
+        1.id, 主键
+        2.type_name, 类型名称
+
+
+1.模型 - Models
+    1.定义模型
+        模型：根据数据库中的表的结构而创建出来的类(模型类，实体类)
+        1.语法
+            class MODELNAME(db.Model):
+                __tablename__ = "TABLENAME"   #若省略，则默认将MODELNAME小写设为表名
+                COLUMN_NAME = db.Column(db.TYPE,OPTIONS)
+            1.MODELNAME:定义模型类的名称，根据表名而设定
+            2.TABLENAME:映射到数据库中表名
+            3.COLUMN_NAME:属性名，映射到数据库就是列名
+            4.TYPE:映射到列的数据类型
+            5.OPTIONS:列选项
+
+            db.TYPE 列类型如下
+            类型名                python类型                说明
+            Integer               int                     32位普通整数
+            SmallInterger         int                     小范围整数，16位
+            BigInteger            int或long               不限精度整数
+            Float                 float                   浮点数
+            Numeric               decimal.Decimal         定点数
+            String                str                     字符串
+            Text                  str                     字符串
+            Boolean               bool                    布尔值
+            Date                  datetime.Date           日期类型
+            Time                  datetime.time           时间类型
+            DateTime              datetime.datetime       日期和时间类型
+
+            OPTIONS 列选项 
+            选项名                说明
+            autoincrement         如果设置为True，表示该列自增长
+                注：如果列的类型为整数，并且是主键，则默认自增长
+            primary_key           如果设置为True，表示该列为主键
+            unique                如果设置为True，表示该列值唯一
+            index                 如果设置为True，表示该列加索引
+            nullable              如果设置为True，表示该列可为空
+            default               指定该列的默认值    
+
+            如果一个列中要包含多个列选项，使用','隔开即可
+            列选项 与 列类型之间使用','隔开的 
+        2.db.create_all()
+            作用：
+                将所有的实体类都创建到数据库上
+            注意：
+                只有类对应的表不存在时才会创建，否则无反应
+        3.db.drop_all()
+            作用：将所有的数据表全部删除
+    2.数据库迁移
+        1.将实体类的改动再映射回数据库
+        2.依赖于第三方库
+            1.flask-script
+                包：flask_script
+                类：Manager
+                    作用：对项目进行管理，如：启动项目，添加命令等
+            2.flask-migrate
+                包：flask_migrate
+                类：
+                    1.Migrate 
+                        作用：用于管理app 和 db 之间的协调关系
+                    2.MigrateCommand
+                        作用：允许在终端中提供实体类的迁移命令
+        3.实现数据库的迁移
+            1.python run.py db init
+                作用：做一些项目和数据库的初始化操作
+                特点：一个项目中，只执行一次即可
+            2.python run.py db migrate
+                作用：将编辑好的实体类生成中间文件并保存在migrations文件夹中
+                特点：只要检测到实体类由更改，就会生成中间文件
+            3.python run.py db upgrade
+                作用：将中间文件映射回数据库
+    3.基于ORM的CRUD
+        1.增加 - C(Create)
+            1.创建实体类的对象，并为对象的属性赋值
+                示例：
+                    user = User()
+                    user.username = "wangwc"
+                    user.age = 37
+                    ... ...
+            2.将实体对象保存回数据库
+                db.session.add(user)
+                #针对非查询操作，必须手动将操作提交回数据库
+                db.session.commit()
+            3.配置自动提交操作或数据库
+                app.config["SQLALCHEMY_COMMIT_ON_TEARDOWN"] = True 
+                当视图函数执行完毕后，自动提交所有操作到数据库中
+        2.查询 - R(Retrieve)
+            1.基于 db.session 进行查询
+                1.db.session.query()
+                    参数：要查询的列，如果查询多个列的话，使用','隔开，如果要查询所有列的话，则参数为实体类
+                    示例：
+                        1.查询 Users 实体类中的id, username, age
+                            db.session.query(Users.id, Users.username, Users.age)
+                        2.查询Users实体类中所有的列
+                            db.session.query(Users)
+                        3.查询Users实体类以及Wife实体类中所有列
+                            db.session.query(Users, Wife)
+                返回值：
+                    该函数会返回一个Query对象，类型为BaseQuery
+                2.查询执行函数
+                    目的：在db.session.query()上得到最终的结果
+                    语法：db.session.query(xxx).查询执行函数()
+                    函数                说明
+                    all()               以列表的方式返回所有数据
+                    first()             以实体对象的方式返回查询中的第一条数据，没有数据则返回None
+                    first_or_404()      效果同上，如果没有数据则响应404
+                    count()             返回查询结果的数量
+                3.查询过滤器函数
+                    1.作用： 
+                        在db.session.query() 后追加筛选条件
+                    2.语法： 
+                        db.session.query().查询过滤器函数().查询执行函数()
+                        过滤器函数              作用
+                        filter()              指定查询条件
+                        filter_by()           等值查询条件中使用
+                        limit()               获取前几行数据
+                        offset()              指定结果偏移量
+                        order_by()            排序
+                        group_by()            分组
+
+                        过滤器函数详解
+                        1.filter()
+                            作用：构建各种各样的条件
+                            注意：条件必须由 实体类.属性 构成
+                                db.session.query(Users).filter(Users.age>17)   # 避免多个实体类查询错误
+                            1.使用","在filter内连接多个条件
+                            2.查询 或，要使用 or_() 函数
+                                用法： from sqlalchemy import or_
+                                     db.session.query(Users).filter(or_(条件1,条件2))
+                            3.等值查询
+                                注：使用 == 查询
+                                db.session.query(Users).filter(Users.id==2).first()
+                            4.查询包含字段的用户信息
+                                db.session.query(Users).filter(Users.email.like("%字段%"))
+                            5.模糊查询 - in 
+                                注意：模糊查询in需要使用实体类属性提供的 in_(["",""]) 完成查询
+                                db.session.query(Users).filter(Users.age.in_(["24","25","37"]))
+                            6.模糊查询 - between and
+                                注意：模糊查询between and需要使用实体类属性提供的between(值1,值2)完成查询 
+                                db.session.query(Users).filter(Users.age.between(30,45))
+                        2.filter_by()
+                            作用：只能做单表的等值条件过滤筛选
+                            语法：
+                                db.session.query(XX).filter_by(属性=值).all()
+                            特点：
+                                1.不用 实体类.属性，而直接用属性名即可
+                                2.等值判断使用 = ，而不是 == 
+                        3.limit() & offset()
+                            SQL:
+                                获取前5条数据
+                                select * from users limit 5
+                                获取表中跳过前3条后的5条数据
+                                select * from users limit 3,5
+                            1.limit(n)
+                                作用：获取前n行数据
+                                语法：
+                                    db.session.query(XX).limit(n).all()
+                            2.offset(n)
+                                作用：从查询结果中跳过前n条数据
+                                语法：
+                                    db.session.query(XX).offset(n)
+                        4.order_by()
+                            作用：排序
+                            示例：
+                                1.将Users实体中所有的数据降序排序
+                                    db.session.query(Users).order_by("age desc").all()
+                                2.将Users实体中大于18岁的人，按年龄降序排序，如果年龄相同按照id升序排序
+                                    db.session.query(Users).filter(Users.age > 18).order_by("age desc,id").all()
+                4.聚合查询
+                    1.基本的聚合查询
+                        from sqlalchemy import func
+                        聚合函数：
+                            sum():求和 ---> func.sum()
+                            count()
+                            max()
+                            min()
+                            avg()
+                        语法：  
+                            db.session.query(func.聚合函数(实体类.属性)).all()
+                        示例： 
+                            1.查询Users实体中所有人的平均年龄是多少
+                                db.session.query(func.avg(Users.age)).all()
+                    2.分组聚合查询
+                        语法：
+                            db.session.query(聚合).group_by("属性名").all()
+                    3.带条件的分组聚合
+                        db.session.query(查询列,聚合列).filter(条件).group_by("分组").having(条件)
+
+
+
+            2.基于 实体类 进行查询
+                实体类.query.查询过滤器函数().查询执行函数()
+                ex:
+                    1.查询Users实体类中所有的数据
+                        Users.query().all()
+                    2.查询Users实体中isActive为True的数据
+                        Users.query.filter_by(isActive=True).all()
+                        Users.query.filter(Users.isActive==True).all()
+        3.修改    
+            1.查询
+                查询出要修改的实体对象
+            2.改
+                通过实体对象.属性 = 值 
+            3.保存
+                db.session.add(实体对象)
+            示例：
+                user = db.session.query(Users).filter_by(id=1).first()
+
+                user.age = 37
+
+                db.session.add(user)
+        4.删除
+            1.查询 
+                查询出要删除的实体对象
+            2.删除
+                db.session.delect(对象)
+            
+
+
+
+
+
+

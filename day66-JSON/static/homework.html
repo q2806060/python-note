@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #container{
+            position: relative;
+        }
+        #showU{
+            height: 150px;
+            width: 300px;
+            position: absolute;
+            left:80px;
+            top:30px;
+            border: 1px solid black;
+            background: #fff;
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <script src="js/common.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $("#uname").keyup(function(){
+                var data = "uanme="+$("#uname").val();
+                $.get("/query-all",data,function(resText){
+                    if(resText.length > 0){
+                        $("#showU").html("");
+                        $("#showU").css("display","block");
+                        $.each(resText, function (i, obj) {
+                            var $p = $("<p>"+obj+"</p>");
+                            $("#showU").append($p);
+                        });
+                    }else{
+                        $("#showU").css("display","none")
+                    };
+                },"json");
+                // var xhr = createXhr();
+                // var s = $("#uname").val();
+                // xhr.open("get", "/query-all?uname="+s, true);
+                // xhr.onreadystatechange = function () {
+                //     if(xhr.readyState==4&&xhr.status==200){
+                //         var ret = xhr.responseText;
+                //         var arr = JSON.parse(ret);
+                //         if(arr.length > 0){
+                //             $("#showU").html("");
+                //             $("#showU").css("display","block");
+                //             $.each(arr, function (i, obj) {
+                //                 var $p = $("<p>"+obj+"</p>");
+                //                 $("#showU").append($p);
+                //             });
+                //         }else{
+                //             $("#showU").css("display","none")
+                //         };
+                //     };
+                // };
+                // xhr.send(null);
+            });
+        });
+    </script>
+    <div id="container">   
+        用户名：<input type="text" name="uname" id="uname">
+        <div id="showU"></div>
+    </div>
+</body>
+</html>

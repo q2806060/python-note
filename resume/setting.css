@@ -1,0 +1,100 @@
+#right h2,#left h2,div,p{
+    margin: 0;
+}
+
+
+
+body{
+    margin: 0 auto;
+    width: 990px;
+    background-image: url(./iSearch.jpg);
+}
+
+#Myhead{
+    text-align: center;
+}
+
+/* 左边悬浮设定 */
+#left{
+    float: left;
+}
+
+#left .min-box{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#left img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 10px;
+}
+#left #name{
+    float: left;
+    padding: 28px 20px 12px 20px;
+    font-size: 18px;
+
+}
+
+#left #clear-float{
+    clear: both;
+}
+
+/* 右边悬浮设定 */
+#right{
+    float:right;
+}
+
+/* 底边设定 */
+#Myfoot{
+    clear:both;
+    margin: 0;
+}
+
+/* 留言阅读区 */
+#RMessage{
+
+}
+
+
+/* 提交设定 */
+#WMessage textarea{
+    float: right;
+    max-width: 900px;
+    max-height: 50px;
+    min-width: 900px;
+    min-height: 50px;
+    font-size: 18px;
+    resize: none;
+
+}
+#WMessage p{
+    float:left;  
+    
+}
+#WMessage input{
+    clear: both;
+    background-color: #64a131;
+    color: white;
+    width: 80px;
+    height: 40px;
+    float: right;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

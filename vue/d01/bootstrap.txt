@@ -1,0 +1,85 @@
+1.window.onstorage = function(){} 
+    改变body属性，会触发
+
+2.localstorange.setItem(变量, value)  ---  sessionstorange
+    设置变量
+
+3.localstorange.getItem(变量)  ---  sessionstorange
+    获取变量
+
+4.localstorange.removeItem(变量) --- sessionstorange
+    移除变量
+
+5.心跳请求  ---  长轮询
+    定时器 + AJAX --- 服务器压力太大
+
+6.setTimeout(function(){}, time)
+    设置时间间隔time为毫秒，时间过后执行函数
+
+7.location.href = 地址
+    设置当前网页地址
+
+8.WebSocket
+    属于 广播-收听，客户端连接到服务器就不再断开，永久连接，双方就随时向对方发送消息，且是全双工不对等发送。
+    ws协议的应用程序分为客户端和服务器端程序
+    ws客户端应用
+    主动发起连接请求，保持连接，向对方发送消息，并接收消息
+    1.连接WS服务器
+        var socket = new WebSocket("ws://127.0.0.1:9001");
+    2.向服务器发送消息
+        socket.send(stringMsg);
+    3.接收服务器发来消息
+        socket.onmessage = function(e){
+            console.log(e.data);
+        }
+    4.断开服务器
+        socket.close()
+
+9.Responsive Web Page:响应式网页/自适应网页
+    1.一个网页，会根据用户浏览设置不同，自动改变布局
+
+        响应式网页必备
+        1.流式布局：float:left; display:inline-block;
+        2.可以改变尺寸图片
+        3.可以改变大小的文字
+
+        响应式页面的不足：
+            代码更加复杂，不适合大型页面
+
+    2.编写
+        Vierport(视口)
+            作用：强行把页面所辖，导致图片，文字，链接都很小
+            IOS提出了"视口"，视口用于盛放网页内容，尺寸可以随意大小
+        
+        1.声明viewport元标签
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+            width=device-width ：表示视口宽度是设备屏幕宽度
+            initial-scale=1.0  ：表示初始缩放比例
+            user-scalable=0    ：表示用户是否可以调整缩放比例
+        2.使用流式布局
+            实现方法：float:left; display:ineline-block;
+        3.所有容器使用相对尺寸，不用绝对尺寸
+            .container{
+                width:100%;
+            }
+        4.所有文字使用相对尺寸，不用绝对尺寸
+            body{
+                font-size:1.2em;
+            }
+        5.所有图片使用相对尺寸，不用绝对尺寸
+            img{
+                width:50%;
+            }
+        6.最重要原则，使用css3 Media Query (媒体查询)技术
+            Media:指浏览器网页设备，如screen(pc/pad/phone),print(打印机)
+            Media Query:查询出当前浏览网页的设备类型，以及特性（如解析度，对比度，尺寸，手持方向等）
+            不同：有选择性的执行某些css代码，而忽略另外一些
+
+            媒体查询两种使用方法：
+                1.根据媒体查询结果执行不同外部CSS文本
+                    <link media="screen and (min_width:768px) and (max-width:991px)" rel="stylesheet" href="pad.css">
+                    <link media="print" rel="stylesheet" href="print.css">
+                2.根据媒体查询结果执行不同CSS片段 --- 常用
+                    @media screen and (min-width:768px) and (max-width:991px){
+                        选择器{样式设定}
+                    }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>用户名</th>
+                        <th>年龄</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in users">
+                        <th>{{item.uid}}</th>
+                        <th>{{item.uname}}</th>
+                        <th>{{item.age}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button @click="createUser">创建用户</button>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        var exampleData = {
+            users:[
+                {uid:1,uname:"xiaoming",age:12},
+                {uid:2,uname:"xiaohu",age:13},
+                {uid:3,uname:"xiaoya",age:14}
+            ]
+        }
+        var app = new Vue({
+            el:"#app",
+            data:exampleData,
+            methods:{
+                createUser:function(){
+                    // console.log("...........");
+                    // this.users.push({uid:4,uname:"kk",age:19})
+                    
+                }
+            }
+        });
+    </script>
+</body>
+</html>

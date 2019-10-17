@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <parent></parent>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script>
+        Vue.component("parent",{
+            data:function(){
+                return {name:"牛魔王"}
+            },
+            template:'<div><h4>父组件</h4><child ref="mySon"></child><button @click="getData">获取子组件数据</button></div>',
+            methods:{
+                getData:function(){
+                    console.log("子组件名称："+this.$refs.mySon.name);
+                }
+            }
+        });
+        Vue.component("child",{
+            data:function(){
+                return {name:"红孩儿"}
+            },
+            mounted:function(){
+                console.log("父元素的数据："+this.$parent.name);
+            }
+        });
+        new Vue({el:"#app"});
+    
+    </script>
+</body>
+</html>
